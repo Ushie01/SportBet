@@ -1,4 +1,4 @@
-const Data = [
+export const LINK_DATA = [
     'Sports',
     'Casino',
     'Live Betting',
@@ -9,5 +9,4 @@ const Data = [
     'Results',
     'Promotion',
     'App',
-    'GMT +1:00'
 ]

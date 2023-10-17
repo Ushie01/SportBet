@@ -1,9 +1,10 @@
 import React from 'react';
+import Link from 'next/link';
 import Container from '../../components/Container/Container';
 import { Button, Input } from '@heathmont/moon-core-tw';
 import Logo from '../../../assests/logo1.png';
 import Image from 'next/image';
-import Link from 'next/link';
+import {LINK_DATA} from './constant/data'
 // import InputText from '../Input/Input';
 
 const Header = () => {
@@ -61,6 +62,23 @@ const Header = () => {
 						</div>
 					</div>
 				</div>
+			</div>
+
+			<div className='flex -mt-3'>
+				{LINK_DATA.map((value, index) => (
+					<div
+						key={index}
+						className={`flex items-center justify-center text-center py-4 px-6 ${index === 0 ? 'bg-white hover:text-white text-blue-800': ''} hover:bg-blue-900 text-white`}>
+						<p className='font-bold '>{value}</p>
+					</div>
+				))}
+				<div className='flex items-center justify-center p-2'>
+					<p className=' text-white font-bold'>GMT +1:00</p>
+				</div>
+			</div>
+
+			<div>
+				
 			</div>
 		</Container>
 	);
