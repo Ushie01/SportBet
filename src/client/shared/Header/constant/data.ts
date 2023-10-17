@@ -1,12 +1,25 @@
-export const LINK_DATA = [
-    'Sports',
-    'Casino',
-    'Live Betting',
-    'Instant Virtuals',
-    'Scheduled Virtuals',
+export const LINK_CATEGORY_TYPES = [
+    'Football',
+    'Games',
+    'Esports Football',
+    'Spaceship',
+    'Prediction',
+    'B-Virtual',
     'Jackpot',
-    'Livescore',
-    'Results',
-    'Promotion',
+    'QuickBet',
     'App',
 ]
+
+export const LINK_GAME_TYPES = [
+    'Basketball',
+    'Table Tennis',
+    'Baseball',
+    'Rugby',
+    'Ice Hockey',
+    'Volleyball',
+    'Darts',
+    'Handball',
+    'American Football'
+]
+
+
