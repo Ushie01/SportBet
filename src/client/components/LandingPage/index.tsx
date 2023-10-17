@@ -1,11 +1,8 @@
-import React from 'react'
+import React from 'react';
+import Header from '../../shared/Header';
 
 const Landing = () => {
-  return (
-      <div className='bg-red-500 font-bold text-7xl'>
-          This is landing page
-    </div>
-  )
-}
+	return <Header />;
+};
 
-export default Landing
+export default Landing;

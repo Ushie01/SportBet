@@ -6,7 +6,11 @@ const config: Config = {
     './src/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./node_modules/@heathmont/moon-core-tw/**/*.{js,ts,jsx,tsx}",
   ],
+  presets: [
+		require("@heathmont/moon-core-tw/lib/private/presets/ds-moon-preset"),
+	],
   theme: {
     extend: {
       backgroundImage: {
