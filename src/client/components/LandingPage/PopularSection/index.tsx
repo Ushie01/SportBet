@@ -4,26 +4,27 @@ import Container from '../../Container/Container';
 import { POPULAR_DATA } from './data';
 import InputText from '@/src/client/shared/Input/Input';
 import { Button } from '@heathmont/moon-core-tw';
+import Link from 'next/link';
 // import AdvertLegitX from './../../../../assests/'
 
 const PopularSection = () => {
 	return (
 		<Container bgColor='bg-[#212733]'>
 			<div className='flex items-start justify-center w-full'>
-				<div className='flex flex-col justify-end w-3/10 pr-12'>
-					<p className='text-white text-2xl font-bold mb-5'>Popular</p>
+				<div className='flex flex-col  justify-end w-3/10 pr-12'>
+					<p className='text-white text-2xl font-bold mb-3 mt-2'>Popular</p>
 					<div className='space-y-2 font-thin'>
 						{POPULAR_DATA.map((value, index) => (
 							<div key={index}>
 								<hr className='text-white' />
-								<div className='flex items-center justify-between space-x-12 mt-2 text-sm'>
+								<Link href='#' className='flex items-center justify-between space-x-12 mt-2 text-sm'>
 									<p className='text-white'>{value}</p>
 									<ControlsPlus
 										height={25}
 										width={25}
 										color='green'
 									/>
-								</div>
+								</Link>
 							</div>
 						))}
 					</div>
