@@ -69,11 +69,14 @@ const Header = () => {
 			{/* Game Type */}
 			<div className='flex justify-between -mt-3'>
 				{LINK_CATEGORY_TYPES.map((value, index) => (
-					<Link href='#'
+					<Link
+						href='#'
 						key={index}
 						onClick={() => handleClick(value)}
 						className={`flex items-center justify-center p-1 text-center section  hover:bg-blue-900 hover:text-white w-full ${
-							value === link ? 'bg-white text-blue-700' : 'text-white'
+							value === link
+								? 'bg-white text-blue-700 hover:bg-white hover:text-blue-700'
+								: 'text-white'
 						} `}>
 						<p className='font-bold text-sm'>{value}</p>
 					</Link>
