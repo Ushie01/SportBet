@@ -1,17 +1,20 @@
-// import { Input, Label } from '@heathmont/moon-core-tw';
+import { Input, Label } from '@heathmont/moon-core-tw';
 
-// const InputText = () => (
-// 	<div className='flex flex-col lg:flex-row justify-around bg-gray-300 items-end w-full gap-2'>
-// 		<div className='flex w-full'>
-// 			<p className='py-2 px-3 text-black'>+234</p>
-// 			<Input
-// 				type='text'
-// 				size='sm'
-// 				placeholder='Mobile Number'
-// 				className='borderless-input bg-gray-300 text-black'
-// 			/>
-// 		</div>
-// 	</div>
-// );
+type Props = {
+    bgColor: string;
+    height: string;
+}
 
-// export default InputText;
+const InputText = ({ bgColor, height }: Props) => (
+	<div
+		className={`flex items-center ${height} ${bgColor} opacity-90 text-xs rounded-sm `}>
+		<p className='py-2 pl-4 text-black'>+234</p>
+		<Input
+			type='text'
+			placeholder='Mobile Number'
+			className={` text-black text-xs h-8 rounded-r-sm  ${bgColor}`}
+		/>
+	</div>
+);
+
+export default InputText;
