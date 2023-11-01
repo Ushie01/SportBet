@@ -1,13 +1,9 @@
 export const LINK_CATEGORY_TYPES = [
-    'Football',
+    'Sports',
     'Games',
-    'Esports Football',
     'Spaceship',
-    'Prediction',
-    'B-Virtual',
     'Jackpot',
-    'QuickBet',
-    'App',
+    'Results'
 ]
 
 export const LINK_GAME_TYPES = [

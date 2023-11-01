@@ -3,7 +3,7 @@ type Props = {
     bgColor: string;
 };
 const Container = ({ children, bgColor }: Props) => (
-	<div className={`px-40 ${bgColor}`}>{children}</div>
+	<div className={`px-44 ${bgColor}`}>{children}</div>
 );
 
 export default Container;

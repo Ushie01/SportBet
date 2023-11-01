@@ -9,15 +9,15 @@ import InputText from '../Input/Input';
 
 
 const Header = () => {
-	const { link, handleClick } = useLink('Football');
+	const { link, handleClick } = useLink('Sports');
 	return (
-		<Container bgColor='bg-gradient-to-r from-blue-900 via-blue-500 to-blue-900'>
+		<Container bgColor='bg-blue-900'>
 			<div className='flex items-start justify-between w-full py-5'>
 				<Image
 					src='/assets/logo1.png'
 					alt='logo alt'
-					height={60}
-					width={260}
+					height={50}
+					width={200}
 				/>
 				<div className='flex flex-col'>
 					<div className='flex space-x-2'>
@@ -63,22 +63,24 @@ const Header = () => {
 			</div>
 
 			{/* Game Type */}
-			<div className='flex justify-between -mt-3'>
+			<div className='flex justify-between -mt-4'>
 				{LINK_CATEGORY_TYPES.map((value, index) => (
 					<Link
 						href='#'
 						key={index}
 						onClick={() => handleClick(value)}
-						className={`flex items-center justify-center p-1 text-center section  hover:bg-blue-900 hover:text-white w-full ${
+						className={`flex items-center justify-center text-center section py-3 hover:bg-blue-800 -mx-1 w-full hover:text-white ${
 							value === link
 								? 'bg-white text-blue-700 hover:text-blue-700 hover:bg-text-800'
 								: 'text-white'
 						} `}>
-						<p className='font-bold text-sm'>{value}</p>
+						<p className='flex flex-center justify-center m-auto font-semibold text-sm text-center shrink-2 p-2'>
+							{value}
+						</p>
 					</Link>
 				))}
-				<div className='flex items-center justify-center p-2 text-center'>
-					<p className=' text-white font-bold'>GMT +1:00</p>
+				<div className='flex items-center justify-end py-2 text-center'>
+					<p className=' text-white font-semibold pl-12'>GMT+1:00</p>
 				</div>
 			</div>
 		</Container>

@@ -8,19 +8,19 @@ const Gametype = () => {
 	const { link, handleClick } = useLink('Basketball');
 
   return (
-		<Container bgColor='bg-white'>
-			<div className='flex justify-center'>
+		<Container bgColor='bg-white '>
+			<div className='flex justify-between'>
 				{LINK_GAME_TYPES.map((value, index) => (
 					<Link
 						href='#'
 						key={index}
 						onClick={() => handleClick(value)}
-						className={`flex items-center justify-center text-center py-4 px-6  transition transform duration-300 ${
+						className={`flex items-center justify-center text-center transition transform duration-300 text-gray-600 w-full py-3 ${
 							link === value
-								? 'border-b-blue-900 border-b-4'
-								: 'hover:border-b-blue-400 hover:border-b-4 border-b-white border-b-4'
+								? 'border-b-blue-900 border-b-2'
+								: 'hover:border-b-blue-400 hover:border-b-2 border-b-white border-b-2'
 						}`}>
-						<p className='font-bold text-sm'>{value}</p>
+						<p className='text-sm'>{value}</p>
 					</Link>
 				))}
 			</div>
