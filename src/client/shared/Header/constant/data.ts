@@ -7,6 +7,7 @@ export const LINK_CATEGORY_TYPES = [
 ]
 
 export const LINK_GAME_TYPES = [
+    'Home',
     'Basketball',
     'Table Tennis',
     'Baseball',
@@ -14,8 +15,7 @@ export const LINK_GAME_TYPES = [
     'Ice Hockey',
     'Volleyball',
     'Darts',
-    'Handball',
-    'American Football'
+    'Handball'
 ]
 
 

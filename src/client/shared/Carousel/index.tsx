@@ -15,7 +15,7 @@ const CustomCarousel = ({ renderCarouselItems }: Props) => {
 			<Carousel.LeftArrow className='bg-gray-400 opacity-60  rounded-xl'>
 				<ControlsChevronLeftSmall className='text-gray-900' />
 			</Carousel.LeftArrow>
-			<Carousel.Reel>{renderCarouselItems()}</Carousel.Reel>
+			<Carousel.Reel className='h-[250px]'>{renderCarouselItems()}</Carousel.Reel>
 			<Carousel.RightArrow className='bg-gray-400 opacity-60  rounded-xl'>
 				<ControlsChevronRightSmall className='text-gray-900' />
 			</Carousel.RightArrow>
