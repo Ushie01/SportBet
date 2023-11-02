@@ -3,7 +3,7 @@ export const LINK_CATEGORY_TYPES = [
     'Games',
     'Spaceship',
     'Jackpot',
-    'Results'
+    'Results',
 ]
 
 export const LINK_GAME_TYPES = [

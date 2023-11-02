@@ -1,15 +1,32 @@
 import React from 'react';
-// import { ControlsPlus } from '@heathmont/moon-icons-tw';
-import { ControlsChevronRight } from '@heathmont/moon-icons-tw';
-import Container from '../../Container/Container';
-import { POPULAR_DATA } from './data';
-import InputText from '@/src/client/shared/Input/Input';
-import { Button } from '@heathmont/moon-core-tw';
+import Image from 'next/image';
 import Link from 'next/link';
+import Container from '../../Container/Container';
+import { POPULAR_CAROUSEL_IMAGE, POPULAR_DATA } from './data';
+import InputText from '@/src/client/shared/Input/Input';
+import { Button, Carousel } from '@heathmont/moon-core-tw';
 import RightArrow from '@/src/client/shared/Svg/RightArrow';
-// import AdvertLegitX from './../../../../assests/'
+import CustomCarousel from '@/src/client/shared/Carousel';
+
 
 const PopularSection = () => {
+	const renderCarouselItems = () => {
+		return POPULAR_CAROUSEL_IMAGE?.map((value, index) => (
+			<Carousel.Item
+				key={index}
+				className='h-80'>
+				<Link href='#'>
+					<Image
+						src={value}
+						alt='image alt'
+						className='h-80'
+					/>
+				</Link>
+			</Carousel.Item>
+		));
+	};
+
+
 	return (
 		<Container bgColor='bg-[#212733]'>
 			<div className='flex items-start justify-center w-full'>
@@ -18,27 +35,25 @@ const PopularSection = () => {
 					<div className='space-y-1 font-thin'>
 						{POPULAR_DATA.map((value, index) => (
 							<div key={index}>
-								<hr  className='text-gray-900'/>
+								<hr className='text-gray-900' />
 								<Link
 									href='#'
 									className='flex items-center justify-between  space-x-12 my-2'>
 									<p className='text-white'>{value}</p>
-									<RightArrow/>
+									<RightArrow />
 								</Link>
 							</div>
 						))}
 					</div>
 				</div>
+
 				<div className='w-4/10'>
-					<video
-						src='/assets/legitVideo.mp4'
-						autoPlay
-						loop
-						muted
-						className='h-72 w-full'
-					/>
+					<div className='w-[490px]'>
+						<CustomCarousel renderCarouselItems={renderCarouselItems} />
+					</div>
 				</div>
-				<div className='flex flex-col items-start justify-start w-3/10 mt-5 pl-10'>
+
+				<div className='flex flex-col items-start justify-start w-3/10 mt-8 pl-10'>
 					<p className='text-white font-semibold'>Instant Registration</p>
 					<p className='border-l-4 border-green-400 pl-1 text-xs mt-3 text-green-400 font-bold'>
 						Make a deposit and start betting
