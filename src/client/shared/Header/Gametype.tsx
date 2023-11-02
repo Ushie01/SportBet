@@ -2,11 +2,12 @@ import React from 'react';
 import { LINK_GAME_TYPES } from './constant/data';
 import Link from 'next/link';
 import Container from '../../components/Container/Container';
-import { useLink } from '../Hooks/useLink';
 import DropDown from '../Dropdown/Dropdown';
+import { useLinkArray } from '../Hooks/useLink';
+
 
 const Gametype = () => {
-	const { link, handleClick } = useLink('Basketball');
+	const {link, setLink, handleClick} = useLinkArray('Home')
 	return (
 		<Container bgColor='bg-white '>
 			<div className='flex items-center justify-between w-full'>
@@ -16,17 +17,22 @@ const Gametype = () => {
 							href='#'
 							key={index}
 							onClick={() => handleClick(value)}
-							className={`flex items-center justify-center text-center transition transform duration-300 text-gray-600 w-full py-2 ${
-								link === value
+							className={`flex items-center justify-center text-center transition transform duration-300 z-50 text-gray-600 w-full ${
+								link === value.name
 									? 'border-b-blue-900 border-b-2'
 									: 'hover:border-b-blue-400 hover:border-b-2 border-b-white border-b-2'
 							}`}>
-							<p>{value}</p>
+							{value.data
+								? value.data && (
+										<DropDown
+											title={value.name}
+											arrayTitle={value.data}
+											setLink={setLink}
+										/>
+								  )
+								: value.name}
 						</Link>
 					))}
-				</div>
-				<div className='w-1/10'>
-					<DropDown />
 				</div>
 			</div>
 		</Container>

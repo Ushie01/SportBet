@@ -6,16 +6,21 @@ export const LINK_CATEGORY_TYPES = [
     'Results',
 ]
 
-export const LINK_GAME_TYPES = [
-    'Home',
-    'Basketball',
-    'Table Tennis',
-    'Baseball',
-    'Rugby',
-    'Ice Hockey',
-    'Volleyball',
-    'Darts',
-    'Handball'
+export const LINK_GAME_TYPES: {  name: string; data?: { name: string }[] }[] = [
+    {name: 'Home'},
+    {name: 'Basketball'},
+    {name: 'Table Tennis'},
+    {name: 'Baseball'},
+    {name: 'Rugby'},
+    {name: 'Ice Hockey'},
+    {name: 'Volleyball'},
+    {name: 'Darts'},
+    {name: 'Handball'},
+    {
+        name: 'More Sports', data: [
+            {name: 'American Football' },
+            {name: 'Esports Football'}
+    ]}
 ]
 
 

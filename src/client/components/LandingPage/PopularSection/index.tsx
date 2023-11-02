@@ -64,8 +64,8 @@ const PopularSection = () => {
 
 				<div className='z-10 relative flex flex-col items-start justify-start w-3/10 mt-8 pl-10'>
 					<div className='man z-10 relative'>
-						<p className='text-white font-semibold'>Instant Registration</p>
-						<p className='border-l-4 border-green-400 pl-1 text-xs mt-3 text-green-400 font-bold'>
+						<p className='text-white font-semibold text-md'>Instant Registration</p>
+						<p className='border-l-4 border-green-400 pl-1 text-sm mt-3 text-green-400 font-bold'>
 							Make a deposit and start betting
 						</p>
 						<div className='mt-5'>

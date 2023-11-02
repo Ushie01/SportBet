@@ -1,50 +1,52 @@
-import React, { useState } from 'react';
-import { Dropdown, MenuItem } from '@heathmont/moon-core-tw';
+import React, { Dispatch, SetStateAction, useState } from 'react';
+import { Chip, Dropdown, MenuItem } from '@heathmont/moon-core-tw';
+import { ControlsChevronDownSmall } from '@heathmont/moon-icons-tw';
 
-type People = {
-	name: string;
+type TitleProps = {
+	title: string;
+	arrayTitle: { name: string }[];
+	setLink: Dispatch<SetStateAction<string | []>>;
 };
 
-const people = [
-	{ name: 'American Football' },
-	{ name: 'Esports Football' },
-];
+const DropDown = ({ title, arrayTitle, setLink }: TitleProps) => {
+	const [option, setOption] = useState<{ name: string } | null>(null);
+	const handleOptionSelect = (selectedLink: { name: string }) => {
+		setOption(selectedLink);
+		setLink(selectedLink.name);
+	};
 
-const DropDown = () => {
-	const [option, setOption] = useState<People | null>(null);
 	return (
-		<div className='flex flex-col lg:flex-row justify-around items-center w-full gap-2 hover:border-b-blue-400 hover:border-b-2'>
-			<Dropdown
-				value={option}
-				onChange={setOption}>
-				{({ open }) => (
-					<>
-						<Dropdown.Select
-							open={open}
-							placeholder='More Sports'>
-							<p className='text-gray-600'>{option?.name}</p>
-						</Dropdown.Select>
-						<Dropdown.Options className='bg-white z-50 rounded-xl '>
-							{people.map((person, index) => (
-								<p
-									className='hover:bg-gray-200 rounded-xl'
-									key={index}>
-									<Dropdown.Option value={person}>
-										{({ selected, active }) => (
-											<MenuItem
-												isActive={active}
-												isSelected={selected}>
-												{person.name}
-											</MenuItem>
-										)}
-									</Dropdown.Option>
-								</p>
-							))}
-						</Dropdown.Options>
-					</>
-				)}
-			</Dropdown>
-		</div>
+		<Dropdown
+			value={option}
+			onChange={setOption}>
+			{({ open }) => (
+				<>
+					<Dropdown.Select
+						open={open}
+						placeholder={title}>
+						{option?.name}
+					</Dropdown.Select>
+					<Dropdown.Options className='border bg-white rounded-xl z-50'>
+						{arrayTitle.map((value, index) => (
+							<p
+								className='hover:bg-gray-200 rounded-xl'
+								key={index}>
+								<Dropdown.Option value={{ name: value.name }}>
+									{({ selected, active }) => (
+										<MenuItem
+											isActive={active}
+											isSelected={selected}
+											onClick={() => handleOptionSelect(value)}>
+											{value.name}
+										</MenuItem>
+									)}
+								</Dropdown.Option>
+							</p>
+						))}
+					</Dropdown.Options>
+				</>
+			)}
+		</Dropdown>
 	);
 };
 

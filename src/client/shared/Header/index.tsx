@@ -74,13 +74,13 @@ const Header = () => {
 								? 'bg-white text-blue-700 hover:text-blue-700 hover:bg-text-800'
 								: 'text-white'
 						} `}>
-						<p className='flex flex-center justify-center m-auto text-center font-thin p-2'>
+						<p className='flex flex-center justify-center m-auto text-center font-semibold p-2'>
 							{value}
 						</p>
 					</Link>
 				))}
 				<div className='flex items-center justify-end py-1 text-center'>
-					<p className=' text-white pl-12'>GMT+1:00</p>
+					<p className=' text-white font-thin pl-12'>GMT+1:00</p>
 				</div>
 			</div>
 		</Container>
