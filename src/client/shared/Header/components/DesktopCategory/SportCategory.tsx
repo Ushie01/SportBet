@@ -1,9 +1,9 @@
 import React from 'react';
-import { LINK_GAME_TYPES } from '../constant/data';
+import { LINK_GAME_TYPES } from '../../constant/data';
 import Link from 'next/link';
-import Container from '../../../components/Container/Container';
-import DropDown from '../../Dropdown/Dropdown';
-import { useLinkArray } from '../../Hooks/useLink';
+import Container from '../../../../components/Container/Container';
+import DropDown from '../../../Dropdown/Dropdown';
+import { useLinkArray } from '../../../Hooks/useLink';
 
 const SportCategory = () => {
 	const { link, setLink, handleClick } = useLinkArray('Home');

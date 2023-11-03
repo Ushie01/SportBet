@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { LINK_CATEGORY_TYPES } from '../constant/data';
-import { useLink } from '../../Hooks/useLink';
+import { LINK_CATEGORY_TYPES } from '../../constant/data';
+import { useLink } from '../../../Hooks/useLink';
 
 const BetCategory = () => {
 	const { link, handleClick } = useLink('Sports');

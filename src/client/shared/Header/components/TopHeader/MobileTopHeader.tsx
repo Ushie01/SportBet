@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import { Button } from '../../../Button/Button';
-import Search from '../../../Svg/search';
+import Search from '../../../Svg/Search';
 
 const MobileTopHeader = () => {
 
@@ -16,19 +16,19 @@ const MobileTopHeader = () => {
 
 			<div className='flex items-center justify-center space-x-4'>
 				<Search
-					width='20'
-					height='20                                                                                                                                                                                                                                                                                                                                                                              '
+					width='18'
+					height='18'
 				/>
 				<div className='space-x-3'>
 					<Button
 						text='Join Now'
 						link='#'
-						classValue='text-blue-900 bg-white py-1 px-3'
+						classValue='text-blue-700 bg-white text-sm py-1 px-3'
 					/>
 					<Button
 						text='Log In'
 						link='#'
-						classValue='text-blue-900 text-white py-1 px-3 border border-white'
+						classValue='text-blue-900 text-white py-1 text-sm px-3 border border-white'
 					/>
 				</div>
 			</div>

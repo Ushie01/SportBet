@@ -1,16 +1,15 @@
 import React from 'react';
-import Header from '../../shared/Header';
-import Gametype from '../../shared/Header/components/SportCategory';
-import PopularSection from './PopularSection';
+import DeviceDisplay from '../../shared/Utils/DeviceDisplay';
+import MobileLandingPage from './MobileLandingPage';
+import DesktopLandingPage from './DesktopLandingPage';
 
-const Landing = () => {
+
+const LandingPage = () => {
 	return (
-		<>
-			<Header />
-			{/* <Gametype /> */}
-			{/* <PopularSection /> */}
-		</>
+		<DeviceDisplay
+			mobileViewDisplay={<MobileLandingPage />}
+			desktopViewDisplay={<DesktopLandingPage />}
+		/>
 	);
 };
-
-export default Landing;
+export default LandingPage;
