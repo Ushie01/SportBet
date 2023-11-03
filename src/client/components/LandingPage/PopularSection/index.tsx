@@ -5,7 +5,7 @@ import { Button, Carousel } from '@heathmont/moon-core-tw';
 import InputText from '@/src/client/shared/Input/Input';
 import RightArrow from '@/src/client/shared/Svg/RightArrow';
 import CustomCarousel from '@/src/client/shared/Carousel';
-import { POPULAR_CAROUSEL_IMAGE, POPULAR_DATA } from './data';
+import { POPULAR_CAROUSEL_IMAGE, POPULAR_DATA } from '../constant/data';
 import Container from '../../Container/Container';
 import LeftBgImg from '../../../../assets/leftBgImg.jpg';
 import RightBgImg from '../../../../assets/rightBgImg.jpg'

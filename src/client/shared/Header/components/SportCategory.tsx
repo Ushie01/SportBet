@@ -1,13 +1,12 @@
 import React from 'react';
-import { LINK_GAME_TYPES } from './constant/data';
+import { LINK_GAME_TYPES } from '../constant/data';
 import Link from 'next/link';
-import Container from '../../components/Container/Container';
-import DropDown from '../Dropdown/Dropdown';
-import { useLinkArray } from '../Hooks/useLink';
+import Container from '../../../components/Container/Container';
+import DropDown from '../../Dropdown/Dropdown';
+import { useLinkArray } from '../../Hooks/useLink';
 
-
-const Gametype = () => {
-	const {link, setLink, handleClick} = useLinkArray('Home')
+const SportCategory = () => {
+	const { link, setLink, handleClick } = useLinkArray('Home');
 	return (
 		<Container bgColor='bg-white '>
 			<div className='flex items-center justify-between w-full'>
@@ -39,4 +38,4 @@ const Gametype = () => {
 	);
 };
 
-export default Gametype;
+export default SportCategory;

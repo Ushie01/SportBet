@@ -1,5 +1,5 @@
 import basketball from '../../../../assets/basketBall.png';
-import elfCup from '../../../../assets/basketBall.png';
+import elfCup from '../../../../assets/eflCup.png';
 import manUrd from '../../../../assets/manUrd.png';
 import topPlayer from '../../../../assets/top.png';
 
