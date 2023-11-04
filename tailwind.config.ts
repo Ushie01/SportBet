@@ -16,6 +16,9 @@ const config: Config = {
       fontFamily: {
         sans: ['"Arial"', 'sans-serif'], 
       },
+      colors: {
+        gold: '#DFB511'
+      }
     },
   },
   plugins: [],

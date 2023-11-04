@@ -13,9 +13,9 @@ const BetCategory = () => {
 					href='#'
 					key={index}
 					onClick={() => handleClick(value)}
-					className={`flex items-center justify-center text-center section py-1 hover:bg-blue-800 -mx-1 w-full hover:text-white ${
+					className={`flex items-center justify-center text-center section py-1 hover:bg-gold -mx-2 w-full hover:text-white ${
 						value === link
-							? 'bg-white text-blue-700 hover:text-blue-700 hover:bg-text-800'
+							? 'bg-white text-gold'
 							: 'text-white'
 					} `}>
 					<p className='flex flex-center justify-center m-auto text-center font-semibold p-2'>

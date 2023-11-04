@@ -6,7 +6,7 @@ import Search from '../../../Svg/Search';
 const MobileTopHeader = () => {
 
 	return (
-		<div className='flex items-center justify-between bg-blue-900 h-[50px] p-2'>
+		<div className='flex items-center justify-between bg-black h-[50px] p-2'>
 			<Image
 				src='/assets/logo1.png'
 				alt='logo alt'
@@ -23,7 +23,7 @@ const MobileTopHeader = () => {
 					<Button
 						text='Join Now'
 						link='#'
-						classValue='text-blue-700 bg-white text-xs py-2 px-2 rounded-sm shadow-md'
+						classValue='text-gold bg-white text-xs py-2 px-2 rounded-sm shadow-md'
 					/>
 					<Button
 						text='Log In'

@@ -11,7 +11,7 @@ const PopularCategory = () => {
 				<Carousel.Item>
 					<Link
 						href='#'
-						className='flex items-start justify-start text-xs text-start space-x-2 w-32 border border-t-4 border-t-red-600 h-[49px]  p-2 shadow-lg'>
+						className='flex items-start justify-start text-xs text-start space-x-2 w-32 border border-t-4 border-t-gold h-[49px]  p-2 shadow-lg'>
 						<p className='font-bold text-black'>{value}</p>
 					</Link>
 				</Carousel.Item>

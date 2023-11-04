@@ -7,7 +7,7 @@ import BetCategory from './components/DesktopCategory/BetCategory';
 const DesktopHeader = () => {
 	return (
 		<>
-			<Container bgColor='bg-blue-900'>
+			<Container bgColor='bg-black'>
 				<TopHeader />
 				<BetCategory />
 			</Container>

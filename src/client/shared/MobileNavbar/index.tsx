@@ -16,7 +16,7 @@ const MobileNavbar = () => {
 					{value.icon()}
 					<div className='flex flex-col items-center justify-center w-16 h-4'>
 						{link === value.title && (
-							<div className='h-2 bg-blue-700 w-12 mt-2'></div>
+							<div className='h-2 bg-gold w-12 mt-2'></div>
 						)}
 						{link !== value.title && (
 							<p className='text-center text-xs text-white w-full pb-1'>

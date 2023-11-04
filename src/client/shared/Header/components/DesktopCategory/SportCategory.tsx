@@ -18,8 +18,8 @@ const SportCategory = () => {
 							onClick={() => handleClick(value)}
 							className={`flex items-center justify-center text-center transition transform duration-300 z-50 text-gray-600 w-full ${
 								link === value.name
-									? 'border-b-blue-900 border-b-2'
-									: 'hover:border-b-blue-400 hover:border-b-2 border-b-white border-b-2'
+									? 'border-b-gold border-b-2'
+									: 'hover:border-b-yellow-400 hover:border-b-2 border-b-white border-b-2'
 							}`}>
 							{value.data
 								? value.data && (
