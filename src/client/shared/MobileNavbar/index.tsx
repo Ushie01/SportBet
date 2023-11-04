@@ -6,7 +6,7 @@ import { useLink } from '../Hooks/useLink';
 const MobileNavbar = () => {
 	const { link, handleClick } = useLink('Home');
 	return (
-		<div className='flex items-center justify-between bg-black  px-6 pt-2'>
+		<div className='flex items-center justify-between bg-black  px-1 pt-2'>
 			{NAVBAR_DATA.map((value, index) => (
 				<Link
 					href='#'
