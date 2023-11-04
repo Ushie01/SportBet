@@ -10,25 +10,25 @@ const MobileTopHeader = () => {
 			<Image
 				src='/assets/logo1.png'
 				alt='logo alt'
-				height={35}
-				width={130}
+				height={25}
+				width={100}
 			/>
 
-			<div className='flex items-center justify-center space-x-4'>
+			<div className='flex items-center justify-center space-x-2'>
 				<Search
 					width='18'
 					height='18'
 				/>
-				<div className='space-x-3'>
+				<div className='space-x-1'>
 					<Button
 						text='Join Now'
 						link='#'
-						classValue='text-blue-700 bg-white text-sm py-1 px-3'
+						classValue='text-blue-700 bg-white text-xs py-2 px-2 rounded-sm shadow-md'
 					/>
 					<Button
 						text='Log In'
 						link='#'
-						classValue='text-blue-900 text-white py-1 text-sm px-3 border border-white'
+						classValue='text-blue-900 text-white py-2 text-xs px-2 border rounded-sm shadow-md border-white'
 					/>
 				</div>
 			</div>
