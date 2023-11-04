@@ -20,7 +20,7 @@ const PopularCategory = () => {
 	};
 
     return (
-			<div className='px-2 '>
+			<div className='px-2'> 
 				<MobileCarousel
 					renderCarouselItems={renderCarouselItems}
 					classValue='-space-x-3'
