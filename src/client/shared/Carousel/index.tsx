@@ -32,8 +32,8 @@ export const MenuItems: React.FC<MenuItemProps> = ({
 					onClick={() => setSelected(index)}>
 					<span
 						className={`${
-							selected === index ? 'bg-blue-900' : 'bg-white'
-						} rounded-full hover:bg-blue-700 h-2 w-2 cursor-default`}></span>
+							selected === index ? 'bg-gold' : 'bg-white'
+						} rounded-full hover:bg-yellow-700 h-2 w-2 cursor-default`}></span>
 				</MenuItem>
 			))}
 		</>
