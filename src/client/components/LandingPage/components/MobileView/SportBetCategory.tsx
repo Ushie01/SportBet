@@ -11,10 +11,10 @@ const SportBetCategory = () => {
 				<Carousel.Item className='w-12'>
 					<Link
 						href='#'
-						className='flex flex-col items-center justify-center'>
+						className='flex flex-col items-center justify-center -space-y-1 py-1'>
 						<value.icon
-							height={30}
-							width={30}
+							height={28}
+							width={28}
 						/>
 						<p className='flex flex-col items-center justify-start text-xs text-center'>{value.title}</p>
 					</Link>
@@ -23,12 +23,14 @@ const SportBetCategory = () => {
 		));
 	};
 
-	return (
-		<MobileCarousel
-			renderCarouselItems={renderCarouselItems}
-			classValue=''
-		/>
-	);
+    return (
+			<div className='px-2 -my-3'>
+				<MobileCarousel
+					renderCarouselItems={renderCarouselItems}
+					classValue='px-2'
+				/>
+			</div>
+		);
 };
 
 export default SportBetCategory;
