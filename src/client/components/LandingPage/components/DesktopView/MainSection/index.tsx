@@ -6,7 +6,7 @@ import Container from '@/src/client/components/Container/Container'
 const MainSection = () => {
     return (
 			<Container bgColor='bg-lightGray'>
-				<div className='flex space-x-6'>
+				<div className='flex space-x-6 pt-2'>
 					<LeftSection />
 					<RightSection />
 				</div>

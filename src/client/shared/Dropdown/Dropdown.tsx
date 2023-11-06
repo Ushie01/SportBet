@@ -5,9 +5,10 @@ type TitleProps = {
 	title: string;
 	arrayTitle: { name: string }[];
 	setLink: Dispatch<SetStateAction<string | []>>;
+	hoverBgColor: string;
 };
 
-const DropDown = ({ title, arrayTitle, setLink }: TitleProps) => {
+const DropDown = ({ title, arrayTitle, setLink, hoverBgColor }: TitleProps) => {
 	const [option, setOption] = useState<{ name: string } | null>(null);
 	const handleOptionSelect = (selectedLink: { name: string }) => {
 		setOption(selectedLink);
@@ -25,10 +26,10 @@ const DropDown = ({ title, arrayTitle, setLink }: TitleProps) => {
 						placeholder={title}>
 						{option?.name}
 					</Dropdown.Select>
-					<Dropdown.Options className='border bg-white rounded-xl z-50'>
+					<Dropdown.Options className='border bg-white z-50'>
 						{arrayTitle.map((value, index) => (
 							<p
-								className='hover:bg-gold hover:text-white rounded-xl'
+								className={`${hoverBgColor} hover:text-white `}
 								key={index}>
 								<Dropdown.Option value={{ name: value.name }}>
 									{({ selected, active }) => (
