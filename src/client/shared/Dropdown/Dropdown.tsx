@@ -1,6 +1,5 @@
 import React, { Dispatch, SetStateAction, useState } from 'react';
-import { Chip, Dropdown, MenuItem } from '@heathmont/moon-core-tw';
-import { ControlsChevronDownSmall } from '@heathmont/moon-icons-tw';
+import { Dropdown, MenuItem } from '@heathmont/moon-core-tw';
 
 type TitleProps = {
 	title: string;
@@ -29,7 +28,7 @@ const DropDown = ({ title, arrayTitle, setLink }: TitleProps) => {
 					<Dropdown.Options className='border bg-white rounded-xl z-50'>
 						{arrayTitle.map((value, index) => (
 							<p
-								className='hover:bg-gray-200 rounded-xl'
+								className='hover:bg-gold hover:text-white rounded-xl'
 								key={index}>
 								<Dropdown.Option value={{ name: value.name }}>
 									{({ selected, active }) => (

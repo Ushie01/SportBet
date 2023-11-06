@@ -17,7 +17,8 @@ const config: Config = {
         sans: ['"Arial"', 'sans-serif'], 
       },
       colors: {
-        gold: '#DFB511'
+        gold: '#DFB511',
+        lightGray: '#EBEBEB'
       }
     },
   },
