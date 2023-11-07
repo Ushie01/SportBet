@@ -5,6 +5,8 @@ import Refresh from '@/src/client/shared/Svg/Refresh';
 import { SoftwareSorting } from '@heathmont/moon-icons-tw';
 import { SportCategoryLink } from '@/src/client/shared/SportCategoryLink';
 import { classes, LINK_GAME_TYPES, Props } from '../constant';
+import OddsRangeFilter from '@/src/client/shared/Filter/OddsRangeFilter';
+import Slider from '@/src/client/shared/Filter/Slider';
 
 const ActionButton = ({ icon, text, href }: Props) => (
 	<Link href={href}>
@@ -16,6 +18,7 @@ const ActionButton = ({ icon, text, href }: Props) => (
 );
 
 const HighLight = () => {
+	
 	return (
 		<div className='pt-6 px-4'>
 			<div className={classes.container}>
@@ -57,6 +60,11 @@ const HighLight = () => {
 					</Link>
 				</div>
 				<hr />
+
+				<div className='py-5'>
+					{/* <Slider/> */}
+					<OddsRangeFilter/>
+				</div>
 			</div>
 		</div>
 	);

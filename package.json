@@ -12,6 +12,7 @@
     "@heathmont/moon-core-tw": "^10.10.1",
     "@heathmont/moon-icons-tw": "^9.28.6",
     "@heathmont/moon-themes-tw": "^10.10.1",
+    "antd": "^5.11.0",
     "next": "13.5.4",
     "react": "^18",
     "react-dom": "^18",
