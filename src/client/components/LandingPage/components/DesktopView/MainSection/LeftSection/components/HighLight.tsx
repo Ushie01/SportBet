@@ -25,7 +25,7 @@ const HighLight = () => {
 	}
 	
 	return (
-		<div className='flex flex-col pt-6 px-4'>
+		<div className='flex flex-col pt-6'>
 			<div className={classes.container}>
 				<div className={classes.highlightsContainer}>
 					<div className={classes.circle}></div>

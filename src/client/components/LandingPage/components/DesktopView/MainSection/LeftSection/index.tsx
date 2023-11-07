@@ -5,7 +5,7 @@ import BettingSection from './components/BettingSection';
 
 const LeftSection = () => {
 	return (
-		<div className='bg-white w-9/12 border'>
+		<div className='bg-white w-9/12 border px-3'>
 			<HighLight />
 			<LeaguesTypes />
 			<BettingSection/>
