@@ -7,13 +7,15 @@ import Link from 'next/link';
 const VirtualImage = () => {
     return (
 			<Container bgColor='bg-lightGray'>
-				<Link href='#' className='py-5'>
-					<Image
-						src={virtualImage}
-						alt='virtualImage'
-						className='h-24 w-full'
-					/>
-				</Link>
+				<div className='my-2'>
+					<Link href='#'>
+						<Image
+							src={virtualImage}
+							alt='virtualImage'
+							className=''
+						/>
+					</Link>
+				</div>
 			</Container>
 		);
 }

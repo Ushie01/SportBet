@@ -6,7 +6,7 @@ import { CustomCarousel, MenuItems } from '@/src/client/shared/Carousel';
 import { POPULAR_CAROUSEL_IMAGE, POPULAR_DATA } from '../../../constant/data';
 import InputText from '@/src/client/shared/Input/Input';
 import RightArrow from '@/src/client/shared/Svg/RightArrow';
-import LeftBgImg from '../../../../../../assets/leftBgImg.jpg'
+import LeftBgImg from '../../../../../../assets/leftBgImg.jpg';
 import RightBgImg from '../../../../../../assets/rightBgImg.jpg';
 import Container from '@/src/client/components/Container/Container';
 
@@ -37,22 +37,20 @@ const PopularSection = () => {
 			/>
 
 			<div className=' flex items-start justify-center w-full'>
-				<div>
-					<div className='flex flex-col  justify-end w-3/10 pr-12 '>
-						<p className='text-white text-xl font-semibold my-2'>Popular</p>
-						<div className='space-y-1 font-thin'>
-							{POPULAR_DATA.map((value, index) => (
-								<div key={index}>
-									<hr className='text-gray-900' />
-									<Link
-										href='#'
-										className='flex items-center justify-between  space-x-12 my-2'>
-										<p className='text-white text-sm'>{value}</p>
-										<RightArrow />
-									</Link>
-								</div>
-							))}
-						</div>
+				<div className='flex flex-col  justify-end w-3/10 pr-10 '>
+					<p className='text-white text-xl font-semibold my-2'>Popular</p>
+					<div className='space-y-1 font-thin'>
+						{POPULAR_DATA.map((value, index) => (
+							<div key={index}>
+								<hr className='text-gray-900' />
+								<Link
+									href='#'
+									className='flex items-center justify-between  space-x-12 my-2'>
+									<p className='text-white text-sm'>{value}</p>
+									<RightArrow />
+								</Link>
+							</div>
+						))}
 					</div>
 				</div>
 
@@ -72,7 +70,7 @@ const PopularSection = () => {
 					</div>
 				</div>
 
-				<div className='z-10 relative flex flex-col items-start justify-start w-3/10 mt-8 pl-10'>
+				<div className='z-10 relative flex flex-col items-start justify-start w-3/10 mt-6 pl-9'>
 					<div className='man z-10 relative'>
 						<p className='text-white font-semibold text-md'>
 							Instant Registration

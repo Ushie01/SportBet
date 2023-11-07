@@ -1,10 +1,14 @@
 import React from 'react';
 import HighLight from './components/HighLight';
+import LeaguesTypes from './components/LeaguesTypes';
+import BettingSection from './components/BettingSection';
 
 const LeftSection = () => {
 	return (
-		<div className='bg-white w-9/12'>
+		<div className='bg-white w-9/12 border'>
 			<HighLight />
+			<LeaguesTypes />
+			<BettingSection/>
 		</div>
 	);
 };

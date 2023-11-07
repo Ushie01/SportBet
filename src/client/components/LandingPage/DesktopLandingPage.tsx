@@ -8,12 +8,12 @@ import MainSection from './components/DesktopView/MainSection';
 
 const DesktopLandingPage = () => {
 	return (
-		<>
+		<div className='bg-lightGray'>
 			<Header />
 			<PopularSection />
 			<VirtualImage />
 			<MainSection/>
-		</>
+		</div>
 	);
 };
 

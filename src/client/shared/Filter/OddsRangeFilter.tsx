@@ -11,7 +11,7 @@ const OddsRangeFilter = () => {
 	const translatedMaxValue = translateSliderValue(sliderValue.max);
 
 	return (
-		<div className='flex flex-col w-full'>
+		<div className='flex flex-col'>
 			<div className='flex items-center justify-between font-bold w-full'>
 				<p>Odds Range</p>
 				<p className='text-green-700'>{`${translatedMinValue} - ${translatedMaxValue}`}</p>

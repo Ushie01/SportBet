@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Printer from '@/src/client/shared/Svg/Printer';
 import Refresh from '@/src/client/shared/Svg/Refresh';
-import { SoftwareSorting } from '@heathmont/moon-icons-tw';
+import { SoftwareSorting, ControlsCloseSmall } from '@heathmont/moon-icons-tw';
 import { SportCategoryLink } from '@/src/client/shared/SportCategoryLink';
 import { classes, LINK_GAME_TYPES, Props } from '../constant';
 import OddsRangeFilter from '@/src/client/shared/Filter/OddsRangeFilter';
-import Slider from '@/src/client/shared/Filter/Slider';
+
 
 const ActionButton = ({ icon, text, href }: Props) => (
 	<Link href={href}>
@@ -18,9 +18,14 @@ const ActionButton = ({ icon, text, href }: Props) => (
 );
 
 const HighLight = () => {
+	const [isClick, setIsClick] = useState(false);
+
+	const handleClick = () => {
+		setIsClick(!isClick);
+	}
 	
 	return (
-		<div className='pt-6 px-4'>
+		<div className='flex flex-col pt-6 px-4'>
 			<div className={classes.container}>
 				<div className={classes.highlightsContainer}>
 					<div className={classes.circle}></div>
@@ -46,25 +51,38 @@ const HighLight = () => {
 						borderColor='border-green-500'
 						hoverBgColor='hover:bg-green-700'
 						hoverBorderColor='hover:border-b-green-700'
-						initialState='Basketbell'
+						initialState='Basketball'
 						data={LINK_GAME_TYPES}
 					/>
 					<Link
 						href='#'
 						className='flex items-center justify-end'>
 						<p className='text-gray-600'>Filter</p>
-						<SoftwareSorting
-							width={30}
-							height={30}
-						/>
+						{!isClick && (
+							<SoftwareSorting
+								width={30}
+								height={30}
+								onClick={handleClick}
+							/>
+						)}
+
+						{isClick && (
+							<ControlsCloseSmall
+								width={30}
+								height={30}
+								onClick={handleClick}
+							/>
+						)}
 					</Link>
 				</div>
+
 				<hr />
 
-				<div className='py-5'>
-					{/* <Slider/> */}
-					<OddsRangeFilter/>
-				</div>
+				{isClick && (
+					<div className='py-5'>
+						<OddsRangeFilter />
+					</div>
+				)} 
 			</div>
 		</div>
 	);
