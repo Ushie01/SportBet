@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html {
-    font-family: "New Times Roman", 
-  }
-}
 
 .borderless-input {
   outline: none;
