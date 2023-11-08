@@ -1,4 +1,5 @@
 import { Button } from '@/src/client/shared/Button/Button';
+import DropdownButton from '@/src/client/shared/Button/DropButton';
 import { ControlsChevronRightSmall, ChartLine } from '@heathmont/moon-icons-tw';
 import React from 'react';
 
@@ -43,14 +44,10 @@ const BettingTab = () => {
 									link='#'
 									classValue='py-2 px-6 hover:bg-green-700 bg-green-500 shadow-xl rounded-r text-white'
 								/>
-                            </div>
-                            
-							<div>
-								<Button
-									text='1'
-									link='#'
-									classValue='py-2 px-6 hover:bg-green-700 bg-green-500 shadow-xl rounded-l text-white'
-								/>
+							</div>
+
+							<div className='flex'>
+								<DropdownButton />
 								<Button
 									text='X'
 									link='#'
@@ -65,7 +62,7 @@ const BettingTab = () => {
 						</div>
 
 						<div className='flex items-center justify-end w-16 h-11'>
-							<div className='text-sm'>+0</div>
+							<div className='text-sm'>+12</div>
 							<ControlsChevronRightSmall
 								height={25}
 								width={25}

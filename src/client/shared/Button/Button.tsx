@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useHandleClick } from '../Hooks/useHandleClick';
 
 export const Button = ({
-	text,
+    text,
 	link,
 	classValue,
 }: {
@@ -11,7 +11,6 @@ export const Button = ({
 	classValue: string;
 }) => {
 	const { click, handleClick } = useHandleClick();
-
 	return (
 		<Link href={link}>
 			<button

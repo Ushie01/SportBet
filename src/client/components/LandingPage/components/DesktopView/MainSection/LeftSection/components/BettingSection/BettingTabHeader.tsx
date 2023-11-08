@@ -9,8 +9,8 @@ const BettingTabHeader = () => {
 				<div className='flex items-center justify-end'>
 					<div className='w-16'></div>
 
-					<div className='flex space-x-2'>
-						<div className='flex'>
+					<div className='flex items-center text-sm mr-2'>
+						<div className='flex justify-between space-x-1 mr-3'>
 							<p className='px-6'>1</p>
 							<p className='px-6'>X</p>
 							<p className='px-6'>2</p>
@@ -20,8 +20,8 @@ const BettingTabHeader = () => {
 							<p className='px-2'>Over</p>
 							<p className='px-2'>Under</p>
 						</div>
-          </div>
-          
+					</div>
+
 					<div className=' w-16'></div>
 				</div>
 			</div>

@@ -21,3 +21,13 @@ export const LEAGUES_DATA = [
     { title: 'Armenia', leagueType: 'Premier League' },
     { title: 'Portugal', leagueType: 'U23 Liga Revelacao'}
 ]
+
+export const GAME_VALUES = [
+	'1',
+	'1.1',
+	'1.2',
+	'1.3',
+	'1.4',
+	'1.5',
+    '2',
+];
