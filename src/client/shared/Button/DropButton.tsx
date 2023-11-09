@@ -1,7 +1,7 @@
 import React, { useState, ChangeEvent } from 'react';
 import { GAME_VALUES } from '../../components/LandingPage/components/DesktopView/MainSection/LeftSection/constant/data';
 
-const DropdownButton = () => {
+const DropdownButton = ({goal}: {goal: string}) => {
   const [selectedValue, setSelectedValue] = useState<string>('');
 
   const handleSelectChange = (event: ChangeEvent<HTMLSelectElement>) => {
@@ -10,14 +10,17 @@ const DropdownButton = () => {
 
 	return (
 		<select
-			className='bg-green-500 w-[55px] hover:bg-green-700 rounded-l borderless-input text-white'
+			className='bg-green-500 h-[37px] w-[52px] text-sm pl-1 hover:bg-green-700 rounded-l borderless-input text-white'
 			value={selectedValue}
 			onChange={handleSelectChange}>
-			<option value=''>1.2</option>
+			<option
+				value=''
+				className='hover:bg-green-500 text-white'>{`${
+				goal ? goal : ''
+			}`}</option>
 			{GAME_VALUES.map((option) => (
 				<option
 					key={option}
-					className='hover:bg-green-500 text-white'
 					value={option}>
 					{option}
 				</option>
