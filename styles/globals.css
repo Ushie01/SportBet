@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @font-face {
-  font-family: 'SpaceGrotesk';
-  src: url('/fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
-} */
 
 .borderless-input {
   outline: none;

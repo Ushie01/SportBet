@@ -23,7 +23,7 @@ const leagueTypesCard = ({
 				<Link
 					href='#'
 					className={`${
-						link === title ? 'border-2 border-green-500' : ''
+						link === title ? 'border-2 border-green-700' : ''
 					} flex flex-col bg-gray-100 p-2 border h-16 w-36`}>
 					<p>{titleValue}</p>
 					<p className='font-semibold '>{leagueTypeValue}</p>

@@ -47,9 +47,9 @@ const HighLight = () => {
 			<div className='mt-1'>
 				<div className='flex px-1 space-x-3'>
 					<TabBar
-						borderColor='border-green-500'
-						hoverBgColor='hover:bg-green-700'
-						hoverBorderColor='hover:border-b-green-700'
+						borderColor='border-green-700'
+						hoverBgColor='hover:bg-green-500'
+						hoverBorderColor='hover:border-b-green-500'
 						initialState='Basketball'
 						data={LINK_GAME_TYPES}
 					/>

@@ -37,17 +37,17 @@ const BettingTab = ({time, sportId, teamOne, teamTwo, win, draw, lose, goal, ove
 								<Button
 									text={win}
 									link='#'
-									classValue='h-[37px] w-[52px] hover:bg-green-700 bg-green-500 shadow-xl rounded-l text-sm text-white'
+									classValue='h-[37px] w-[52px] hover:bg-green-500 bg-green-700 shadow-xl rounded-l text-sm text-white'
 								/>
 								<Button
 									text={draw}
 									link='#'
-									classValue='h-[38px] w-[52px] hover:bg-green-700 bg-green-500 shadow-xl border text-sm text-white'
+									classValue='h-[38px] w-[52px] hover:bg-green-500 bg-green-700 shadow-xl border text-sm text-white'
 								/>
 								<Button
 									text={lose}
 									link='#'
-									classValue='h-[37px] w-[52px] hover:bg-green-700 bg-green-500 shadow-xl rounded-r text-sm text-white'
+									classValue='h-[37px] w-[52px] hover:bg-green-500 bg-green-700 shadow-xl rounded-r text-sm text-white'
 								/>
 							</div>
 
@@ -56,12 +56,12 @@ const BettingTab = ({time, sportId, teamOne, teamTwo, win, draw, lose, goal, ove
 								<Button
 									text={over}
 									link='#'
-									classValue='h-[38px] w-[52px]  hover:bg-green-700 bg-green-500 shadow-xl border text-sm text-white'
+									classValue='h-[38px] w-[52px]  hover:bg-green-500 bg-green-700 shadow-xl border text-sm text-white'
 								/>
 								<Button
 									text={under}
 									link='#'
-									classValue='h-[36px] w-[52px] hover:bg-green-700 bg-green-500 shadow-xl rounded-r text-sm text-white'
+									classValue='h-[36px] w-[52px] hover:bg-green-500 bg-green-700 shadow-xl rounded-r text-sm text-white'
 								/>
 							</div>
 						</div>

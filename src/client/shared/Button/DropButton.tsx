@@ -10,7 +10,7 @@ const DropdownButton = ({goal}: {goal: string}) => {
 
 	return (
 		<select
-			className='bg-green-500 h-[37px] w-[52px] text-sm pl-1 hover:bg-green-700 rounded-l borderless-input text-white'
+			className='bg-green-700 h-[37px] w-[52px] text-sm pl-1 hover:bg-green-500 rounded-l borderless-input text-white'
 			value={selectedValue}
 			onChange={handleSelectChange}>
 			<option
