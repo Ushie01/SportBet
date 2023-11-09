@@ -3,10 +3,9 @@ import Link from 'next/link';
 import Printer from '@/src/client/shared/Svg/Printer';
 import Refresh from '@/src/client/shared/Svg/Refresh';
 import { SoftwareSorting, ControlsCloseSmall } from '@heathmont/moon-icons-tw';
-import { SportCategoryLink } from '@/src/client/shared/SportCategoryLink';
+import { TabBar } from '@/src/client/shared/Tab/TabBar';
 import { classes, LINK_GAME_TYPES, Props } from '../constant';
 import OddsRangeFilter from '@/src/client/shared/Filter/OddsRangeFilter';
-
 
 const ActionButton = ({ icon, text, href }: Props) => (
 	<Link href={href}>
@@ -22,8 +21,8 @@ const HighLight = () => {
 
 	const handleClick = () => {
 		setIsClick(!isClick);
-	}
-	
+	};
+
 	return (
 		<div className='flex flex-col pt-6'>
 			<div className={classes.container}>
@@ -47,7 +46,7 @@ const HighLight = () => {
 
 			<div className='mt-1'>
 				<div className='flex px-1 space-x-3'>
-					<SportCategoryLink
+					<TabBar
 						borderColor='border-green-500'
 						hoverBgColor='hover:bg-green-700'
 						hoverBorderColor='hover:border-b-green-700'
@@ -82,7 +81,7 @@ const HighLight = () => {
 					<div className='py-5'>
 						<OddsRangeFilter />
 					</div>
-				)} 
+				)}
 			</div>
 		</div>
 	);

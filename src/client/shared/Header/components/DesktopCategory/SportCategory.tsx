@@ -1,13 +1,13 @@
 import React from 'react';
 import Container from '../../../../components/Container/Container';
 import { LINK_GAME_TYPES } from '../../constant/data';
-import { SportCategoryLink } from '../../../SportCategoryLink';
+import { TabBar } from '../../../Tab/TabBar';
 
 const SportCategory = () => {
 	return (
 		<Container bgColor='bg-white '>
 			<div className='flex items-center justify-between w-full'>
-				<SportCategoryLink
+				<TabBar
 					initialState='Home'
 					data={LINK_GAME_TYPES}
 					borderColor='border-gold'
