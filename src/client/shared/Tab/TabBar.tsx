@@ -13,9 +13,11 @@ type PropsTabBar = {
 };
 
 type PropsTab = {
+	data: string[];
+	className: string;
 	initialState: string;
 	borderColor: string;
-	data: string[];
+	borderBottomColor: string;
 	handleTabClick: () => void;
 	setTabValue: React.Dispatch<React.SetStateAction<string>>;
 };
@@ -59,13 +61,14 @@ export const TabBar = ({
 
 
 export const Tab = ({
-	initialState,
 	data,
+	initialState,
 	borderColor,
+	className,
 	setTabValue,
-	handleTabClick
+	handleTabClick,
+	borderBottomColor,
 }: PropsTab) => {
-
 	const { link, handleClick } = useLink(initialState);
 	return (
 		<div className='flex justify-between w-full'>
@@ -73,13 +76,17 @@ export const Tab = ({
 				<Link
 					href='#'
 					key={index}
-					onClick={() => {handleClick(value), setTabValue(value), handleTabClick()}}
-					className={`flex items-center justify-center text-center transition text-white transform duration-1000 ease-in-out w-full  ${
+					onClick={() => {
+						handleClick(value);
+						setTabValue(value);
+						handleTabClick();
+					}}
+					className={`flex items-center justify-center text-center transition transform duration-1000 ease-in-out w-full  ${
 						link === value
-							? `${borderColor} border-b-4 text-white`
-							: `hover:border-b-4 border-b-gray-900 border-b-4`
-					}`}>
-					{value}
+							? `${borderColor} border-b-4`
+							: `hover:border-b-4 border-b-4 ${borderBottomColor}`
+					} ${className}`}>
+					<p>{value}</p>
 				</Link>
 			))}
 		</div>

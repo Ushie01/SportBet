@@ -1,13 +1,11 @@
 import React  from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Button, Input } from '@heathmont/moon-core-tw';
+import ModalComponent from '@/src/client/components/Auth/Components/ModalComponent';
 import Modal from '../../../Modal/Modal';
 import InputText from '../../../Input/Input';
 import { useModal } from '../../../Hooks/useModal';
-import { Button, Input } from '@heathmont/moon-core-tw';
-import ModalComponent from '@/src/client/components/Auth/Components/ModalComponent';
-
-
 
 const DesktopTopHeader = () => {
 	const {openModal, setOpenModal, handleClick} = useModal();
@@ -70,6 +68,7 @@ const DesktopTopHeader = () => {
 
 				{openModal && (
 					<Modal
+						className=''
 						openModal={openModal}
 						setOpenModal={setOpenModal}
 						modalContent={<ModalComponent />}

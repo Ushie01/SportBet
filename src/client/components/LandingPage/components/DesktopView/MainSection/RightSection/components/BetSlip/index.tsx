@@ -13,16 +13,17 @@ const BetSlip = () => {
 	const [inputValue, setInputValue] = useState('');
 	const { openModal, setOpenModal, handleClick } = useModal();
 
-	console.log(tabValue);
 	return (
 		<div className='w-full border-4 border-gray-900'>
 			<div className=' pt-5 pb-1 bg-gray-900 px-3'>
 				<Tab
+					className='text-white'
 					initialState='Betslip'
 					data={navItem}
-					borderColor='border-green-500'
 					setTabValue={setTabValue}
 					handleTabClick={handleClick}
+					borderColor='border-green-500'
+				   borderBottomColor='border-b-gray-900'
 				/>
 				<div className='pt-3 pb-1'>
 					<Toggle />
@@ -60,9 +61,10 @@ const BetSlip = () => {
 
 			{tabValue === 'Cashout' && (
 				<Modal
+					className=''
 					openModal={openModal}
 					setOpenModal={setOpenModal}
-					modalContent={<ModalComponent/>}
+					modalContent={<ModalComponent />}
 				/>
 			)}
 		</div>
