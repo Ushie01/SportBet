@@ -1,16 +1,19 @@
-import { Tab } from '@/src/client/shared/Tab/TabBar';
-import Toggle from '@/src/client/components/LandingPage/components/DesktopView/MainSection/RightSection/components/BetSlip/Toggle';
 import React, { useState } from 'react';
-import DropdownText from '@/src/client/shared/Dropdown/DropdownText';
+import { Tab } from '@/src/client/shared/Tab/TabBar';
 import { Button } from '@/src/client/shared/Button/Button';
+import { useModal } from '@/src/client/shared/Hooks/useModal';
+import Modal from '@/src/client/shared/Modal/Modal';
+import Toggle from '@/src/client/components/LandingPage/components/DesktopView/MainSection/RightSection/components/BetSlip/Toggle';
+import DropdownText from '@/src/client/shared/Dropdown/DropdownText';
+import ModalComponent from '@/src/client/components/Auth/Components/ModalComponent';
 
 const BetSlip = () => {
 	const navItem = ['Betslip', 'Cashout'];
+	const [tabValue, setTabValue] = useState('');
 	const [inputValue, setInputValue] = useState('');
+	const { openModal, setOpenModal, handleClick } = useModal();
 
-
-
-
+	console.log(tabValue);
 	return (
 		<div className='w-full border-4 border-gray-900'>
 			<div className=' pt-5 pb-1 bg-gray-900 px-3'>
@@ -18,6 +21,8 @@ const BetSlip = () => {
 					initialState='Betslip'
 					data={navItem}
 					borderColor='border-green-500'
+					setTabValue={setTabValue}
+					handleTabClick={handleClick}
 				/>
 				<div className='pt-3 pb-1'>
 					<Toggle />
@@ -25,9 +30,7 @@ const BetSlip = () => {
 			</div>
 
 			<div className='px-3 py-5 bg-white text-sm'>
-				<p>
-					To place a bet, click on the odds. Or insert a booking code
-				</p>
+				<p>To place a bet, click on the odds. Or insert a booking code</p>
 
 				<div className='flex flex-col space-y-2 mt-4'>
 					<DropdownText />
@@ -54,6 +57,14 @@ const BetSlip = () => {
 					</p>
 				</div>
 			</div>
+
+			{tabValue === 'Cashout' && (
+				<Modal
+					openModal={openModal}
+					setOpenModal={setOpenModal}
+					modalContent={<ModalComponent/>}
+				/>
+			)}
 		</div>
 	);
 };

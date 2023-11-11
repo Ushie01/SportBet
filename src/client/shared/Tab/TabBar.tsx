@@ -3,7 +3,8 @@ import Link from 'next/link';
 import DropDown from '../Dropdown/Dropdown';
 import { useLink, useLinkArray } from '../Hooks/useLink';
 
-type Props = {
+
+type PropsTabBar = {
 	initialState: string;
 	borderColor: string;
 	hoverBgColor: string;
@@ -11,10 +12,12 @@ type Props = {
 	data: { name: string; data?: { name: string }[] }[];
 };
 
-type PropsLink = {
+type PropsTab = {
 	initialState: string;
 	borderColor: string;
 	data: string[];
+	handleTabClick: () => void;
+	setTabValue: React.Dispatch<React.SetStateAction<string>>;
 };
 
 export const TabBar = ({
@@ -23,7 +26,7 @@ export const TabBar = ({
 	borderColor,
 	hoverBgColor,
 	hoverBorderColor,
-}: Props) => {
+}: PropsTabBar) => {
 	const { link, setLink, handleClick } = useLinkArray(initialState);
 
 	return (
@@ -59,16 +62,18 @@ export const Tab = ({
 	initialState,
 	data,
 	borderColor,
-}: PropsLink) => {
-	const { link,  handleClick } = useLink(initialState);
+	setTabValue,
+	handleTabClick
+}: PropsTab) => {
 
+	const { link, handleClick } = useLink(initialState);
 	return (
 		<div className='flex justify-between w-full'>
 			{data.map((value, index) => (
 				<Link
 					href='#'
 					key={index}
-					onClick={() => handleClick(value)}
+					onClick={() => {handleClick(value), setTabValue(value), handleTabClick()}}
 					className={`flex items-center justify-center text-center transition text-white transform duration-1000 ease-in-out w-full  ${
 						link === value
 							? `${borderColor} border-b-4 text-white`
