@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useModal } from '@/src/client/shared/Hooks/useModal';
 import { Button, Carousel } from '@heathmont/moon-core-tw';
 import { CustomCarousel, MenuItems } from '@/src/client/shared/Carousel';
 import { POPULAR_CAROUSEL_IMAGE, POPULAR_DATA } from '../../../constant/data';
@@ -9,9 +10,13 @@ import RightArrow from '@/src/client/shared/Svg/RightArrow';
 import LeftBgImg from '../../../../../../assets/leftBgImg.jpg';
 import RightBgImg from '../../../../../../assets/rightBgImg.jpg';
 import Container from '@/src/client/components/Container/Container';
+import Modal from '@/src/client/shared/Modal/Modal';
+import ModalComponent from '@/src/client/components/Auth/Components/ModalComponent';
 
 const PopularSection = () => {
 	const [selected, setSelected] = useState(0);
+	const { openModal, setOpenModal, handleClick } = useModal();
+
 	const renderCarouselItems = () => {
 		return POPULAR_CAROUSEL_IMAGE?.map((value, index) => (
 			<Carousel.Item
@@ -83,7 +88,9 @@ const PopularSection = () => {
 								height='h-11'
 								bgColor='bg-white'
 							/>
-							<Button className='text-white font-thin w-full bg-green-600 rounded-sm mt-4'>
+							<Button
+								onClick={handleClick}
+								className='text-white font-thin w-full bg-green-600 rounded-sm mt-4'>
 								Register
 							</Button>
 						</div>
@@ -95,6 +102,15 @@ const PopularSection = () => {
 						className='h-[200px] right-[-160px] opacity-70 absolute  top-0 woman z-0'
 					/>
 				</div>
+				
+				{openModal && (
+					<Modal
+						className=''
+						openModal={openModal}
+						setOpenModal={setOpenModal}
+						modalContent={<ModalComponent />}
+					/>
+				)}
 			</div>
 		</Container>
 	);

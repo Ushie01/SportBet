@@ -7,6 +7,7 @@ export const AutoCashImage = () => {
 		<Image
 			src={AutoCash}
 			alt='autocash'
+			className='w-full'
 		/>
 	);
 };
