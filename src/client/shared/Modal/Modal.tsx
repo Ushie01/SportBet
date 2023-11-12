@@ -15,7 +15,7 @@ const Modal = ({modalContent, openModal, setOpenModal, className}: ModalProps) =
 				<div>
 					<div
 						onClick={() => setOpenModal(false)}
-						className={`z-10000 fixed w-[100%] h-[100%] top-0 left-0 bg-black opacity-25`}></div>
+						className={`z-10000 fixed w-[100%] h-[100%] top-0 left-0 bg-black opacity-75`}></div>
 					<div
 						className={`z-10000 fixed bg-white top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${className}`}>
 						<div className='flex flex-col items-center w-full'>

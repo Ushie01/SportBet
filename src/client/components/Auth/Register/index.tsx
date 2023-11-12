@@ -1,16 +1,30 @@
-import React from 'react'
-import FormInput from '../Components/FormInput'
+import React from 'react';
+import Link from 'next/link';
 import { Button } from '@/src/client/shared/Button/Button';
+import { NumberInput, TextInput } from '../Components/Input';
 
 const Register = () => {
-  return (
-		<form className='flex flex-col items-center space-y-5'>
-			<FormInput />
-			<div className='flex flex-col items-center'>
+	return (
+		<form className='flex flex-col items-center'>
+			<div className='w-[340px]'>
+				<NumberInput />
+				<TextInput
+					type='email'
+					placeHolder='Set Email'
+				/>
+				<TextInput
+					type='password'
+					placeHolder='Set Password'
+				/>
+			</div>
+
+
+
+			<div className='flex flex-col items-center w-full'>
 				<Button
 					text='Register'
 					link='#'
-					classValue=' h-12 w-full bg-green-500 text-white my-7 w-[270px] '
+					classValue=' h-12 bg-green-500 text-white my-7 w-[340px] '
 				/>
 				<div className='flex flex-col items-center justify-center text-xs w-full'>
 					<p>
@@ -22,6 +36,6 @@ const Register = () => {
 			</div>
 		</form>
 	);
-}
+};
 
-export default Register
+export default Register;

@@ -1,17 +1,19 @@
-import React, { useState } from 'react'
-import Login from '../Login'
-import Register from '../Register';
+import React, { useState } from 'react';
 import { Tab } from '@/src/client/shared/Tab/TabBar';
-import { useModal } from '@/src/client/shared/Hooks/useModal';
 import { useLink } from '@/src/client/shared/Hooks/useLink';
+import { useModal } from '@/src/client/shared/Hooks/useModal';
+import Login from '../Login';
+import Register from '../Register';
+import Image from 'next/image';
 
 const ModalComponent = () => {
-  const navItem = ['Register', 'Login'];
-  const { link } = useLink('Register');
-  const { handleClick } = useModal();
-  const [tabValue, setTabValue] = useState('');
+	const navItem = ['Register', 'Login'];
+	const { link } = useLink('Register');
+	const { handleClick } = useModal();
+	const [tabValue, setTabValue] = useState('Register'); 
 
-  return (
+
+	return (
 		<div className='flex flex-col items-center justify-center'>
 			<div className='flex items-center justify-between py-8 px-44 w-[600px]'>
 				<Tab
@@ -25,12 +27,11 @@ const ModalComponent = () => {
 				/>
 			</div>
 
-			<div className='py-8 bg-gray-100 w-[700px] h-[350px]'>
-				{link === tabValue && <Register />}
-				{link !== tabValue && <Login />}
+			<div className='py-8 bg-gray-100 w-[800px] h-[390px]'>
+				{link === tabValue ? <Register /> : <Login />}
 			</div>
 		</div>
 	);
-}
+};
 
-export default ModalComponent
+export default ModalComponent;
