@@ -12,7 +12,7 @@ const SportCategory = () => {
 					data={LINK_GAME_TYPES}
 					borderColor='border-gold'
 					hoverBgColor='hover:bg-gold'
-					hoverBorderColor='hover:border-b-yellow-600'
+					hoverBorderColor='hover:border-b-yellow-600 border-b-white'
 				/>
 			</div>
 		</Container>

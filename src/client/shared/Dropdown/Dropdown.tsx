@@ -26,7 +26,7 @@ const DropDown = ({ title, arrayTitle, setLink, hoverBgColor }: TitleProps) => {
 						placeholder={title}>
 						{option?.name}
 					</Dropdown.Select>
-					<Dropdown.Options className='border bg-white z-50'>
+					<Dropdown.Options className='border bg-white text-black z-50'>
 						{arrayTitle.map((value, index) => (
 							<p
 								className={`${hoverBgColor} hover:text-white `}
