@@ -1,9 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import PopOver from '@/src/client/shared/PopOver';
 import { useLink } from '@/src/client/shared/Hooks/useLink';
 import { truncateText } from '@/src/client/shared/Utils/TruncateText';
 import { LEAGUES_DATA } from '../../constant/data';
+import ToolTip from '@/src/client/shared/PopOver/ToolTip';
 
 const leagueTypesCard = ({
 	title,
@@ -18,7 +18,7 @@ const leagueTypesCard = ({
 	const leagueTypeValue = truncateText(leagueType, 11);
 
 	return (
-		<PopOver
+		<ToolTip
 			element={
 				<Link
 					href='#'

@@ -6,7 +6,7 @@ type Props = {
     text: string;
 }
 
-const PopOver = ({element, title, text}: Props) => (
+const ToolTip = ({element, title, text}: Props) => (
 	<>
 		<div className='flex flex-wrap items-center justify-around gap-2 w-full'>
 			<Tooltip>
@@ -25,4 +25,4 @@ const PopOver = ({element, title, text}: Props) => (
 	</>
 );
 
-export default PopOver;
+export default ToolTip;

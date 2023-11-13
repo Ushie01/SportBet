@@ -46,7 +46,7 @@ const ContactInfo = () => (
     <p className='font-bold'>Connect with Us</p>
     <div className='flex flex-col font-thin'>
       <p>Telephone: 07008888888 | 09088999988</p>
-      <Link href='#'>Email: nigeria.support@legitxbet.com</Link>
+      <Link href='#'>Email: support@legitxbet.com</Link>
     </div>
     <div className='flex space-x-4'>
       {SOCIAL_LINK.map((item, index) => (

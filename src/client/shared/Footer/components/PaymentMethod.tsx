@@ -1,10 +1,11 @@
 import React from 'react'
-import Paystack from '../../Svg/Paystack'
+import Image from 'next/image';
+import Payment from '../../../../assets/payment.png';
 
 const PaymentMethod = () => {
   return (
-		<div className='flex items-center justify-between cursor-default px-48 bg-black py-6'>
-			<Paystack />
+		<div className='flex items-center justify-between cursor-default px-48 bg-black -mt-1 py-1'>
+		  <Image src={ Payment} alt='Payment alt' className='h-10 w-80' />
 			<p className='text-gray-400 text-xs'>© 2023 LegitXBet. All rights reserved.</p>
 		</div>
 	);

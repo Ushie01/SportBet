@@ -74,8 +74,7 @@ const LeftSectionHeader = ({
 					/>
 
 					{filter && (
-						<Link
-							href='#'
+						<div
 							className='flex items-center justify-end'>
 							<p className='text-gray-600'>Filter</p>
 							{!isClick && (
@@ -93,7 +92,7 @@ const LeftSectionHeader = ({
 									onClick={handleClick}
 								/>
 							)}
-						</Link>
+						</div>
 					)}
 
 					{!filter && <div className='w-12'></div>}
