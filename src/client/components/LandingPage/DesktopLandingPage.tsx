@@ -3,6 +3,7 @@ import Header from '../../shared/Header';
 import PopularSection from './components/DesktopView/PopularSection';
 import VirtualImage from './components/DesktopView/VirtualImage';
 import MainSection from './components/DesktopView/MainSection';
+import Footer from '../../shared/Footer';
 
 
 
@@ -12,7 +13,8 @@ const DesktopLandingPage = () => {
 			<Header />
 			<PopularSection />
 			<VirtualImage />
-			<MainSection/>
+			<MainSection />
+			<Footer/>
 		</div>
 	);
 };
