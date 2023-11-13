@@ -4,7 +4,7 @@ import License from '../../Svg/License';
 
 const Warning = () => {
   return (
-		<div className='flex items-center justify-between cursor-default w-full font-white text-xs text-white bg-gray-900 py-3 px-48'>
+		<div className='flex items-center justify-between cursor-default text-gray-400 w-full font-white text-xs  bg-gray-900 py-3 px-48'>
 			<div className='flex items-center justify-center space-x-4'>
 				<Forum />
 				<p>

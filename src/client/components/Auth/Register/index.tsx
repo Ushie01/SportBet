@@ -1,25 +1,11 @@
 import React from 'react';
-import Link from 'next/link';
 import { Button } from '@/src/client/shared/Button/Button';
-import { NumberInput, TextInput } from '../Components/Input';
+import Form from '../Components/Form';
 
 const Register = () => {
 	return (
 		<form className='flex flex-col items-center'>
-			<div className='w-[340px]'>
-				<NumberInput />
-				<TextInput
-					type='email'
-					placeHolder='Set Email'
-				/>
-				<TextInput
-					type='password'
-					placeHolder='Set Password'
-				/>
-			</div>
-
-
-
+			<Form />
 			<div className='flex flex-col items-center w-full'>
 				<Button
 					text='Register'

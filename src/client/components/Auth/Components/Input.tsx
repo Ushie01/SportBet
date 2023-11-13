@@ -17,7 +17,7 @@ export const TextInput = ({type, placeHolder}: {type: string, placeHolder: strin
 		<input
 			type={type}
 			placeholder={placeHolder}
-			className='h-16 pl-4 bg-gray-100 w-full borderless-input border hover:border-green-500'
+			className='h-16 pl-4 bg-gray-100 w-full borderless-input pr-4 border hover:border-green-500'
 			required
 		/>
 	);

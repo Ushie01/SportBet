@@ -3,17 +3,12 @@ import { Button } from '@/src/client/shared/Button/Button';
 import { NumberInput, TextInput } from '../Components/Input';
 import CheckBox from '@/src/client/shared/CheckBox/CheckBox';
 import Link from 'next/link';
+import Form from '../Components/Form';
 
 const Login = () => {
   return (
 		<form className='flex flex-col items-center space-y-3'>
-			<div className='w-[340px]'>
-				<NumberInput />
-				<TextInput
-					type='password'
-					placeHolder='Set Password'
-				/>
-			</div>
+			<Form />
 
 			<div className='w-[340px]'>
 				<div className='flex items-start justify-between mt-7'>

@@ -14,25 +14,35 @@ const LogoComponent = () => (
 );
 
 //NavigationItem component
-const NavigationItem = ({ title, items }: {title:string, items:string[]}) => (
-  <div className='flex flex-col items-start justify-start text-lightGray'>
-    <h1 className='font-bold ml-1'>{title}</h1>
-    <div className='pt-4'>
-      {items.map((value:string, index:number) => (
-        <div key={index} className='flex items-center justify-start pt-1 hover:text-gold'>
-          <LeftArrow />
-          <Link href='#' className='font-thin'>
-            {value}
-          </Link>
-        </div>
-      ))}
-    </div>
-  </div>
+const NavigationItem = ({
+	title,
+	items,
+}: {
+	title: string;
+	items: string[];
+}) => (
+	<div className='flex flex-col items-start justify-start text-gray-400 '>
+		<h1 className='font-bold ml-1'>{title}</h1>
+		<div className='pt-4'>
+			{items.map((value: string, index: number) => (
+				<div
+					key={index}
+					className='flex items-center justify-start pt-1 hover:text-gold'>
+					<LeftArrow />
+					<Link
+						href='#'
+						className='font-thin'>
+						{value}
+					</Link>
+				</div>
+			))}
+		</div>
+	</div>
 );
 
 // ContactInfo component
 const ContactInfo = () => (
-  <div className='text-white space-y-5'>
+  <div className='text-gray-400 space-y-5'>
     <p className='font-bold'>Connect with Us</p>
     <div className='flex flex-col font-thin'>
       <p>Telephone: 07008888888 | 09088999988</p>
