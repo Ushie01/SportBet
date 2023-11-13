@@ -9,8 +9,8 @@ const BettingTabHeader = ({date}:{date:string}) => {
 				<div className='flex items-center justify-end'>
 					<div className='w-16'></div>
 
-					<div className='flex items-center text-sm mr-2'>
-						<div className='flex justify-between space-x-1'>
+					<div className='flex items-center text-sm mr-3'>
+						<div className='flex justify-between space-x-1 mr-3'>
 							<p className='px-6'>1</p>
 							<p className='px-6'>X</p>
 							<p className='px-6'>2</p>

@@ -1,9 +1,9 @@
 import React from 'react';
-import { LEAGUES_DATA } from '../constant/data';
-import { truncateText } from '@/src/client/shared/Utils/TruncateText';
 import Link from 'next/link';
-import { useLink } from '@/src/client/shared/Hooks/useLink';
 import PopOver from '@/src/client/shared/PopOver';
+import { useLink } from '@/src/client/shared/Hooks/useLink';
+import { truncateText } from '@/src/client/shared/Utils/TruncateText';
+import { LEAGUES_DATA } from '../../constant/data';
 
 const leagueTypesCard = ({
 	title,
@@ -48,7 +48,7 @@ const LeaguesTypes = () => {
 					</div>
 				))}
 			</div>
-			<hr className='mt-3'/>
+			<hr className='mt-3' />
 		</div>
 	);
 };

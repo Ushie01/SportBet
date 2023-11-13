@@ -13,7 +13,7 @@ const GrandPriceWinner = () => {
 				{GRANDPRIZE_WINNER_DATA.map((item, index) => (
 					<div
 						key={index}
-						className='flex flex-col p-2 bg-white h-16 w-full space-y-1 py-2'>
+						className='flex flex-col p-2 bg-white h-16 w-full space-y-1 py-'>
 						<div className='flex items-center justify-between'>
 							<p className='text-green-500'>{item.price}</p>
 							<p className='text-sm text-gray-400'>1 min ago</p>

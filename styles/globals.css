@@ -14,3 +14,7 @@
 .section {
 clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
 }
+
+.sectionbet {
+clip-path: polygon(5% 0, 100% 0, 50% 100%, 0% 100%);
+}

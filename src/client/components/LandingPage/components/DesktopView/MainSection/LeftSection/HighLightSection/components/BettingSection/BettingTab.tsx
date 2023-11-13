@@ -2,13 +2,25 @@ import { Button } from '@/src/client/shared/Button/Button';
 import DropdownButton from '@/src/client/shared/Button/DropButton';
 import { ControlsChevronRightSmall, ChartLine } from '@heathmont/moon-icons-tw';
 import React from 'react';
-import { BetProps } from '../../constant/props';
+import { BetProps } from '../../../constant/props';
 import { truncateText } from '@/src/client/shared/Utils/TruncateText';
+import { GAME_VALUES } from '../../../constant/data';
 
-
-const BettingTab = ({time, sportId, teamOne, teamTwo, win, draw, lose, goal, over, under, sportCount}: BetProps) => {
+const BettingTab = ({
+	time,
+	sportId,
+	teamOne,
+	teamTwo,
+	win,
+	draw,
+	lose,
+	goal,
+	over,
+	under,
+	sportCount,
+}: BetProps) => {
 	const teamOneName = truncateText(teamOne, 25);
-	const teamTwoName = truncateText(teamTwo, 25)
+	const teamTwoName = truncateText(teamTwo, 25);
 	return (
 		<div className={`flex items-center space-x-5`}>
 			<div className='flex flex-col text-sm py-1 '>
@@ -24,12 +36,11 @@ const BettingTab = ({time, sportId, teamOne, teamTwo, win, draw, lose, goal, ove
 						<div className='flex flex-col text-black'>{teamOneName}</div>
 						<div className='flex flex-col text-black'>{teamTwoName}</div>
 					</div>
-					<div className='flex items-center justify-end'>
+					<div className='flex items-center justify-end space-x-4'>
 						<ChartLine
 							height={30}
 							width={30}
 							fill='gray'
-							className='mr-7'
 						/>
 
 						<div className='flex space-x-2'>
@@ -37,36 +48,39 @@ const BettingTab = ({time, sportId, teamOne, teamTwo, win, draw, lose, goal, ove
 								<Button
 									text={win}
 									link='#'
-									classValue='h-[37px] w-[52px] hover:bg-green-500 bg-green-700 shadow-xl rounded-l text-sm text-white'
+									classValue='h-[37px] w-[56px] hover:bg-green-500 bg-green-700 shadow-xl rounded-l text-sm text-white'
 								/>
 								<Button
 									text={draw}
 									link='#'
-									classValue='h-[37px] w-[52px] hover:bg-green-500 bg-green-700 shadow-xl border-x text-sm text-white'
+									classValue='h-[37px] w-[56px] hover:bg-green-500 bg-green-700 shadow-xl border-x border-gray-400 text-sm text-white'
 								/>
 								<Button
 									text={lose}
 									link='#'
-									classValue='h-[37px] w-[52px] hover:bg-green-500 bg-green-700 shadow-xl rounded-r text-sm text-white'
+									classValue='h-[37px] w-[56px] hover:bg-green-500 bg-green-700 shadow-xl rounded-r text-sm text-white'
 								/>
 							</div>
 
 							<div className='flex items-center'>
-								<DropdownButton goal={goal} />
+								<DropdownButton
+									goal={goal}
+									items={GAME_VALUES}
+								/>
 								<Button
 									text={over}
 									link='#'
-									classValue='h-[37px] w-[52px]  hover:bg-green-500 bg-green-700 shadow-xl border-x text-sm text-white'
+									classValue='h-[37px] w-[56px]  hover:bg-green-500 bg-green-700 shadow-xl border-x border-gray-400 text-sm text-white'
 								/>
 								<Button
 									text={under}
 									link='#'
-									classValue='h-[37px] w-[52px] hover:bg-green-500 bg-green-700 shadow-xl rounded-r text-sm text-white'
+									classValue='h-[37px] w-[56px] hover:bg-green-500 bg-green-700 shadow-xl rounded-r text-sm text-white'
 								/>
 							</div>
 						</div>
 
-						<div className='flex items-center justify-end w-16 h-11'>
+						<div className='flex items-center justify-end w-12 h-11'>
 							<div className='text-sm'>{`+${sportCount}`}</div>
 							<ControlsChevronRightSmall
 								height={25}

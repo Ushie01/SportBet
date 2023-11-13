@@ -1,11 +1,12 @@
 import React from 'react';
 
-const Refresh = () => {
+const Refresh = ({color}: {color: string}) => {
 	return (
 		<svg
 			xmlns='http://www.w3.org/2000/svg'
 			width='18'
 			height='18'
+			color={color}
 			fill='currentColor'
 			className='bi bi-arrow-clockwise'
 			viewBox='0 0 16 16'>

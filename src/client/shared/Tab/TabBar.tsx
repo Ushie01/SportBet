@@ -41,7 +41,7 @@ export const TabBar = ({
 					className={`flex items-center justify-center text-center transition transform duration-300 z-50 text-gray-600 w-full ${
 						link === value.name
 							? `${borderColor} border-b-4`
-							: `${hoverBorderColor} hover:border-b-4 border-b-white border-b-4`
+							: `${hoverBorderColor} hover:border-b-4 border-b-4`
 					}`}>
 					{value.data
 						? value.data && (
