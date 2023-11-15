@@ -7,7 +7,6 @@ type Data = {
 
 export const useLink = (initialLink: string) => {
   const [link, setLink] = useState<string>(initialLink);
-
   const handleClick = (item: string) => {
     setLink(item);
   };
@@ -21,7 +20,6 @@ export const useLink = (initialLink: string) => {
 
 export const useLinkArray = (initialLink: string) => {
   const [link, setLink] = useState<string | []>(initialLink);
-
   const handleClick = (item: Data) => {
     setLink(item.name);
   }
