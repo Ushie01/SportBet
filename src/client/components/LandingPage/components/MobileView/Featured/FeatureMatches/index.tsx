@@ -72,7 +72,7 @@ const FeatureMatches = () => {
 				className='-mt-2'
 				step={1}
 				selectedIndex={selected}>
-				<Carousel.Reel className='gap-2 px-2 -mt-4'>
+				<Carousel.Reel className='gap-2 px-2 -mt-5'>
 					{renderFeatureMatchItems()}
 				</Carousel.Reel>
 			</Carousel>
