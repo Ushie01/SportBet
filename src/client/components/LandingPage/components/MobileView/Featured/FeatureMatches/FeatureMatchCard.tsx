@@ -1,13 +1,16 @@
 import React from 'react';
 import Image, { StaticImageData } from 'next/image';
 import { truncateText } from '@/src/client/shared/Utils/TruncateText';
+import { BetButton, LockButton } from '../components/BetButton';
 
 type MatchTeam = {
 	teamName: string;
-	teamImg: StaticImageData; 
+	teamImg: StaticImageData;
 };
 
-type MatchData = {
+type FeatureMatchDataProps = {
+	cupType: string;
+	region: string;
 	teamOne: MatchTeam;
 	teamTwo: MatchTeam;
 	time: string;
@@ -19,21 +22,23 @@ type MatchData = {
 	liveScore: string;
 };
 
-type FeatureMatchDataProps = {
-	cupType: string;
-	region: string;
-	match: MatchData;
-};
-
 const FeatureMatchCard = ({
 	region,
 	cupType,
-	match
+	teamOne,
+	teamTwo,
+	time,
+	day,
+	eventType,
+	winPoint,
+	draw,
+	losePoint,
+	liveScore,
 }: FeatureMatchDataProps) => {
-	const cupTypeText = truncateText(cupType, 30)
+	const cupTypeText = truncateText(cupType, 30);
 
 	return (
-		<div className='flex flex-col w-[350px] h-[150px] p-2 border mt-5 shadow-xl'>
+		<div className='flex flex-col w-[315px] h-[136px] p-2 border mt-5 shadow-xl'>
 			<p className='underline text-[12px] text-green-600 pb-1'>
 				{`${region} - ${cupTypeText}`}
 			</p>
@@ -41,49 +46,73 @@ const FeatureMatchCard = ({
 			<div className='flex items-end justify-between space-x-2 w-full mt-1'>
 				<div className='flex flex-col items-center w-1/3'>
 					<Image
-						src={match?.teamOne.teamImg}
+						src={teamOne.teamImg}
 						alt='Logo alt'
-						className='rounded-full h-12 w-12'
+						className='rounded-full h-10 w-10'
 					/>
 					<p className='text-[12px] text-gray-500 pt-1'>
-						{truncateText(match?.teamOne.teamName, 15)}
+						{truncateText(teamOne.teamName, 15)}
 					</p>
 				</div>
 
-				<div className='flex flex-col items-center text-[12px] w-1/3 space-y-4'>
-					<p>
-						<span className='font-bold'>{match?.time}</span> | {match?.day}
-					</p>
-					<p className='text-green-600 font-bold text-[12px] '>
-						{match?.eventType}
-					</p>
+				<div className='flex flex-col items-center text-[12px] w-1/3'>
+					{liveScore === '' && (
+						<div className='mb-3'>
+							<p>
+								<span className='font-bold'>{time}</span> | {day}
+							</p>
+						</div>
+					)}
+
+					{liveScore !== '' && (
+						<div className='flex flex-col items-center justify-between text-[10px]'>
+							<p className='font-bold text-[12px] pb-1'>{liveScore}</p>
+							<div className='flex items-center justify-between h-5'>
+								<p className='bg-green-600 px-1'>Live</p>
+								<p className='bg-white border px-1'>90:00 H2</p>
+							</div>
+						</div>
+					)}
+
+					<p className='text-green-600 font-bold text-[12px] '>{eventType}</p>
 				</div>
 
 				<div className='flex flex-col items-center w-1/3'>
 					<Image
-						src={match?.teamTwo.teamImg}
+						src={teamTwo.teamImg}
 						alt='Logo alt'
-						className='rounded-full h-12 w-12'
+						className='rounded-full h-10 w-10'
 					/>
 					<p className='text-[12px] text-gray-500 pt-1'>
-						{truncateText(match?.teamOne.teamName, 15)}
+						{truncateText(teamOne.teamName, 15)}
 					</p>
 				</div>
 			</div>
 
-			<div className='flex items-center justify-between w-full mt-3 text-green-600 font-bold text-[16px]'>
-				<div className='flex items-center  px-4 space-x-10 h-8 bg-green-100'>
-					<p>1</p>
-					<p>{match?.winPoint}</p>
-				</div>
-				<div className='flex items-center  px-4 space-x-10 h-8 bg-green-100'>
-					<p>1</p>
-					<p>{match?.draw}</p>
-				</div>
-				<div className='flex items-center  px-4 space-x-10 h-8 bg-green-100'>
-					<p>1</p>
-					<p>{match?.losePoint}</p>
-				</div>
+			<div className='flex items-center justify-between w-full space-x-1 mt-1 text-green-600 font-bold text-[16px]'>
+				{winPoint === '' && <LockButton />}
+				{winPoint !== '' && (
+					<BetButton
+						betType='1'
+						betPoint={winPoint}
+					/>
+				)}
+
+				{draw === '' && <LockButton />}
+				{draw !== '' && (
+					<BetButton
+						betType='X'
+						betPoint={draw}
+					/>
+				)}
+
+				{losePoint === '' && <LockButton />}
+				{losePoint !== '' && (
+					<BetButton
+						betType='2'
+						betPoint={losePoint}
+					/>
+				)}
 			</div>
 		</div>
 	);

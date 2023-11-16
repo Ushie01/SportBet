@@ -17,7 +17,7 @@ const Featured = () => {
 							onClick={() => handleClick(value)}
 							className={`${
 								link === value ? '' : 'bg-gray-200'
-							} font-bold text-sm text-center w-1/2 h-12`}>
+							} font-bold text-sm text-center w-1/2 h-10`}>
 							<p>{value}</p>
 						</button>
 					))}

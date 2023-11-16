@@ -52,8 +52,8 @@ export const FEATURED_DATA = [
       eventType: '1X2',
       winPoint: '1.78',
       draw: '3.30',
-      losePoint: '4.60',
-      liveScore: ''
+      losePoint: '',
+      liveScore: '0 - 4'
     },
     
   },
@@ -67,7 +67,7 @@ export const FEATURED_DATA = [
       time: '20:45',
       day: 'Today',
       eventType: '1X2',
-      winPoint: '1.78',
+      winPoint: '',
       draw: '3.30',
       losePoint: '4.60',
       liveScore: ''
@@ -103,7 +103,7 @@ export const FEATURED_DATA = [
         winPoint: '',
         draw: '',
         losePoint: '',
-        liveScore: '0-3',
+        liveScore: '0 - 3',
       },
   },
   
