@@ -1,22 +1,33 @@
 import React, { useState } from 'react';
-import { Carousel } from '@heathmont/moon-core-tw';
-import FeatureMatchCard from './FeatureMatchCard';
+import { useLink } from '@/src/client/shared/Hooks/useLink';
+import { Carousel, MenuItem } from '@heathmont/moon-core-tw';
 import { MobileCarousel } from '@/src/client/shared/Carousel';
 import { FEATURED_DATA } from '../constant/data';
 import FeatureMatchCup from './FeatureMatchCup';
-import { useLink } from '@/src/client/shared/Hooks/useLink';
+import FeatureMatchCard from './FeatureMatchCard';
 
 const FeatureMatches = () => {
+	 const [selected, setSelected] = useState(0);
 	const { link, handleClick } = useLink(FEATURED_DATA[0].cupType);
+
 	const renderFeatureMatchCup = () => {
 		return FEATURED_DATA.map((value, index) => (
-			<div key={index} onClick={() => handleClick(value.cupType)}>
+			<div
+				key={index}
+				onClick={() => handleClick(value.cupType)}>
 				<Carousel.Item>
-					<FeatureMatchCup
-						cupImage={value.cupImage}
-						cupType={value.cupType}
-						linkValue={link}
-					/>
+					<MenuItem
+						key={index}
+						isActive={selected === index}
+						onClick={() => setSelected(index)}>
+						<FeatureMatchCup
+							cupImage={value.cupImage}
+							cupType={value.cupType}
+							linkValue={link}
+							index={index}
+							selectedIndex={selected}
+						/>
+					</MenuItem>
 				</Carousel.Item>
 			</div>
 		));
@@ -48,12 +59,16 @@ const FeatureMatches = () => {
 		<div>
 			<MobileCarousel
 				renderCarouselItems={renderFeatureMatchCup}
-				classValue='gap-2 px-2'
+				classValue='-gap-6 -px-6 -mt-1'
 			/>
-			<MobileCarousel
-				renderCarouselItems={renderFeatureMatchItems}
-				classValue='gap-2 px-2'
-			/>
+
+			<Carousel className='-mt-2'
+				step={1}
+				selectedIndex={selected}>
+				<Carousel.Reel className='gap-2 px-2 -mt-4'>
+					{ renderFeatureMatchItems()}
+				</Carousel.Reel>
+			</Carousel>
 		</div>
 	);
 };
