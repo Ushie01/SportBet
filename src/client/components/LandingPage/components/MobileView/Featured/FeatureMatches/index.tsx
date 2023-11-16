@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { useLink } from '@/src/client/shared/Hooks/useLink';
 import { Carousel, MenuItem } from '@heathmont/moon-core-tw';
 import { MobileCarousel } from '@/src/client/shared/Carousel';
-import { FEATURED_DATA } from '../constant/data';
-import FeatureMatchCup from './FeatureMatchCup';
+import { FEATURED_DATA } from '../constant/data/featureMatchData';
 import FeatureMatchCard from './FeatureMatchCard';
+import TooltipFeatured from '../components/TooltipFeatured';
 
 const FeatureMatches = () => {
 	const [selected, setSelected] = useState(0);
@@ -24,7 +24,7 @@ const FeatureMatches = () => {
 						key={index}
 						isActive={selected === index}
 						onClick={() => setSelected(index)}>
-						<FeatureMatchCup
+						<TooltipFeatured
 							cupImage={value.cupImage}
 							cupType={value.cupType}
 							linkValue={link}
