@@ -13,7 +13,7 @@ export const BetButton = ({betType, betPoint}:{betType: string, betPoint: string
 
 export const LockButton = () => {
   return (
-		<Button className='flex items-center justify-center px-2 w-24 h-8 bg-gray-100'>
+		<Button className='flex items-center justify-center px-2 w-1/3 h-8 font-bold bg-gray-100'>
 			<Lock height='16' width='16' color='gray'/>
 		</Button>
 	);

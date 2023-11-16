@@ -35,7 +35,7 @@ const FeatureMatchCard = ({
 	losePoint,
 	liveScore,
 }: FeatureMatchDataProps) => {
-	const cupTypeText = truncateText(cupType, 30);
+	const cupTypeText = truncateText(cupType, 20);
 
 	return (
 		<div className='flex flex-col w-[315px] h-[136px] p-2 border mt-5 shadow-xl'>
@@ -51,7 +51,7 @@ const FeatureMatchCard = ({
 						className='rounded-full h-10 w-10'
 					/>
 					<p className='text-[12px] text-gray-500 pt-1'>
-						{truncateText(teamOne.teamName, 15)}
+						{truncateText(teamOne.teamName, 10)}
 					</p>
 				</div>
 
@@ -84,7 +84,7 @@ const FeatureMatchCard = ({
 						className='rounded-full h-10 w-10'
 					/>
 					<p className='text-[12px] text-gray-500 pt-1'>
-						{truncateText(teamOne.teamName, 15)}
+						{truncateText(teamOne.teamName, 10)}
 					</p>
 				</div>
 			</div>
