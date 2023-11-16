@@ -7,11 +7,15 @@ import FeatureMatchCup from './FeatureMatchCup';
 import FeatureMatchCard from './FeatureMatchCard';
 
 const FeatureMatches = () => {
-	 const [selected, setSelected] = useState(0);
+	const [selected, setSelected] = useState(0);
 	const { link, handleClick } = useLink(FEATURED_DATA[0].cupType);
 
 	const renderFeatureMatchCup = () => {
-		return FEATURED_DATA.map((value, index) => (
+		const uniqueCups = FEATURED_DATA.filter((value, index, self) => {
+			return index === self.findIndex((v) => v.cupType === value.cupType);
+		});
+		
+		return uniqueCups.map((value, index) => (
 			<div
 				key={index}
 				onClick={() => handleClick(value.cupType)}>
@@ -36,21 +40,23 @@ const FeatureMatches = () => {
 	const renderFeatureMatchItems = () => {
 		return FEATURED_DATA.map((value, index) => (
 			<div key={index}>
-				<Carousel.Item>
-					<FeatureMatchCard
-						region={value.region}
-						cupType={value.cupType}
-						teamOne={value.match.teamOne}
-						teamTwo={value.match.teamTwo}
-						time={value.match.time}
-						day={value.match.day}
-						eventType={value.match.eventType}
-						winPoint={value.match.winPoint}
-						draw={value.match.draw}
-						losePoint={value.match.losePoint}
-						liveScore={value.match.liveScore}
-					/>
-				</Carousel.Item>
+				{link === value.cupType && (
+					<Carousel.Item>
+						<FeatureMatchCard
+							region={value.region}
+							cupType={value.cupType}
+							teamOne={value.match.teamOne}
+							teamTwo={value.match.teamTwo}
+							time={value.match.time}
+							day={value.match.day}
+							eventType={value.match.eventType}
+							winPoint={value.match.winPoint}
+							draw={value.match.draw}
+							losePoint={value.match.losePoint}
+							liveScore={value.match.liveScore}
+						/>
+					</Carousel.Item>
+				)}
 			</div>
 		));
 	};
@@ -62,11 +68,12 @@ const FeatureMatches = () => {
 				classValue='-gap-6 -px-6 -mt-1'
 			/>
 
-			<Carousel className='-mt-2'
+			<Carousel
+				className='-mt-2'
 				step={1}
 				selectedIndex={selected}>
 				<Carousel.Reel className='gap-2 px-2 -mt-4'>
-					{ renderFeatureMatchItems()}
+					{renderFeatureMatchItems()}
 				</Carousel.Reel>
 			</Carousel>
 		</div>
