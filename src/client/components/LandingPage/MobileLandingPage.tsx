@@ -5,6 +5,7 @@ import MobileCarousel from './components/MobileView/MobileAdvert';
 import SportBetCategory from './components/MobileView/SportBetCategory';
 import PopularCategory from './components/MobileView/PopularSection';
 import Featured from './components/MobileView/Featured';
+import LiveBettingSection from './components/MobileView/LiveBettingSection';
 
 const MobileLandingPage = () => {
 	return (
@@ -14,6 +15,7 @@ const MobileLandingPage = () => {
 			<SportBetCategory />
 			<PopularCategory />
 			<Featured />
+			<LiveBettingSection/>
 			<div className='fixed bottom-0 right-0 left-0'>
 				<MobileNavbar />
 			</div>

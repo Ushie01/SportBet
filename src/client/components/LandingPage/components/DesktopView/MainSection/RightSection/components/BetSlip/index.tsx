@@ -23,7 +23,7 @@ const BetSlip = () => {
 					setTabValue={setTabValue}
 					handleTabClick={handleClick}
 					borderColor='border-green-500'
-				   borderBottomColor='border-b-gray-900'
+				  borderBottomColor='border-b-gray-900'
 				/>
 				<div className='pt-3 pb-1'>
 					<Toggle />

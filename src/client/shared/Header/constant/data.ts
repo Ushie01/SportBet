@@ -6,6 +6,8 @@ export const LINK_CATEGORY_TYPES = [
     'Results',
 ]
 
+
+
 export const LINK_GAME_TYPES: {  name: string; data?: { name: string }[] }[] = [
     {name: 'Home'},
     {name: 'Basketball'},

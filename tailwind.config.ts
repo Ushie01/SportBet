@@ -18,7 +18,8 @@ const config: Config = {
       },
       colors: {
         gold: '#DFB511',
-        lightGray: '#EBEBEB'
+        lightGray: '#EBEBEB',
+        
       }
     },
   },
