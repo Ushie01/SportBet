@@ -8,7 +8,7 @@ const Featured = () => {
 	const { link, handleClick } = useLink('Featured Matches');
 
 	return (
-		<div className='p-2'>
+		<div className='p-2 -mt-2'>
 			<div className='flex flex-col w-full h-max border shadow-2xl'>
 				<div className='flex'>
 					{navValues.map((value, index) => (

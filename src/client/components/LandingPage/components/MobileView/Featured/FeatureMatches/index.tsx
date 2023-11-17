@@ -14,7 +14,7 @@ const FeatureMatches = () => {
 		const uniqueCups = FEATURED_DATA.filter((value, index, self) => {
 			return index === self.findIndex((v) => v.cupType === value.cupType);
 		});
-		
+
 		return uniqueCups.map((value, index) => (
 			<div
 				key={index}
