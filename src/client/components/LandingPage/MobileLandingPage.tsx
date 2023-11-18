@@ -9,13 +9,15 @@ import LiveBettingSection from './components/MobileView/LiveBettingSection';
 
 const MobileLandingPage = () => {
 	return (
-		<div className='relative h-screen flex flex-col border border-black'>
-			<Header />
-			<MobileCarousel />
-			<SportBetCategory />
-			<PopularCategory />
-			<Featured />
-			<LiveBettingSection/>
+		<div className='flex flex-col border h-max border-black'>
+			<div className='w-full mb-10'>
+				<Header />
+				<MobileCarousel />
+				<SportBetCategory />
+				<PopularCategory />
+				<Featured />
+				<LiveBettingSection />
+			</div>
 			<div className='fixed bottom-0 right-0 left-0'>
 				<MobileNavbar />
 			</div>

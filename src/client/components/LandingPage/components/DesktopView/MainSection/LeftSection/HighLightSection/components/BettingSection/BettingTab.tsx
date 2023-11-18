@@ -1,5 +1,5 @@
 import { Button } from '@/src/client/shared/Button/Button';
-import DropdownButton from '@/src/client/shared/Button/DropButton';
+import DropdownButton from '@/src/client/shared/Button/DropButton/DesktopDropButton/DropButton';
 import { ControlsChevronRightSmall, ChartLine } from '@heathmont/moon-icons-tw';
 import React from 'react';
 import { BetProps } from '../../../constant/props';

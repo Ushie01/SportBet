@@ -4,9 +4,13 @@ import LiveBettingCard from './components/LiveBettingCard';
 
 const LiveBettingSection = () => {
 	return (
-		<div className='h-[93px] bg-gray-900'>
+		<div className='bg-darkGray w-full'>
 			<HeadBettingSection />
-			<LiveBettingCard/>
+			<LiveBettingCard />
+			<LiveBettingCard />
+			<LiveBettingCard />
+			<LiveBettingCard />
+			<LiveBettingCard />
 		</div>
 	);
 };

@@ -110,8 +110,7 @@ export const MobileCarouselTab = ({
 	const { link, handleClick } = useLink(initialState);
 	return data.map((value, index) => (
 		<Carousel.Item key={index}>
-			<Link
-				href='#'
+			<div
 				onClick={() => {
 					handleClick(value);
 					handleTabClick(value);
@@ -120,7 +119,7 @@ export const MobileCarouselTab = ({
 					link === value ? `border-green-600 border-b-4` : `border-b-4 ${borderColor}`
 				} ${className}`}>
 				<p>{value}</p>
-			</Link>
+			</div>
 		</Carousel.Item>
 	));
 };

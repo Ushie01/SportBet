@@ -1,5 +1,5 @@
 import { Button } from '@/src/client/shared/Button/Button';
-import DropdownButton from '@/src/client/shared/Button/DropButton';
+import DropdownButton from '@/src/client/shared/Button/DropButton/DesktopDropButton/DropButton';
 import { ControlsChevronRightSmall, ChartLine } from '@heathmont/moon-icons-tw';
 import React from 'react';
 import { BetProps } from '../../../constant/props';
@@ -26,9 +26,7 @@ const BettingTab = ({
 			<div className='flex'>
 				<div className='w-4 sectionbet h-12 bg-green-600'></div>
 				<div className='flex flex-col text-sm py-1 section pl-1'>
-					<div className='flex flex-col font-bold text-white text-sm'>
-						Set3
-					</div>
+					<div className='flex flex-col font-bold text-white text-sm'>Set3</div>
 				</div>
 			</div>
 

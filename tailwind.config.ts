@@ -19,7 +19,8 @@ const config: Config = {
       colors: {
         gold: '#DFB511',
         lightGray: '#EBEBEB',
-        
+        darkGray: "#1B1E25",
+        ash:'#3A3C42'
       }
     },
   },

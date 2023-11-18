@@ -53,14 +53,14 @@ const HeadBettingSection = () => {
 				data={eventTypes}
 				initialState={eventTypes[0]}
 				handleTabClick={handleTabClick}
-				borderColor='border-b-gray-900 font-bold'
+				borderColor='border-b-darkGray font-bold'
 				className='text-lightGray'
 			/>
 		);
 	};
 
 	return (
-		<div className='flex flex-col'>
+		<div className='flex flex-col bg-darkGray'>
 			<div className='flex items-center justify-start px-2 w-full'>
 				<div className='flex items-center space-x-3 w-full'>
 					<p className='text-white font-bold text-xl'>Live</p>
@@ -82,12 +82,12 @@ const HeadBettingSection = () => {
 				/>
 			</div>
 
-			<div className='flex items-center justify-end  w-full h-6 bg-gray-500 pr-12 mt-2'>
-				<div className='flex flex-row justify-between space-x-3 w-44 text-white text-sm'>
+			<div className='flex items-center justify-end  w-full h-6 bg-ash mt-2'>
+				<div className='flex flex-row w-[210px] text-white text-sm mr-2'>
 					{pointHeaderValues &&
 						pointHeaderValues.map((value: string, index: number) => (
 							<p
-								className='p-1'
+								className='flex-grow p-1 text-center'
 								key={index}>
 								{value}
 							</p>
