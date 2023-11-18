@@ -22,12 +22,12 @@ type PropsTab = {
 	setTabValue: React.Dispatch<React.SetStateAction<string>>;
 };
 
-type MobilePropsType = {
+type MobilePropsTypeProps = {
 	data: string[];
 	initialState: string;
 	borderColor: string;
 	className: string;
-	setTabValue: React.Dispatch<React.SetStateAction<string>>;
+	handleTabClick: (tabValue: string) => void;
 };
 
 export const TabBar = ({
@@ -105,8 +105,8 @@ export const MobileCarouselTab = ({
 	initialState,
 	borderColor,
 	className,
-	setTabValue,
-}: MobilePropsType) => {
+	handleTabClick,
+}: MobilePropsTypeProps) => {
 	const { link, handleClick } = useLink(initialState);
 	return data.map((value, index) => (
 		<Carousel.Item key={index}>
@@ -114,7 +114,7 @@ export const MobileCarouselTab = ({
 				href='#'
 				onClick={() => {
 					handleClick(value);
-					setTabValue(value);
+					handleTabClick(value);
 				}}
 				className={`flex items-center justify-center p-2 text-center transition transform duration-1000 ease-in-out w-full  ${
 					link === value ? `border-green-600 border-b-4` : `border-b-4 ${borderColor}`

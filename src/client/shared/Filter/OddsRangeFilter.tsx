@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Button } from '../Button/Button';
 import SliderBar from './Slider';
-import { translateSliderValue } from './../Utils/TranslateSliderValue';
 import { SliderValue } from './Type';
+import { translateSliderValue } from '../Utils/TranslateSliderValue';
 
 
 const OddsRangeFilter = () => {
