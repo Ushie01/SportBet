@@ -15,7 +15,8 @@ type Props = {
 }
 
 const LiveBettingCard = ({live, teamOne, teamTwo, teamScore, leagueType, getOddsHeaderLength}: Props) => {
-	// const teamOneTrancateText = truncateText(teamOne, 1)
+	const teamOneTruncateText = truncateText(teamOne, 22);
+	const teamTwoTruncateText = truncateText(teamTwo, 22)
 	return (
 		<div className='flex flex-col px-2 pt-1 bg-darkGray h-24 w-full'>
 			<div className='flex flex-col items-start'>
@@ -35,16 +36,14 @@ const LiveBettingCard = ({live, teamOne, teamTwo, teamScore, leagueType, getOdds
 					)}
 					<p className='text-green-500 text-[13px] font-bold'>
 						45:00 HT{' '}
-						<span className='text-[10px] pl-2 text-gray-500'>
-							{leagueType}
-						</span>
+						<span className='text-[10px] pl-2 text-gray-500'>{leagueType}</span>
 					</p>
 				</div>
 
 				<div className='flex items-center justify-between pt-1 w-full'>
 					<div className='flex flex-col text-[12px] text-white'>
-						<p>{teamOne}</p>
-						<p>{teamTwo}</p>
+						<p>{teamOneTruncateText}</p>
+						<p>{teamTwoTruncateText}</p>
 					</div>
 
 					<div className='flex space-x-4'>
