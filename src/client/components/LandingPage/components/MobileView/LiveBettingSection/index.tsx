@@ -14,6 +14,9 @@ const LiveBettingSection = () => {
 					<LiveBettingCard {...value} getOddsHeaderLength={oddsHeaderLength} />
 				</div>
 			))}
+			<div className='flex items-center justify-end h-16 px-2'>
+				<p className='text-green-600 text-[11px] text-semibold'>{`All Live Event 120 >`}</p>
+			</div>
 		</div>
 	);
 };
