@@ -16,7 +16,7 @@ type Props = {
 const LiveBettingCard = ({live, teamOne, teamTwo, teamScore, leagueType, getOddsHeaderLength}: Props) => {
 
 	return (
-		<div className='flex flex-col p-2 bg-darkGray h-28 w-full '>
+		<div className='flex flex-col px-2 pt-1 bg-darkGray h-24 w-full'>
 			<div className='flex flex-col items-start'>
 				<div className='flex items-center space-x-2'>
 					{live && (
@@ -40,7 +40,7 @@ const LiveBettingCard = ({live, teamOne, teamTwo, teamScore, leagueType, getOdds
 					</p>
 				</div>
 
-				<div className='flex items-center justify-between pt-2 w-full'>
+				<div className='flex items-center justify-between pt-1 w-full'>
 					<div className='flex flex-col text-[12px] text-white'>
 						<p>{teamOne}</p>
 						<p>{teamTwo}</p>
@@ -56,7 +56,7 @@ const LiveBettingCard = ({live, teamOne, teamTwo, teamScore, leagueType, getOdds
 				</div>
 
 				<div className='flex flex-col w-full border-b border-b-gray-700'>
-					<div className='text-[10px] text-white py-2'>{`+12>`}</div>
+					<div className='text-[10px] text-white py-1'>{`+12>`}</div>
 				</div>
 			</div>
 		</div>
