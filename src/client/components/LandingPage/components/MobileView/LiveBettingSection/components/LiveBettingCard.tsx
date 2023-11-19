@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Hot from '../../../../../../../assets/hot.png';
+import { truncateText } from '@/src/client/shared/Utils/TruncateText';
 import { renderOddsButtons } from '@/src/client/shared/Utils/OddsButton';
 
 
@@ -14,7 +15,7 @@ type Props = {
 }
 
 const LiveBettingCard = ({live, teamOne, teamTwo, teamScore, leagueType, getOddsHeaderLength}: Props) => {
-
+	// const teamOneTrancateText = truncateText(teamOne, 1)
 	return (
 		<div className='flex flex-col px-2 pt-1 bg-darkGray h-24 w-full'>
 			<div className='flex flex-col items-start'>

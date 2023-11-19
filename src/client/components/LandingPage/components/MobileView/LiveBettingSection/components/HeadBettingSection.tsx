@@ -95,7 +95,7 @@ const HeadBettingSection = ({
 			</div>
 
 			<div className='flex items-center justify-end  w-full h-6 bg-ash mt-2'>
-				<div className='flex flex-row  w-[210px] text-gray-400 text-sm mr-2'>
+				<div className='flex flex-row  w-[190px] text-gray-400 text-sm mr-2'>
 					{oddsHeaderValues &&
 						oddsHeaderValues.map((value: string, index: number) => (
 							<p

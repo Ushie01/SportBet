@@ -5,20 +5,15 @@ import { MATCH_DATA } from './constant/data';
 
 const LiveBettingSection = () => {
 	const [oddsHeaderLength, setOddsHeaderLength] = useState<number>(0);
-
+	
 	return (
 		<div className='bg-darkGray w-full'>
 			<HeadBettingSection setOddsHeaderLength={setOddsHeaderLength} />
-			<div className='flex flex-col'>
-				{MATCH_DATA.map((value, index) => (
-					<div key={index}>
-						<LiveBettingCard
-							{...value}
-							getOddsHeaderLength={oddsHeaderLength}
-						/>
-					</div>
-				))}
-			</div>
+			{MATCH_DATA.map((value, index) => (
+				<div key={index}>
+					<LiveBettingCard {...value} getOddsHeaderLength={oddsHeaderLength} />
+				</div>
+			))}
 		</div>
 	);
 };

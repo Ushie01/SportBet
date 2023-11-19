@@ -22,19 +22,19 @@ export const TwoOddsButton = () => {
 
 export const ThreeOddsButton = () => {
   return (
-		<div className='flex w-[210px]'>
+		<div className='flex w-[190px]'>
 			<DropdownButton
-				className='text-green-500 h-9 w-[70px] bg-ash font-bold hover:text-white hover:bg-green-600'
+				className='text-green-500 h-9 w-[63.3px] bg-ash font-bold hover:text-white hover:bg-green-600'
 				items={items}
 			/>
 			<Button
 				text='2.3'
-				classValue='text-green-500 border-l border-l-darkGray h-9 w-[70px] hover:text-white hover:bg-green-600 bg-ash font-bold'
+				classValue='text-green-500 border-l border-l-darkGray h-9 w-[63.3px] hover:text-white hover:bg-green-600 bg-ash font-bold'
 				link='#'
 			/>
 			<Button
 				text='2.3'
-				classValue='text-green-500 border-l border-l-darkGray h-9 w-[70px] hover:text-white hover:bg-green-600 bg-ash font-bold'
+				classValue='text-green-500 border-l border-l-darkGray h-9 w-[63.3px] hover:text-white hover:bg-green-600 bg-ash font-bold'
 				link='#'
 			/>
 		</div>
@@ -43,7 +43,7 @@ export const ThreeOddsButton = () => {
 
 export const FourOddsButton = () => {
   return (
-		<div className='flex w-[210px]'>
+		<div className='flex w-[200px]'>
 			<DropdownButton
 				className='text-green-500 h-9 w-[52.5px] bg-ash font-bold hover:text-white hover:bg-green-600'
 				items={items}
