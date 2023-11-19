@@ -18,7 +18,7 @@ const LiveBettingCard = ({live, teamOne, teamTwo, teamScore, leagueType, getOdds
 	const teamOneTruncateText = truncateText(teamOne, 22);
 	const teamTwoTruncateText = truncateText(teamTwo, 22)
 	return (
-		<div className='flex flex-col px-2 bg-darkGray h-24 w-full'>
+		<div className='flex flex-col px-2 bg-darkGray h-[84px] w-full'>
 			<div className='flex flex-col items-start'>
 				<div className='flex items-center space-x-2'>
 					{live && (
@@ -56,7 +56,7 @@ const LiveBettingCard = ({live, teamOne, teamTwo, teamScore, leagueType, getOdds
 				</div>
 
 				<div className='flex flex-col w-full border-b border-b-gray-700'>
-					<div className='text-[10px] text-white py-1'>{`+12>`}</div>
+					<div className='text-[10px] text-white pb-1'>{`+12>`}</div>
 				</div>
 			</div>
 		</div>
