@@ -77,3 +77,35 @@ export const SPORT_DATA = [
     'Away O/U': ['Goals', 'Over', 'Under']
   }
 ]
+
+
+export const MATCH_DATA = [
+  {
+    leagueType: 'Interbational - CONCACAF National League',
+    teamOne: 'Belgium',
+    teamTwo: 'Azerbaijan',
+    teamScore: ['4', '0'],
+    live: true
+  },
+  {
+    leagueType: 'Interbational - CONCACAF National League',
+    teamOne: 'Saint Kitts and Nevis',
+    teamTwo: 'Guadeloupe',
+    teamScore: ['2', '3'],
+    live: true
+  },
+  {
+    leagueType: 'Spain - Primera Federacion',
+    teamOne: 'Real Madrid Castilla',
+    teamTwo: 'CF Algeciras',
+    teamScore: ['1', '2'],
+    live: true
+  },
+  {
+    leagueType: 'Spain - Primera Federacion',
+    teamOne: 'Sestao River Club',
+    teamTwo: 'CF Fuenlabrade',
+    teamScore: ['0', '0'],
+    live: false
+  }
+]

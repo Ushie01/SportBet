@@ -1,31 +1,57 @@
 import React from 'react';
-import { TwoPointButton } from '@/src/client/shared/Button/MobileButton/MobileEventPoint';
+import Image from 'next/image';
+import Hot from '../../../../../../../assets/hot.png';
+import { renderOddsButtons } from '@/src/client/shared/Utils/OddsButton';
 
-const LiveBettingCard = () => {
+
+type Props = {
+	live: boolean;
+	teamOne: string;
+	teamTwo: string;
+	teamScore: string[];
+	leagueType: string;
+	getOddsHeaderLength: number
+}
+
+const LiveBettingCard = ({live, teamOne, teamTwo, teamScore, leagueType, getOddsHeaderLength}: Props) => {
+
 	return (
 		<div className='flex flex-col p-2 bg-darkGray h-28 w-full '>
 			<div className='flex flex-col items-start'>
-				<p className='text-green-500 text-[13px] font-bold'>
-					45:00 HT{' '}
-					<span className='text-[10px] pl-2 text-gray-500'>
-						Brazil - Brasileiro Serie B
-					</span>
-				</p>
+				<div className='flex items-center space-x-2'>
+					{live && (
+						<div className='flex items-center justify-center h-4 w-[70px] space-x-1 sectionhot bg-red-600 -ml-8 '>
+							<p className='text-white text-[12px] text-center font-bold pl-4 pt-[1px]'>
+								Hot
+							</p>
+							<Image
+								src={Hot}
+								alt='hot'
+								height={12}
+								width={12}
+							/>
+						</div>
+					)}
+					<p className='text-green-500 text-[13px] font-bold'>
+						45:00 HT{' '}
+						<span className='text-[10px] pl-2 text-gray-500'>
+							{leagueType}
+						</span>
+					</p>
+				</div>
 
 				<div className='flex items-center justify-between pt-2 w-full'>
 					<div className='flex flex-col text-[12px] text-white'>
-						<p>Crown FC</p>
-						<p>One Rocket</p>
+						<p>{teamOne}</p>
+						<p>{teamTwo}</p>
 					</div>
 
 					<div className='flex space-x-4'>
 						<div className='flex flex-col text-white text-[13px]'>
-							<p>1</p>
-							<p>1</p>
+							<p>{teamScore[0]}</p>
+							<p>{teamScore[1]}</p>
 						</div>
-						<div className='flex'>
-							<TwoPointButton />
-						</div>
+						<div className='flex'>{renderOddsButtons(getOddsHeaderLength)}</div>
 					</div>
 				</div>
 

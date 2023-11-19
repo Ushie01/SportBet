@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLink } from '@/src/client/shared/Hooks/useLink';
 import { Carousel } from '@heathmont/moon-core-tw';
 import { SPORT_DATA } from '../constant/data';
@@ -11,7 +11,13 @@ type SportDataItem = {
 	[key: string]: string[] | undefined;
 };
 
-const HeadBettingSection = () => {
+type headBettingsSectionProps = {
+	setOddsHeaderLength: React.Dispatch<React.SetStateAction<number>>;
+};
+
+const HeadBettingSection = ({
+	setOddsHeaderLength,
+}: headBettingsSectionProps) => {
 	const { link, handleClick } = useLink('Football');
 	const getEventTypesByGameType = () => {
 		const result = SPORT_DATA.filter((data) => data.gameType === link);
@@ -22,13 +28,19 @@ const HeadBettingSection = () => {
 		eventTypes[0]
 	);
 
-	const pointHeaderValues = (
+	const oddsHeaderValues = (
 		SPORT_DATA?.find(
 			(sport) => sport?.gameType === link
 		) as unknown as SportDataItem
 	)?.[clickValue];
 
-	const renderHandBettingSection = () => {
+	useEffect(() => {
+		if (oddsHeaderValues) {
+			setOddsHeaderLength(oddsHeaderValues.length);
+		}
+	}, [oddsHeaderValues, setOddsHeaderLength]);
+
+	const renderSportTypes = () => {
 		return SPORT_DATA.map((value, index) => (
 			<div
 				key={index}
@@ -47,7 +59,7 @@ const HeadBettingSection = () => {
 		));
 	};
 
-	const renderHandleEventSection = () => {
+	const renderEventTypes = () => {
 		return (
 			<MobileCarouselTab
 				data={eventTypes}
@@ -69,7 +81,7 @@ const HeadBettingSection = () => {
 
 				<div className='w-5/6'>
 					<MobileCarousel
-						renderCarouselItems={renderHandBettingSection}
+						renderCarouselItems={renderSportTypes}
 						classValue='mt-3'
 					/>
 				</div>
@@ -77,15 +89,15 @@ const HeadBettingSection = () => {
 
 			<div className='w-full h-10'>
 				<MobileCarousel
-					renderCarouselItems={renderHandleEventSection}
+					renderCarouselItems={renderEventTypes}
 					classValue='mt-1'
 				/>
 			</div>
 
 			<div className='flex items-center justify-end  w-full h-6 bg-ash mt-2'>
-				<div className='flex flex-row w-[210px] text-white text-sm mr-2'>
-					{pointHeaderValues &&
-						pointHeaderValues.map((value: string, index: number) => (
+				<div className='flex flex-row  w-[210px] text-gray-400 text-sm mr-2'>
+					{oddsHeaderValues &&
+						oddsHeaderValues.map((value: string, index: number) => (
 							<p
 								className='flex-grow p-1 text-center'
 								key={index}>

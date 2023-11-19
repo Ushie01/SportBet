@@ -1,6 +1,6 @@
 import React, { useState, ChangeEvent } from 'react';
 
-const DropdownButton = ({ goal, items }: { goal: string; items: string[] }) => {
+const DropdownButton = ({items, className}: {items: string[], className: string }) => {
 	const [selectedValue, setSelectedValue] = useState<string>('');
 	const handleSelectChange = (event: ChangeEvent<HTMLSelectElement>) => {
 		setSelectedValue(event.target.value);
@@ -8,14 +8,14 @@ const DropdownButton = ({ goal, items }: { goal: string; items: string[] }) => {
 
 	return (
 		<select
-			className='bg-green-700 h-9 w-[105px] text-sm pl-1 hover:bg-green-500  rounded-l borderless-input text-white'
+			className={className}
 			value={selectedValue}
 			onChange={handleSelectChange}>
 			<option
 				value=''
-				className='hover:bg-green-500 text-white'>{`${
-				goal ? goal : ''
-			}`}</option>
+				className='hover:bg-green-500 text-white borderless-input'>
+				2.3
+			</option>
 			{items.map((option) => (
 				<option
 					key={option}
