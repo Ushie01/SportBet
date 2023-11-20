@@ -118,7 +118,8 @@ const HeadBettingSection = ({
 				className={`flex items-center w-full h-6 ${
 					filter ? 'bg-gray-100 justify-between' : 'justify-end bg-ash '
 					} mt-2`}>
-				<p className='text-gray-800 text-[13px] px-2'>{`20/11 Monday`}</p>
+				{filter && <p className='text-gray-800 text-[13px] px-2'>{`20/11 Monday`}</p>}
+				
 				<div className='flex flex-row  w-[180px] text-gray-400 text-sm mr-2'>
 					{oddsHeaderValues &&
 						oddsHeaderValues.map((value: string, index: number) => (
