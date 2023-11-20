@@ -9,7 +9,7 @@ const SportsSection = () => {
 	return (
 		<div className='bg-white w-full'>
 			<HeadBettingSection
-				filter={true}
+				sports={true}
 				setOddsHeaderLength={setOddsHeaderLength}
 			/>
 			{MATCH_DATA.map((value, index) => (

@@ -13,15 +13,16 @@ type SportDataItem = {
 };
 
 type headBettingsSectionProps = {
-	filter: boolean;
+	sports: boolean;
 	setOddsHeaderLength: React.Dispatch<React.SetStateAction<number>>;
 };
 
 const HeadBettingSection = ({
-	filter,
+	sports,
 	setOddsHeaderLength,
 }: headBettingsSectionProps) => {
 	const { link, handleClick } = useLink('Football');
+	const { link: clickItem, handleClick: onHandleClick } = useLink('Highlights');
 	const getEventTypesByGameType = () => {
 		const result = SPORT_DATA.filter((data) => data.gameType === link);
 		return result.length > 0 ? result[0].eventType : [];
@@ -30,6 +31,7 @@ const HeadBettingSection = ({
 	const { link: clickValue, handleClick: handleTabClick } = useLink(
 		eventTypes[0]
 	);
+	const highLightTodayCountries = ['Highlights', 'Today', 'Countries'];
 
 	const oddsHeaderValues = (
 		SPORT_DATA?.find(
@@ -43,6 +45,21 @@ const HeadBettingSection = ({
 		}
 	}, [oddsHeaderValues, setOddsHeaderLength]);
 
+	const renderHighlightTodayCountries = () => {
+		return highLightTodayCountries.map((value, index) => (
+			<div
+				key={index}
+				onClick={() => onHandleClick(value)}
+				className={`w-1/3 mt-3 border-b-4 ${
+					clickItem === value
+						? 'border-b-green-500 font-bold'
+						: 'border-b-white'
+				}`}>
+				<p className='pb-3 text-center '>{value}</p>
+			</div>
+		));
+	};
+
 	const renderSportTypes = () => {
 		return SPORT_DATA.map((value, index) => (
 			<div
@@ -52,8 +69,8 @@ const HeadBettingSection = ({
 					<button
 						className={`${
 							link === value.gameType
-								? 'text-green-600 font-bold'
-								: `${filter ? 'text-gray-800' : 'text-white'}`
+								? 'text-green-500 font-bold'
+								: `${sports ? 'text-gray-800' : 'text-white'}`
 						}`}>
 						{value.gameType}
 					</button>
@@ -69,43 +86,46 @@ const HeadBettingSection = ({
 				initialState={eventTypes[0]}
 				handleTabClick={handleTabClick}
 				borderColor={`${
-					filter ? 'border-b-white' : 'border-b-darkGray font-bold'
+					sports ? 'border-b-white' : 'border-b-darkGray font-bold'
 				}`}
-				className={`${filter ? 'text-black' : 'text-white'}`}
+				className={`${sports ? 'text-black' : 'text-white'}`}
 			/>
 		);
 	};
 
 	return (
 		<div className='flex flex-col h-max mt-2'>
-			<div className='flex items-center space-x-3 px-2 w-full'>
+			<div className='flex items-center justify-between px-2 w-full'>
 				<p
 					className={`font-bold text-xl  ${
-						filter ? 'text-black' : 'text-white'
+						sports ? 'text-black' : 'text-white'
 					}`}>
 					Live
 				</p>
 				<p className='text-gray-300'>|</p>
 
-				<div className={`${filter ? 'w-4/6' : 'w-5/6 pr-2'}`}>
+				<div className={`${sports ? 'w-4/6' : 'w-5/6 pr-2'}`}>
 					<MobileCarousel
 						renderCarouselItems={renderSportTypes}
 						classValue='mt-3'
 					/>
 				</div>
 
-				{filter && (
+				{sports && (
 					<div className='border p-1'>
 						<SoftwareSorting
-							width={30}
-							height={30}
-							// onClick={handleClick}
+							width={20}
+							height={20}
 						/>
 					</div>
 				)}
 			</div>
 
-			
+			{sports && (
+				<div className='flex items-center w-full '>
+					{renderHighlightTodayCountries()}
+				</div>
+			)}
 
 			<div className='w-full h-10'>
 				<MobileCarousel
@@ -116,10 +136,12 @@ const HeadBettingSection = ({
 
 			<div
 				className={`flex items-center w-full h-6 ${
-					filter ? 'bg-gray-100 justify-between' : 'justify-end bg-ash '
-					} mt-2`}>
-				{filter && <p className='text-gray-800 text-[13px] px-2'>{`20/11 Monday`}</p>}
-				
+					sports ? 'bg-gray-100 justify-between' : 'justify-end bg-ash '
+				} mt-2`}>
+				{sports && (
+					<p className='text-gray-800 text-[13px] px-2'>{`20/11 Monday`}</p>
+				)}
+
 				<div className='flex flex-row  w-[180px] text-gray-400 text-sm mr-2'>
 					{oddsHeaderValues &&
 						oddsHeaderValues.map((value: string, index: number) => (
