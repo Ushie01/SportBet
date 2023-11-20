@@ -87,7 +87,7 @@ const HeadBettingSection = ({
 				</p>
 				<p className='text-gray-300'>|</p>
 
-				<div className={`${filter ? 'w-[280px]' : 'w-5/6 pr-2'}`}>
+				<div className={`${filter ? 'w-4/6' : 'w-5/6 pr-2'}`}>
 					<MobileCarousel
 						renderCarouselItems={renderSportTypes}
 						classValue='mt-3'
