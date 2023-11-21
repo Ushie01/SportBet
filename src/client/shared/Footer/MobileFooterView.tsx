@@ -12,9 +12,9 @@ const AgeRate = () => {
 				<FilesText
 					height={40}
 					width={40}
-					className='text-gray-500'
+					className='text-gray-400'
 				/>
-				<p className='text-2xl font-bold text-gray-500'>{'18+'}</p>
+				<p className='text-2xl font-bold text-gray-400'>{'18+'}</p>
 			</div>
 			<p className='text-[11px] text-gray-400'>
 				c 2023 LegitXBet. All rights reserved
@@ -31,7 +31,8 @@ const FooterSection = () => {
 					src='/assets/logo1.png'
 					alt='Logo alt'
 					height={40}
-					width={100}
+          width={100}
+          className='pr-2'
 				/>
 				<Image
 					src={officialSport2}
