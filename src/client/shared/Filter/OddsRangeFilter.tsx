@@ -50,7 +50,7 @@ const OddsRangeFilter = ({ setClick }: OddsRangeFilterProps) => {
 						}}
 						className={`${
 							isMobile ? 'w-full' : 'px-4'
-						} text-green-500 border py-2 shadow-lg  border-green-700`}>
+						} text-green-500 border py-2 shadow-lg  border-green-500`}>
 						Clear
 					</Button>
 					<Button

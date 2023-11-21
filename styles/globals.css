@@ -7,6 +7,10 @@
   src: url('/fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
 } */
 
+html {
+  scroll-behavior: smooth;
+}
+
 .borderless-input {
   outline: none;
 }

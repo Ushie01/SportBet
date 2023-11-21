@@ -6,7 +6,7 @@ import Search from '../../../Svg/Search';
 const MobileTopHeader = () => {
 
 	return (
-		<div className='flex items-center justify-between bg-black h-[50px] p-2'>
+		<div className='flex items-center justify-between bg-black h-[50px] p-2' id='section1'>
 			<Image
 				src='/assets/logo1.png'
 				alt='logo alt'
