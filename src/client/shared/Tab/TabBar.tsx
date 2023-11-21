@@ -116,7 +116,7 @@ export const MobileCarouselTab = ({
 					handleTabClick(value);
 				}}
 				className={`flex items-center justify-center p-2 text-center transition transform duration-1000 ease-in-out w-full border-b-4   ${
-					link === value ? `border-green-600` : `${borderColor}`
+					link === value ? `border-green-600 font-semibold` : `${borderColor}`
 				} ${className}`}>
 				<p>{value}</p>
 			</div>
