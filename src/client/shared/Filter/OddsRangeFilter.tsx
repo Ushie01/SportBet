@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
-// import { Button } from '../Button/Button';
+import { Button } from '@heathmont/moon-core-tw';
 import SliderBar from './Slider';
 import { SliderValue } from './Type';
 import { translateSliderValue } from '../Utils/TranslateSliderValue';
 import useDeviceType from '../Hooks/useDeviceType';
-import { Button } from '@heathmont/moon-core-tw';
 
 type OddsRangeFilterProps = {
 	setClick: React.Dispatch<React.SetStateAction<boolean>>;
-}
+};
 
-const OddsRangeFilter = ({setClick}: OddsRangeFilterProps) => {
+const OddsRangeFilter = ({ setClick }: OddsRangeFilterProps) => {
 	const { isMobile } = useDeviceType();
 	const [sliderValue, setSliderValue] = useState<SliderValue>({
 		min: 0,
@@ -46,16 +45,25 @@ const OddsRangeFilter = ({setClick}: OddsRangeFilterProps) => {
 						isMobile ? 'w-full' : ''
 					}`}>
 					<Button
-						onClick={() => {setClick(false)}}
+						onClick={() => {
+							setClick(false);
+						}}
 						className={`${
 							isMobile ? 'w-full' : 'px-4'
-						} text-green-500 border py-2  border-green-700`}>
+						} text-green-500 border py-2 shadow-lg  border-green-700`}>
 						Clear
 					</Button>
 					<Button
+						onClick={() => {
+							setClick(false);
+						}}
 						className={`${
 							isMobile ? 'w-full' : 'px-4'
-						} text-gray-500 border bg-gray-300 py-2`}>
+						}  border shadow-xl py-2 ${
+							sliderValue.max > 0 || sliderValue.min > 0
+								? 'bg-green-600 text-white'
+								: 'bg-gray-300 text-gray-500'
+						}`}>
 						Apply
 					</Button>
 				</div>

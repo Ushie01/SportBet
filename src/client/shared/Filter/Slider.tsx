@@ -14,7 +14,7 @@ const SliderBar: React.FC<Props> = ({ setSliderValue }) => {
 		<Slider
 			range
 			step={5}
-			defaultValue={[0, 50]}
+			defaultValue={[0, 100]}
 			onChange={handleChange}
 			onAfterChange={handleChange}
 		/>
