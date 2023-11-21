@@ -1,3 +1,6 @@
+export	const highLightTodayCountries = ['Highlights', 'Today', 'Countries'];
+
+
 export const SPORT_DATA = [
   {
     gameType: 'Football',

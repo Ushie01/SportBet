@@ -49,7 +49,8 @@ const LeftSectionHeader = ({
 					<div className={`${classes.circle} ${circleColor}`}></div>
 					<h1 className={`${classes.title} ${textColor}`}>{title}</h1>
 				</div>
-				<div className={`${classes.actionButtonsContainer} ${iconTextColor}`}>
+				<div
+					className={`${classes.actionButtonsContainer} ${iconTextColor}`}>
 					<ActionButton
 						href='#'
 						icon={<Printer color={iconColor} />}
@@ -74,8 +75,7 @@ const LeftSectionHeader = ({
 					/>
 
 					{filter && (
-						<div
-							className='flex items-center justify-end'>
+						<div className='flex items-center justify-end'>
 							<p className='text-gray-600'>Filter</p>
 							{!isClick && (
 								<SoftwareSorting
@@ -98,11 +98,11 @@ const LeftSectionHeader = ({
 					{!filter && <div className='w-12'></div>}
 				</div>
 
-				<hr className='border-gray-600'/>
+				<hr className='border-gray-600' />
 
 				{isClick && (
 					<div className='py-5'>
-						<OddsRangeFilter />
+						<OddsRangeFilter setClick={setIsClick} />
 					</div>
 				)}
 			</div>
