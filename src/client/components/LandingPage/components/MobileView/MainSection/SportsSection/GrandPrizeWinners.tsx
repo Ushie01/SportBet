@@ -20,10 +20,10 @@ const Card = ({ phoneNo, price }: { phoneNo: string; price: string }) => {
 					alt='cup alt'
 					height={100}
 					width={100}
-					className='absolute top-0 right-0'
+					className='absolute top-0 right-0 z-1000'
 				/>
 			</div>
-			<p className='text-gray-700 text-[11px]'>1 min ago</p>
+			<p className='text-gray-500 text-[11px]'>1 min ago</p>
 		</div>
 	);
 };
