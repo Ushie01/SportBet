@@ -47,9 +47,9 @@ const FooterSection = () => {
 
 			<div className='space-y-4 px-4 mt-5 w-full'>
 				<p className='p-2 text-center text-[11px] text-gray-400'>
-					Age 18 and above only to register or play at SportyBet. Play
+					Age 18 and above only to register or play at LegitXBet. Play
 					Responsibly. Betting is addictive and can be psychologically
-					harmful. | SportyBet Nigeria is licensed by National Lottery
+					harmful. | LegitXBet Nigeria is licensed by National Lottery
 					Regulatory Commission of Nigeria
 				</p>
 				<hr className='w-full border-gray-700' />
