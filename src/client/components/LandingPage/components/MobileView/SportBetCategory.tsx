@@ -1,7 +1,7 @@
 import React from 'react';
-import { SPORT_BET_CATEGORY } from '../../constant/data';
-import { Carousel } from '@heathmont/moon-core-tw';
 import Link from 'next/link';
+import { Carousel } from '@heathmont/moon-core-tw';
+import { SPORT_BET_CATEGORY } from '../../constant/data';
 import { MobileCarousel } from '@/src/client/shared/Carousel';
 
 const SportBetCategory = () => {

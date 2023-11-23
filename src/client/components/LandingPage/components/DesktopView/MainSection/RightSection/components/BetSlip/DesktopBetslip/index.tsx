@@ -3,9 +3,9 @@ import { Tab } from '@/src/client/shared/Tab/TabBar';
 import { Button } from '@/src/client/shared/Button/Button';
 import { useModal } from '@/src/client/shared/Hooks/useModal';
 import Modal from '@/src/client/shared/Modal/Modal';
-import Toggle from '@/src/client/components/LandingPage/components/DesktopView/MainSection/RightSection/components/BetSlip/Toggle';
 import DropdownText from '@/src/client/shared/Dropdown/DropdownText';
 import ModalComponent from '@/src/client/components/Auth/Components/DesktopModelView';
+import Toggle from '@/src/client/shared/Switch/Toggle';
 
 const BetSlip = () => {
 	const navItem = ['Betslip', 'Cashout'];

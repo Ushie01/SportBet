@@ -10,7 +10,7 @@ const InputText = ({ bgColor, height }: Props) => (
 		className={`flex items-center ${height} ${bgColor} opacity-90 text-xs rounded-sm `}>
 		<p className='py-2 pl-4 text-black'>+234</p>
 		<Input
-			type='text'
+			type='number'
 			placeholder='Mobile Number'
 			className={` text-black text-xs h-8 rounded-r-sm  ${bgColor}`}
 		/>

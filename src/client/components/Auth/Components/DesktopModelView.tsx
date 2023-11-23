@@ -5,7 +5,6 @@ import { Tab } from '@/src/client/shared/Tab/TabBar';
 import { useLink } from '@/src/client/shared/Hooks/useLink';
 import { useModal } from '@/src/client/shared/Hooks/useModal';
 
-
 const DesktopModalView = () => {
 	const navItem = ['Register', 'Login'];
 	const { link } = useLink('Register');

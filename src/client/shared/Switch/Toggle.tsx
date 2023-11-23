@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 const Toggle = () => {
 	const [isClick, setClick] = useState(false);
-
 	const handleClick = () => {
 		setClick(!isClick);
 	};
@@ -21,7 +20,9 @@ const Toggle = () => {
 					</>
 				) : (
 					<>
-						<p className='m-auto text-gray-400 pl-1 text-xs'>REAL</p>
+						<p className='m-auto text-gray-400 pl-1 text-xs'>
+							REAL
+						</p>
 						<span className='flex items-center justify-center p-1 text-white text-xs h-full w-1/2 rounded-2xl bg-yellow-400'>
 							SIM
 						</span>

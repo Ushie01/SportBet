@@ -8,6 +8,7 @@ import Featured from './components/MobileView/Featured';
 import LiveBettingSection from './components/MobileView/MainSection/LiveBettingSection';
 import SportsSection from './components/MobileView/MainSection/SportsSection';
 import Footer from '../../shared/Footer';
+import BetSlipButton from './components/MobileView/BetSlip';
 
 const MobileLandingPage = () => {
 	return (
@@ -20,7 +21,10 @@ const MobileLandingPage = () => {
 				<Featured />
 				<LiveBettingSection />
 				<SportsSection />
-				<Footer/>
+				<Footer />
+			</div>
+			<div className='fixed bottom-12 right-0'>
+				<BetSlipButton />
 			</div>
 			<div className='fixed bottom-0 right-0 left-0'>
 				<MobileNavbar />
