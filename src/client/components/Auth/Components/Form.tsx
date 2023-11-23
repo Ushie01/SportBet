@@ -1,14 +1,28 @@
-import React from 'react';
-import { NumberInput, TextInput } from './Input';
+import React, { useState } from 'react';
+import { Password, PhoneNo } from './Input';
 
-const Form = () => {
+type formProps = {
+	password: string;
+	phoneNo: string;
+	setPassword: Function;
+	setPhoneNo: Function;
+}
+
+const Form = ({ password, setPassword, phoneNo, setPhoneNo }: formProps) => {
+
 	return (
 		<form>
 			<div className='w-[340px] z-10000'>
-				<NumberInput />
-				<TextInput
-					type='password'
+				<PhoneNo
+				      phoneNo={phoneNo}
+					bgColor='bg-gray-100'
+					setPhoneNo={setPhoneNo}
+				/>
+				<Password
+					password={password}
+					setPassword={setPassword}
 					placeHolder='Set Password'
+					bgColor='bg-gray-200'
 				/>
 			</div>
 		</form>

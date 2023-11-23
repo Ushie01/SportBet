@@ -11,7 +11,7 @@ import LeftBgImg from '../../../../../../assets/leftBgImg.jpg';
 import RightBgImg from '../../../../../../assets/rightBgImg.jpg';
 import Container from '@/src/client/components/Container/Container';
 import Modal from '@/src/client/shared/Modal/Modal';
-import ModalComponent from '@/src/client/components/Auth/Components/ModalComponent';
+import ModalComponent from '@/src/client/components/Auth/Components/DesktopModelView';
 
 const PopularSection = () => {
 	const [selected, setSelected] = useState(0);
@@ -43,7 +43,9 @@ const PopularSection = () => {
 
 			<div className=' flex items-start justify-center w-full'>
 				<div className='flex flex-col  justify-end w-3/10 pr-10 '>
-					<p className='text-white text-xl font-semibold my-2'>Popular</p>
+					<p className='text-white text-xl font-semibold my-2'>
+						Popular
+					</p>
 					<div className='space-y-1 font-thin'>
 						{POPULAR_DATA.map((value, index) => (
 							<div key={index}>
@@ -51,7 +53,9 @@ const PopularSection = () => {
 								<Link
 									href='#'
 									className='flex items-center justify-between  space-x-12 my-2'>
-									<p className='text-white text-sm'>{value}</p>
+									<p className='text-white text-sm'>
+										{value}
+									</p>
 									<RightArrow />
 								</Link>
 							</div>
@@ -102,7 +106,7 @@ const PopularSection = () => {
 						className='h-[200px] right-[-160px] opacity-70 absolute  top-0 woman z-0'
 					/>
 				</div>
-				
+
 				{openModal && (
 					<Modal
 						className=''

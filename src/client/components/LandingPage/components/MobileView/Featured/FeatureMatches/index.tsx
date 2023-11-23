@@ -65,7 +65,7 @@ const FeatureMatches = () => {
 		<div>
 			<MobileCarousel
 				renderCarouselItems={renderFeatureMatchCup}
-				classValue='-gap-6 -px-6 -mt-1'
+				className='-gap-6 -px-6 -mt-1'
 			/>
 
 			<Carousel

@@ -15,9 +15,12 @@ const HeadBettingSection = ({
 }: headBettingsSectionProps) => {
 	const [click, setClick] = useState(false);
 	const { link, handleClick } = useLink('Football');
-	const { link: clickItem, handleClick: onHandleClick } = useLink('Highlights');
+	const { link: clickItem, handleClick: onHandleClick } =
+		useLink('Highlights');
 	const eventTypes = getEventTypesByGameType(link, SPORT_DATA);
-	const { link: clickValue, handleClick: handleTabClick } = useLink(eventTypes[0]);
+	const { link: clickValue, handleClick: handleTabClick } = useLink(
+		eventTypes[0]
+	);
 
 	const oddsHeaderValues = (
 		SPORT_DATA?.find(
@@ -93,7 +96,7 @@ const HeadBettingSection = ({
 					<div className={`${sports ? 'w-4/6' : 'w-5/6 pr-2'}`}>
 						<MobileCarousel
 							renderCarouselItems={renderSportTypes}
-							classValue='mt-3'
+							className='mt-3'
 						/>
 					</div>
 					{sports && (
@@ -117,7 +120,7 @@ const HeadBettingSection = ({
 				<div className='w-full h-10'>
 					<MobileCarousel
 						renderCarouselItems={renderEventTypes}
-						classValue='mt-1'
+						className='mt-1'
 					/>
 				</div>
 				<div

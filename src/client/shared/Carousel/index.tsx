@@ -15,7 +15,7 @@ type MenuItemProps = {
 
 type mobileCarouselProp = {
 	renderCarouselItems: () => React.ReactNode;
-	classValue: string;
+	className: string;
 };
 
 export const MenuItems: React.FC<MenuItemProps> = ({
@@ -55,11 +55,11 @@ export const CustomCarousel = ({ renderCarouselItems, selected }: Props) => {
 
 export const MobileCarousel = ({
 	renderCarouselItems,
-	classValue,
+	className,
 }: mobileCarouselProp) => {
 	return (
 		<Carousel>
-			<Carousel.Reel className={classValue}>
+			<Carousel.Reel className={className}>
 				{renderCarouselItems()}
 			</Carousel.Reel>
 		</Carousel>

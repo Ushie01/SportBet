@@ -33,8 +33,12 @@ const BettingTab = ({
 			<div className='w-full py-1 border-y'>
 				<div className='flex items-center justify-between'>
 					<div className='flex flex-col text-sx text-sm'>
-						<div className='flex flex-col text-black'>{teamOneName}</div>
-						<div className='flex flex-col text-black'>{teamTwoName}</div>
+						<div className='flex flex-col text-black'>
+							{teamOneName}
+						</div>
+						<div className='flex flex-col text-black'>
+							{teamTwoName}
+						</div>
 					</div>
 					<div className='flex items-center justify-end space-x-4'>
 						<ChartLine
@@ -48,17 +52,17 @@ const BettingTab = ({
 								<Button
 									text={win}
 									link='#'
-									classValue='h-[37px] w-[56px] hover:bg-green-500 bg-green-700 shadow-xl rounded-l text-sm text-white'
+									className='h-[37px] w-[56px] hover:bg-green-500 bg-green-700 shadow-xl rounded-l text-sm text-white'
 								/>
 								<Button
 									text={draw}
 									link='#'
-									classValue='h-[37px] w-[56px] hover:bg-green-500 bg-green-700 shadow-xl border-x border-gray-400 text-sm text-white'
+									className='h-[37px] w-[56px] hover:bg-green-500 bg-green-700 shadow-xl border-x border-gray-400 text-sm text-white'
 								/>
 								<Button
 									text={lose}
 									link='#'
-									classValue='h-[37px] w-[56px] hover:bg-green-500 bg-green-700 shadow-xl rounded-r text-sm text-white'
+									className='h-[37px] w-[56px] hover:bg-green-500 bg-green-700 shadow-xl rounded-r text-sm text-white'
 								/>
 							</div>
 
@@ -70,12 +74,12 @@ const BettingTab = ({
 								<Button
 									text={over}
 									link='#'
-									classValue='h-[37px] w-[56px]  hover:bg-green-500 bg-green-700 shadow-xl border-x border-gray-400 text-sm text-white'
+									className='h-[37px] w-[56px]  hover:bg-green-500 bg-green-700 shadow-xl border-x border-gray-400 text-sm text-white'
 								/>
 								<Button
 									text={under}
 									link='#'
-									classValue='h-[37px] w-[56px] hover:bg-green-500 bg-green-700 shadow-xl rounded-r text-sm text-white'
+									className='h-[37px] w-[56px] hover:bg-green-500 bg-green-700 shadow-xl rounded-r text-sm text-white'
 								/>
 							</div>
 						</div>

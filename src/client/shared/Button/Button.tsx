@@ -1,24 +1,63 @@
 import Link from 'next/link';
 import { useHandleClick } from '../Hooks/useHandleClick';
 
+type ActionButtonProps = {
+	text: string;
+	className: string;
+};
+
+const ActualButton = ({ text, className }: ActionButtonProps) => {
+	const { click, handleClick } = useHandleClick();
+	return (
+		<button
+			onClick={handleClick}
+			type='submit'
+			className={`transition-all transform ${
+				click ? 'scale-75' : ''
+			} ${className}`}>
+			{text}
+		</button>
+	);
+};
+
 export const Button = ({
-  text,
+	text,
 	link,
-	classValue,
+	className,
 }: {
 	text: string;
 	link: string;
-	classValue: string;
+	className: string;
 }) => {
-	const { click, handleClick } = useHandleClick();
 	return (
 		<Link href={link}>
-			<button
-				onClick={handleClick}
-				type='submit'
-				className={`scale-animation ${click ? 'active' : ''} ${classValue}`}>
-				{text}
-			</button>
+			<ActualButton
+				text={text}
+				className={className}
+			/>
+		</Link>
+	);
+};
+
+type AuthButtonProps = {
+	text: string;
+	href: string;
+	className: string;
+	setIsOpen: Function;
+};
+
+export const AuthButton = ({
+	setIsOpen,
+	text,
+	href,
+	className,
+}:  AuthButtonProps) => {
+	return (
+		<Link href={href} onClick={() => setIsOpen(true)}>
+			<ActualButton
+				text={text}
+				className={className}
+			/>
 		</Link>
 	);
 };

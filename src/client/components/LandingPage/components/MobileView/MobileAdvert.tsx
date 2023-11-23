@@ -27,7 +27,7 @@ const MobileAdvert = () => {
 	return (
 		<MobileCarousel
 			renderCarouselItems={renderCarouselItems}
-			classValue='gap-0'
+			className='gap-0'
 		/>
 	);
 };

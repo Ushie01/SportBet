@@ -12,7 +12,9 @@ const FeatureGames = () => {
 
 	const renderFeatureGameCup = () => {
 		const uniqueCups = FEATURED_GAME.filter((value, index, self) => {
-			return index === self.findIndex((v) => v.gameType === value.gameType);
+			return (
+				index === self.findIndex((v) => v.gameType === value.gameType)
+			);
 		});
 
 		return uniqueCups.map((value, index) => (
@@ -53,7 +55,7 @@ const FeatureGames = () => {
 		<div>
 			<MobileCarousel
 				renderCarouselItems={renderFeatureGameCup}
-				classValue='-gap-6 -px-6 -mt-1'
+				className='-gap-6 -px-6 -mt-1'
 			/>
 
 			<Carousel

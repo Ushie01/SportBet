@@ -16,21 +16,23 @@ const SportBetCategory = () => {
 							height={28}
 							width={28}
 						/>
-						<p className='flex flex-col items-center justify-start text-xs text-center'>{value.title}</p>
+						<p className='flex flex-col items-center justify-start text-xs text-center'>
+							{value.title}
+						</p>
 					</Link>
 				</Carousel.Item>
 			</div>
 		));
 	};
 
-    return (
-			<div className='px-2 -my-3'>
-				<MobileCarousel
-					renderCarouselItems={renderCarouselItems}
-					classValue='px-2'
-				/>
-			</div>
-		);
+	return (
+		<div className='px-2 -my-3'>
+			<MobileCarousel
+				renderCarouselItems={renderCarouselItems}
+				className='px-2'
+			/>
+		</div>
+	);
 };
 
 export default SportBetCategory;

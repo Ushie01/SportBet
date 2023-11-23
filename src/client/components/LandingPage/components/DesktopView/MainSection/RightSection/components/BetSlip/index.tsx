@@ -5,7 +5,7 @@ import { useModal } from '@/src/client/shared/Hooks/useModal';
 import Modal from '@/src/client/shared/Modal/Modal';
 import Toggle from '@/src/client/components/LandingPage/components/DesktopView/MainSection/RightSection/components/BetSlip/Toggle';
 import DropdownText from '@/src/client/shared/Dropdown/DropdownText';
-import ModalComponent from '@/src/client/components/Auth/Components/ModalComponent';
+import ModalComponent from '@/src/client/components/Auth/Components/DesktopModelView';
 
 const BetSlip = () => {
 	const navItem = ['Betslip', 'Cashout'];
@@ -23,7 +23,7 @@ const BetSlip = () => {
 					setTabValue={setTabValue}
 					handleTabClick={handleClick}
 					borderColor='border-green-500'
-				  borderBottomColor='border-b-gray-900'
+					borderBottomColor='border-b-gray-900'
 				/>
 				<div className='pt-3 pb-1'>
 					<Toggle />
@@ -31,7 +31,9 @@ const BetSlip = () => {
 			</div>
 
 			<div className='px-3 py-5 bg-white text-sm'>
-				<p>To place a bet, click on the odds. Or insert a booking code</p>
+				<p>
+					To place a bet, click on the odds. Or insert a booking code
+				</p>
 
 				<div className='flex flex-col space-y-2 mt-4'>
 					<DropdownText />
@@ -43,7 +45,7 @@ const BetSlip = () => {
 					<Button
 						text='Load'
 						link='#'
-						classValue={`${
+						className={`${
 							inputValue
 								? 'bg-green-600 text-white'
 								: 'bg-gray-500 text-black opacity-40'
@@ -53,8 +55,8 @@ const BetSlip = () => {
 
 				<div className='bg-white opacity-30 mt-3'>
 					<p>
-						A booking code enables one to transfer a betslip between different
-						devices.
+						A booking code enables one to transfer a betslip between
+						different devices.
 					</p>
 				</div>
 			</div>

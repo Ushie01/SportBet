@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import Login from '../Login';
-import Register from '../Register';
+import Login from '../Login/DesktopLogin';
+import Register from '../Register/DesktopRegister';
 import { Tab } from '@/src/client/shared/Tab/TabBar';
 import { useLink } from '@/src/client/shared/Hooks/useLink';
 import { useModal } from '@/src/client/shared/Hooks/useModal';
 
 
-const ModalComponent = () => {
+const DesktopModalView = () => {
 	const navItem = ['Register', 'Login'];
 	const { link } = useLink('Register');
 	const { handleClick } = useModal();
@@ -33,4 +33,4 @@ const ModalComponent = () => {
 	);
 };
 
-export default ModalComponent;
+export default DesktopModalView;

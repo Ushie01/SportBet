@@ -26,7 +26,9 @@ const BettingTab = ({
 			<div className='flex'>
 				<div className='w-4 sectionbet h-12 bg-green-600'></div>
 				<div className='flex flex-col text-sm py-1 section pl-1'>
-					<div className='flex flex-col font-bold text-white text-sm'>Set3</div>
+					<div className='flex flex-col font-bold text-white text-sm'>
+						Set3
+					</div>
 				</div>
 			</div>
 
@@ -47,17 +49,17 @@ const BettingTab = ({
 								<Button
 									text={win}
 									link='#'
-									classValue='h-[37px] w-[56px] hover:bg-green-500 bg-green-700 shadow-xl rounded-l text-sm text-white'
+									className='h-[37px] w-[56px] hover:bg-green-500 bg-green-700 shadow-xl rounded-l text-sm text-white'
 								/>
 								<Button
 									text={draw}
 									link='#'
-									classValue='h-[37px] w-[56px] hover:bg-green-500 bg-green-700 shadow-xl border-x border-gray-900 text-sm text-white'
+									className='h-[37px] w-[56px] hover:bg-green-500 bg-green-700 shadow-xl border-x border-gray-900 text-sm text-white'
 								/>
 								<Button
 									text={lose}
 									link='#'
-									classValue='h-[37px] w-[56px] hover:bg-green-500 bg-green-700 shadow-xl rounded-r text-sm text-white'
+									className='h-[37px] w-[56px] hover:bg-green-500 bg-green-700 shadow-xl rounded-r text-sm text-white'
 								/>
 							</div>
 
@@ -69,12 +71,12 @@ const BettingTab = ({
 								<Button
 									text={over}
 									link='#'
-									classValue='h-[37px] w-[56px]  hover:bg-green-500 bg-green-700 border-x border-gray-900  shadow-xl border-x text-sm text-white'
+									className='h-[37px] w-[56px]  hover:bg-green-500 bg-green-700 border-x border-gray-900  shadow-xl border-x text-sm text-white'
 								/>
 								<Button
 									text={under}
 									link='#'
-									classValue='h-[37px] w-[56px] hover:bg-green-500 bg-green-700 shadow-xl rounded-r text-sm text-white'
+									className='h-[37px] w-[56px] hover:bg-green-500 bg-green-700 shadow-xl rounded-r text-sm text-white'
 								/>
 							</div>
 						</div>

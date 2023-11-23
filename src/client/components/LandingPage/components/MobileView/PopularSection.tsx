@@ -19,14 +19,14 @@ const PopularCategory = () => {
 		));
 	};
 
-    return (
-			<div className='px-2'> 
-				<MobileCarousel
-					renderCarouselItems={renderCarouselItems}
-					classValue='-space-x-3'
-				/>
-			</div>
-		);
+	return (
+		<div className='px-2'>
+			<MobileCarousel
+				renderCarouselItems={renderCarouselItems}
+				className='-space-x-3'
+			/>
+		</div>
+	);
 };
 
 export default PopularCategory;
