@@ -29,7 +29,7 @@ const MobileRegister = () => {
 					}`}
 				/>
 
-				<p className='text-green-500 text-center'>
+				<p className='text-green-500 text-center text-xs'>
 					Already have an account? Log In
 				</p>
 			</div>

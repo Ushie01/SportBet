@@ -46,7 +46,7 @@ const MobileLogin = () => {
 				<hr className='w-full' />
 			</div>
 
-			<p className='text-gray-400 mt-8'>
+			<p className='text-gray-400 mt-8 text-sm text-center'>
 				To deactive or reactivate your action{' '}
 				<Link
 					href='#'
