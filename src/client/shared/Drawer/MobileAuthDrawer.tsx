@@ -21,7 +21,7 @@ const MobileAuthDrawer = ({button, content, isOpen, setIsOpen}: AuthDrawerProps)
 						<div className='flex fixed right-2'>
 							<ControlsClose
 								fill='gray'
-								className='text-gray-400'
+								className='text-gray-700'
 								height={28}
 								width={28}
 								onClick={() => setIsOpen(false)}
