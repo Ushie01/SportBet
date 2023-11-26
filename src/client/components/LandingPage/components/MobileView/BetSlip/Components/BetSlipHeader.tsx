@@ -3,13 +3,12 @@ import Toggle from '@/src/client/shared/Switch/Toggle';
 import MobileLogin from '@/src/client/components/Auth/Login/MobileLogin';
 import MobileRegister from '@/src/client/components/Auth/Register/MobileRegister';
 import { renderAuthDrawer } from '@/src/client/shared/Drawer/RenderAuthDrawer';
-import { useVisibilityControl } from '@/src/client/shared/Hooks/useDrawer';
+import { useVisibilityControl } from '@/src/client/shared/Hooks/useVisibilityControl';
 import { ControlsChevronDown } from '@heathmont/moon-icons-tw';
-
 
 type BetSlipHeaderProps = {
 	setIsDrawerOpen: Function;
-}
+};
 
 const BetSlipHeader: React.FC<BetSlipHeaderProps> = ({ setIsDrawerOpen }) => {
 	const {

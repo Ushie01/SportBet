@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Tab } from '@/src/client/shared/Tab/TabBar';
 import { Button } from '@/src/client/shared/Button/Button';
-import { useModal } from '@/src/client/shared/Hooks/useModal';
+import { useVisibilityControl } from '@/src/client/shared/Hooks/useVisibilityControl';
 import Modal from '@/src/client/shared/Modal/Modal';
 import DropdownText from '@/src/client/shared/Dropdown/DropdownText';
 import ModalComponent from '@/src/client/components/Auth/Components/DesktopModelView';
@@ -11,7 +11,7 @@ const BetSlip = () => {
 	const navItem = ['Betslip', 'Cashout'];
 	const [tabValue, setTabValue] = useState('');
 	const [inputValue, setInputValue] = useState('');
-	const { openModal, setOpenModal, handleClick } = useModal();
+	const { isOpen, setIsOpen, handleClick } = useVisibilityControl();
 
 	return (
 		<div className='w-full border-4 border-gray-900'>
@@ -64,8 +64,8 @@ const BetSlip = () => {
 			{tabValue === 'Cashout' && (
 				<Modal
 					className=''
-					openModal={openModal}
-					setOpenModal={setOpenModal}
+					openModal={isOpen}
+					setOpenModal={setIsOpen}
 					modalContent={<ModalComponent />}
 				/>
 			)}

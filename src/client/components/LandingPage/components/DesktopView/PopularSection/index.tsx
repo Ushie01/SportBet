@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useModal } from '@/src/client/shared/Hooks/useModal';
+import { useVisibilityControl } from '@/src/client/shared/Hooks/useVisibilityControl';
 import { Button, Carousel } from '@heathmont/moon-core-tw';
 import { CustomCarousel, MenuItems } from '@/src/client/shared/Carousel';
 import { POPULAR_CAROUSEL_IMAGE, POPULAR_DATA } from '../../../constant/data';
@@ -15,7 +15,7 @@ import ModalComponent from '@/src/client/components/Auth/Components/DesktopModel
 
 const PopularSection = () => {
 	const [selected, setSelected] = useState(0);
-	const { openModal, setOpenModal, handleClick } = useModal();
+	const { openModal, setOpenModal, handleClick } = useVisibilityControl();
 
 	const renderCarouselItems = () => {
 		return POPULAR_CAROUSEL_IMAGE?.map((value, index) => (

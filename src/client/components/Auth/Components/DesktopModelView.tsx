@@ -3,13 +3,13 @@ import Login from '../Login/DesktopLogin';
 import Register from '../Register/DesktopRegister';
 import { Tab } from '@/src/client/shared/Tab/TabBar';
 import { useLink } from '@/src/client/shared/Hooks/useLink';
-import { useModal } from '@/src/client/shared/Hooks/useModal';
+import { useVisibilityControl } from '@/src/client/shared/Hooks/useVisibilityControl';
 
 const DesktopModalView = () => {
 	const navItem = ['Register', 'Login'];
 	const { link } = useLink('Register');
-	const { handleClick } = useModal();
-	const [tabValue, setTabValue] = useState('Register'); 
+	const { handleClick } = useVisibilityControl();
+	const [tabValue, setTabValue] = useState('Register');
 
 	return (
 		<div className='flex flex-col items-center justify-center'>

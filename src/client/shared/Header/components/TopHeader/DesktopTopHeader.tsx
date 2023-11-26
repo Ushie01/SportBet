@@ -5,10 +5,10 @@ import { Button, Input } from '@heathmont/moon-core-tw';
 import ModalComponent from '@/src/client/components/Auth/Components/DesktopModelView';
 import Modal from '../../../Modal/Modal';
 import InputText from '../../../Input/Input';
-import { useModal } from '../../../Hooks/useModal';
+import { useVisibilityControl } from '../../../Hooks/useVisibilityControl';
 
 const DesktopTopHeader = () => {
-	const { openModal, setOpenModal, handleClick } = useModal();
+	const { openModal, setOpenModal, handleClick } = useVisibilityControl();
 
 	return (
 		<div className='flex items-start justify-between w-full py-5'>

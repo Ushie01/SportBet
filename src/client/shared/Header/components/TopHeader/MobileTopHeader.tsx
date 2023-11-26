@@ -4,7 +4,7 @@ import Search from '../../../Svg/Search';
 import MobileRegister from '@/src/client/components/Auth/Register/MobileRegister';
 import MobileLogin from '@/src/client/components/Auth/Login/MobileLogin';
 import { renderAuthDrawer } from '../../../Drawer/RenderAuthDrawer';
-import { useVisibilityControl } from '../../../Hooks/useDrawer';
+import { useVisibilityControl } from '../../../Hooks/useVisibilityControl';
 
 const MobileTopHeader = () => {
 	const {
@@ -18,7 +18,6 @@ const MobileTopHeader = () => {
 		setIsOpen: setLoginIsOpen,
 		handleClick: handleLoginClick,
 	} = useVisibilityControl();
-
 
 	return (
 		<div className='relative'>

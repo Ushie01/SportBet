@@ -1,9 +1,13 @@
 import React from 'react';
 import { Drawer } from '@heathmont/moon-core-tw';
-import { useVisibilityControl } from '../Hooks/useDrawer';
+import { useVisibilityControl } from '../Hooks/useVisibilityControl';
 import BetSlipHeader from '../../components/LandingPage/components/MobileView/BetSlip/Components/BetSlipHeader';
 
-const MobileBetSlipDrawer = ({drawerContent}: {drawerContent: React.JSX.Element;}) => {
+const MobileBetSlipDrawer = ({
+	drawerContent,
+}: {
+	drawerContent: React.JSX.Element;
+}) => {
 	const { isOpen, setIsOpen, handleClick } = useVisibilityControl();
 
 	return (
@@ -25,9 +29,7 @@ const MobileBetSlipDrawer = ({drawerContent}: {drawerContent: React.JSX.Element;
 					className='bg-white border-t z-10000'>
 					<div className='h-max'>
 						<div className='flex flex-col'>
-							<BetSlipHeader
-								setIsDrawerOpen={setIsOpen}
-							/>
+							<BetSlipHeader setIsDrawerOpen={setIsOpen} />
 							{drawerContent}
 						</div>
 					</div>
