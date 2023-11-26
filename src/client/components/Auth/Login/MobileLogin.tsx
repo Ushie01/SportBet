@@ -51,7 +51,7 @@ const MobileLogin = () => {
 				<Link
 					href='#'
 					className='text-green-500'>
-					click href
+					click here
 				</Link>
 			</p>
 		</div>

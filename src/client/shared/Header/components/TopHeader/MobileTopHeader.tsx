@@ -1,16 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import Search from '../../../Svg/Search';
-import { AuthButton } from '../../../Button/Button';
-import MobileModal from '../../../Modal/MobileModal';
 import MobileRegister from '@/src/client/components/Auth/Register/MobileRegister';
 import MobileLogin from '@/src/client/components/Auth/Login/MobileLogin';
+import { renderAuthDrawer } from '../../../Drawer/RenderAuthDrawer';
+import { useVisibilityControl } from '../../../Hooks/useDrawer';
 
 const MobileTopHeader = () => {
-	const [isOpen, setIsOpen] = useState(false);
-	const closeModal = () => setIsOpen(false);
-	const hash = window.location.hash;
-	const urlRoute = hash.slice(1);
+	const {
+		isOpen: isRegisterOpen,
+		setIsOpen: setRegisterIsOpen,
+		handleClick: handleRegisterClick,
+	} = useVisibilityControl();
+
+	const {
+		isOpen: isLoginOpen,
+		setIsOpen: setLoginIsOpen,
+		handleClick: handleLoginClick,
+	} = useVisibilityControl();
+
 
 	return (
 		<div className='relative'>
@@ -30,29 +38,22 @@ const MobileTopHeader = () => {
 						height='18'
 					/>
 					<div className='flex items-center space-x-3'>
-						<AuthButton
-							href='/#Register'
-							setIsOpen={setIsOpen}
-							text='Join New'
-							className='text-gold bg-white text-xs p-2 rounded-sm shadow-md'
-						/>
-						<AuthButton
-							href='/#Login'
-							setIsOpen={setIsOpen}
-							text='Log In'
-							className='text-white py-2 text-xs px-2 border rounded-sm shadow-md border-white'
-						/>
-						<MobileModal
-							isOpen={isOpen}
-							closeModal={closeModal}
-							modalContent={
-								urlRoute === 'Register' ? (
-									<MobileRegister />
-								) : (
-									<MobileLogin />
-								)
-							}
-						/>
+						{renderAuthDrawer(
+							'Join Now',
+							isRegisterOpen,
+							'text-gold bg-white text-xs p-2 rounded-sm shadow-md',
+							setRegisterIsOpen,
+							handleRegisterClick,
+							<MobileRegister />
+						)}
+						{renderAuthDrawer(
+							'Log In',
+							isLoginOpen,
+							'text-white py-2 text-xs px-2 border rounded-sm shadow-md border-white',
+							setLoginIsOpen,
+							handleLoginClick,
+							<MobileLogin />
+						)}
 					</div>
 				</div>
 			</div>

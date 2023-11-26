@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Modal,  IconButton } from '@heathmont/moon-core-tw';
 import { ControlsCloseSmall } from '@heathmont/moon-icons-tw';
 

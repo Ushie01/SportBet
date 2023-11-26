@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from 'react';
 import { ControlsClose } from '@heathmont/moon-icons-tw';
 
 type ModalProps = {
@@ -8,7 +8,12 @@ type ModalProps = {
 	setOpenModal: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const Modal = ({modalContent, openModal, setOpenModal, className}: ModalProps) => {
+const Modal = ({
+	modalContent,
+	openModal,
+	setOpenModal,
+	className,
+}: ModalProps) => {
 	return (
 		<div>
 			{openModal && (
