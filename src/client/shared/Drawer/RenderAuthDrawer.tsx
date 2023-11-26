@@ -1,12 +1,12 @@
-import MobileAuthDrawer from "./MobileAuthDrawer";
+import MobileAuthDrawer from './MobileAuthDrawer';
 
 export const renderAuthDrawer = (
 	label: string,
-      isOpen: boolean,
-      className: string,
+	isOpen: boolean,
+	className: string,
 	setIsOpen: (value: boolean) => void,
 	handleClick: Function,
-	content: React.ReactNode
+	content: React.JSX.Element
 ) => (
 	<MobileAuthDrawer
 		isOpen={isOpen}

@@ -4,7 +4,7 @@ import {Drawer } from '@heathmont/moon-core-tw';
 
 type AuthDrawerProps = {
       button: React.JSX.Element;
-      content: any;
+      content: React.JSX.Element;
       isOpen: boolean;
       setIsOpen: (value: boolean) => void;
 }
@@ -17,8 +17,8 @@ const MobileAuthDrawer = ({button, content, isOpen, setIsOpen}: AuthDrawerProps)
 				open={isOpen}
 				setOpen={setIsOpen}>
 				<Drawer.Panel position='bottom'>
-					<div className='p-3 h-screen w-screen bg-white'>
-						<div className='flex fixed right-5 top-5'>
+					<div className='p-3 h-screen w-screen bg-white pt-28'>
+						<div className='flex fixed right-2'>
 							<ControlsClose
 								fill='gray'
 								className='text-gray-400'
