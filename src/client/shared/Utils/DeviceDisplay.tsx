@@ -14,8 +14,14 @@ const DeviceDisplay: React.FC<Props> = ({
 	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
-		setIsLoading(false);
-	}, []);
+		const fetchData = async () => {
+			setTimeout(() => {
+				setIsLoading(false);
+			}, 2000);
+		};
+
+		fetchData();
+	}, []); 
 
 	if (isLoading) {
 		return (
@@ -30,4 +36,5 @@ const DeviceDisplay: React.FC<Props> = ({
 	}
 	return desktopViewDisplay;
 };
+
 export default DeviceDisplay;
