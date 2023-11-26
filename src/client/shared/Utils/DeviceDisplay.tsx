@@ -17,9 +17,8 @@ const DeviceDisplay: React.FC<Props> = ({
 		const fetchData = async () => {
 			setTimeout(() => {
 				setIsLoading(false);
-			}, 2000);
+			}, 5000);
 		};
-
 		fetchData();
 	}, []); 
 
