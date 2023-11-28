@@ -13,7 +13,7 @@ const MobileLogin = () => {
 			<div className='flex flex-col space-y-6'>
                         <PhoneNo
                               phoneNo={phoneNo}
-					bgColor='white'
+					bgColor='bg-white'
 					setPhoneNo={setPhoneNo}
 				/>
 

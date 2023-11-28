@@ -53,8 +53,8 @@ export const Password = ({
 				className={`h-full borderless-input pl-4 hover:border-green-500 w-full ${bgColor}`}
 				required
 			/>
-			
-			<button
+
+			{/* <button
 				type='button'
 				onClick={handleToggleVisibility}>
 				{showPassword ? (
@@ -72,7 +72,7 @@ export const Password = ({
 						className='m-1'
 					/>
 				)}
-			</button>
+			</button> */}
 		</div>
 	);
 };
