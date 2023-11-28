@@ -57,12 +57,20 @@ export const Password = ({
 			<button
 				type='button'
 				onClick={handleToggleVisibility}>
+				{!showPassword ? (
+					<ControlsEyeCrossed
+						height={30}
+						width={30}
+						className='m-1 text-gray-900'
+					/>
+				) : (
 					<ControlsEye
 						height={30}
 						width={30}
 						color='gray'
-						className='m-1'
+						className='m-1 text-gray-900'
 					/>
+				)}
 			</button>
 		</div>
 	);

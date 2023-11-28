@@ -15,7 +15,7 @@ import ModalComponent from '@/src/client/components/Auth/Components/DesktopModel
 
 const PopularSection = () => {
 	const [selected, setSelected] = useState(0);
-	const { openModal, setOpenModal, handleClick } = useVisibilityControl();
+	const { isOpen, setIsOpen, handleClick } = useVisibilityControl();
 
 	const renderCarouselItems = () => {
 		return POPULAR_CAROUSEL_IMAGE?.map((value, index) => (
@@ -107,11 +107,11 @@ const PopularSection = () => {
 					/>
 				</div>
 
-				{openModal && (
+				{isOpen && (
 					<Modal
 						className=''
-						openModal={openModal}
-						setOpenModal={setOpenModal}
+						openModal={isOpen}
+						setOpenModal={setIsOpen}
 						modalContent={<ModalComponent />}
 					/>
 				)}
