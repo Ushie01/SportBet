@@ -53,6 +53,7 @@ export const Password = ({
 				className={`h-full borderless-input pl-4 hover:border-green-500 w-full ${bgColor}`}
 				required
 			/>
+			
 			<button
 				type='button'
 				onClick={handleToggleVisibility}>
