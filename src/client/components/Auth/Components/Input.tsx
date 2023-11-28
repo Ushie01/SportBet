@@ -54,7 +54,7 @@ export const Password = ({
 				required
 			/>
 
-			{/* <button
+			<button
 				type='button'
 				onClick={handleToggleVisibility}>
 				{showPassword ? (
@@ -72,7 +72,7 @@ export const Password = ({
 						className='m-1'
 					/>
 				)}
-			</button> */}
+			</button>
 		</div>
 	);
 };
