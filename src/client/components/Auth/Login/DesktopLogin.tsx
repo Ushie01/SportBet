@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useMutation } from '@tanstack/react-query';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Form from '../Components/Form';
 import { signIn } from '@/src/helper/api/auth';
-import { Button, Loader } from '@heathmont/moon-core-tw';
 import CheckBox from '@/src/client/shared/CheckBox/CheckBox';
+import { ErrorToast, SuccessToast } from '@/src/client/shared/ToastBar';
+import { AuthButton } from '../Components/DesktopButton';
+import { ResponseMsg } from '../Components/ResponseMsg';
 
 const DesktopLogin = () => {
 	const [response, setResponse] = useState('');
@@ -12,27 +16,23 @@ const DesktopLogin = () => {
 	const [phoneNumber, setPhoneNumber] = useState('');
 	const mutation = useMutation({ mutationFn: signIn });
 
-	const handleRegister = async () => {
+	const handleLogin = async () => {
 		const values = { phoneNumber, password };
 		if (values.phoneNumber && values.password) {
 			const payload = await mutation.mutateAsync(values);
 			setResponse(payload?.message);
+			if (response.includes('found')) {
+				ErrorToast({ text: 'Login Failed' });
+			} else {
+				SuccessToast({ text: 'Successfully Login' });
+			}
 		}
 	};
 
 	return (
 		<form className='flex flex-col items-center'>
-			{response && (
-				<p
-					className={`flex text-center font-bold pb-3 text-green-500 ${
-						response.includes('found')
-							? 'text-red-600'
-							: 'text-green-600'
-					}`}>
-					{response}
-				</p>
-			)}
-
+			<ResponseMsg response={response} />
+			<ToastContainer />
 			<Form
 				setPassword={setPassword}
 				setPhoneNo={setPhoneNumber}
@@ -53,16 +53,14 @@ const DesktopLogin = () => {
 					</Link>
 				</div>
 
-				<Button
-					onClick={handleRegister}
-					className={`h-12 my-7 w-[340px]  ${
-						phoneNumber.length > 0 && password.length > 0
-							? 'bg-green-500 text-white'
-							: 'bg-gray-200 text-gray-400 disabled'
-					}`}
-					disabled={mutation.isPending}>
-					{mutation.isPending ? <Loader size='xs' /> : 'Register'}
-				</Button>
+				<AuthButton
+					buttonName='Log In'
+					phoneNumber={phoneNumber}
+					className='h-12 my-7 w-[340px] '
+					password={password}
+					mutation={mutation}
+					handle={handleLogin}
+				/>
 			</div>
 		</form>
 	);
