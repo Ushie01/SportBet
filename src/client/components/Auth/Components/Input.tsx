@@ -1,3 +1,6 @@
+import { useState } from 'react';
+import { ControlsEye, ControlsEyeCrossed } from "@heathmont/moon-icons-tw";
+
 export const PhoneNo = ({
 	phoneNo,
 	bgColor,
@@ -35,14 +38,40 @@ export const Password = ({
 	setPassword,
 	bgColor,
 }: PasswordProps) => {
+	const [showPassword, setShowPassword] = useState<boolean>(false);
+	const handleToggleVisibility= () => {
+		setShowPassword(!showPassword);
+	};
+	
 	return (
-		<input
-			value={password}
-			onChange={(e) => setPassword(e.target.value)}
-			type='password'
-			placeholder={placeHolder}
-			className={`h-16 pl-4 w-full borderless-input pr-4 border hover:border-green-500 ${bgColor}`}
-			required
-		/>
+		<div className='flex h-16 w-full border hover:border-green-500'>
+			<input
+				value={password}
+				onChange={(e) => setPassword(e.target.value)}
+				type={showPassword ? 'text' : 'password'}
+				placeholder={placeHolder}
+				className={`h-full borderless-input pl-4 hover:border-green-500 w-full ${bgColor}`}
+				required
+			/>
+			<button
+				type='button'
+				onClick={handleToggleVisibility}>
+				{showPassword ? (
+					<ControlsEye
+						height={35}
+						width={35}
+						color='gray'
+						className='m-1'
+					/>
+				) : (
+					<ControlsEyeCrossed
+						height={35}
+						width={35}
+						color='gray'
+						className='m-1'
+					/>
+				)}
+			</button>
+		</div>
 	);
 };

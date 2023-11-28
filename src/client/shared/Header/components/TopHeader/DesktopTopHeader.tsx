@@ -8,7 +8,7 @@ import InputText from '../../../Input/Input';
 import { useVisibilityControl } from '../../../Hooks/useVisibilityControl';
 
 const DesktopTopHeader = () => {
-	const { openModal, setOpenModal, handleClick } = useVisibilityControl();
+	const { isOpen, setIsOpen, handleClick } = useVisibilityControl();
 
 	return (
 		<div className='flex items-start justify-between w-full py-5'>
@@ -66,11 +66,11 @@ const DesktopTopHeader = () => {
 					</div>
 				</div>
 
-				{openModal && (
+				{isOpen && (
 					<Modal
 						className=''
-						openModal={openModal}
-						setOpenModal={setOpenModal}
+						openModal={isOpen}
+						setOpenModal={setIsOpen}
 						modalContent={<ModalComponent />}
 					/>
 				)}

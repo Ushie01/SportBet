@@ -9,7 +9,7 @@ type AuthDrawerProps = {
       setIsOpen: (value: boolean) => void;
 }
 
-const MobileAuthDrawer = ({button, content, isOpen, setIsOpen}: AuthDrawerProps) => {	// const handleBottomClick = () => setIsBottomOpen(true);
+const MobileAuthDrawer = ({button, content, isOpen, setIsOpen}: AuthDrawerProps) => {	
 	return (
 		<>
 			{button}

@@ -22,7 +22,7 @@ const Form = ({ password, setPassword, phoneNo, setPhoneNo }: formProps) => {
 					password={password}
 					setPassword={setPassword}
 					placeHolder='Set Password'
-					bgColor='bg-gray-200'
+					bgColor='bg-gray-100'
 				/>
 			</div>
 		</form>
