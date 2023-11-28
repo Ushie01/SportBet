@@ -20,16 +20,16 @@ export const signUp: (payload: SignUpPayload) => Promise<any> = async (payload) 
 };
 
 
-// export const signUp = async (payload) => {
-//     try {
-//         return await (await fetch(`${baseUrl}/users/signup`, {
-//             method: 'POST',
-//             headers: {
-//                 'Content-type': 'application/json',
-//             },
-//             body: JSON.stringify(payload)
-//         })).json()
-//     } catch (error) {
-//         console.log(error)
-//     }
-// }
+export const signIn: (payload: SignUpPayload) => Promise<any> = async (payload) => {
+    try {
+        return await (await fetch(`${baseUrl}/auth/login`, {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json',
+            },
+            body: JSON.stringify(payload)
+        })).json()
+    } catch (error) {
+        console.log(error)
+    }
+};

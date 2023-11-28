@@ -58,15 +58,15 @@ export const Password = ({
 				onClick={handleToggleVisibility}>
 				{showPassword ? (
 					<ControlsEye
-						height={35}
-						width={35}
+						height={30}
+						width={30}
 						color='gray'
 						className='m-1'
 					/>
 				) : (
 					<ControlsEyeCrossed
-						height={35}
-						width={35}
+						height={30}
+						width={30}
 						color='gray'
 						className='m-1'
 					/>
