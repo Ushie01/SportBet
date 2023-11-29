@@ -4,7 +4,7 @@ import { Button } from '@/src/client/shared/Button/Button';
 import { useVisibilityControl } from '@/src/client/shared/Hooks/useVisibilityControl';
 import Modal from '@/src/client/shared/Modal/Modal';
 import DropdownText from '@/src/client/shared/Dropdown/DropdownText';
-import ModalComponent from '@/src/client/components/Auth/Components/DesktopModelView';
+import ModalComponent from '@/src/client/components/Auth/User/Components/DesktopModelView';
 import Toggle from '@/src/client/shared/Switch/Toggle';
 
 const BetSlip = () => {

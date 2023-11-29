@@ -11,7 +11,7 @@ import LeftBgImg from '../../../../../../assets/leftBgImg.jpg';
 import RightBgImg from '../../../../../../assets/rightBgImg.jpg';
 import Container from '@/src/client/components/Container/Container';
 import Modal from '@/src/client/shared/Modal/Modal';
-import ModalComponent from '@/src/client/components/Auth/Components/DesktopModelView';
+import ModalComponent from '@/src/client/components/Auth/User/Components/DesktopModelView';
 
 const PopularSection = () => {
 	const [selected, setSelected] = useState(0);

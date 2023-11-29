@@ -1,37 +1,37 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { useMutation } from '@tanstack/react-query';
-import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Form from '../Components/Form';
-import { signIn } from '@/src/helper/api/auth';
 import CheckBox from '@/src/client/shared/CheckBox/CheckBox';
-import { ErrorToast, SuccessToast } from '@/src/client/shared/ToastBar';
+import { signIn } from '@/src/helper/api/auth';
 import { AuthButton } from '../Components/DesktopButton';
+import { useMutation } from '@tanstack/react-query';
 import { ResponseMsg } from '../Components/ResponseMsg';
+import { ToastContainer } from 'react-toastify';
+import { useAuthAccess } from '../../../../shared/Hooks/useAuthAccess';
 
 const DesktopLogin = () => {
-	const [response, setResponse] = useState('');
-	const [password, setPassword] = useState('');
-	const [phoneNumber, setPhoneNumber] = useState('');
-	const mutation = useMutation({ mutationFn: signIn });
+	const mutation = useMutation({mutationFn: signIn});
 
-	const handleLogin = async () => {
-		const values = { phoneNumber, password };
-		if (values.phoneNumber && values.password) {
-			const payload = await mutation.mutateAsync(values);
-			setResponse(payload?.message);
-			if (response.includes('found')) {
-				ErrorToast({ text: 'Login Failed' });
-			} else {
-				SuccessToast({ text: 'Successfully Login' });
-			}
-		}
-	};
+	const {
+		response,
+		password,
+		setPassword,
+		phoneNumber,
+		setPhoneNumber,
+		handleClick,
+	} = useAuthAccess({
+		mutation,
+		failedResText: 'found',
+		successfulResText: 'successful',
+	});
 
 	return (
 		<form className='flex flex-col items-center'>
-			<ResponseMsg response={response} />
+			<ResponseMsg
+				response={response}
+				failedResText='found'
+			/>
 			<ToastContainer />
 			<Form
 				setPassword={setPassword}
@@ -59,7 +59,7 @@ const DesktopLogin = () => {
 					className='h-12 my-7 w-[340px] '
 					password={password}
 					mutation={mutation}
-					handle={handleLogin}
+					handle={handleClick}
 				/>
 			</div>
 		</form>

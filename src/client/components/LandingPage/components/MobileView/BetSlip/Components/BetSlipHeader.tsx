@@ -1,7 +1,7 @@
 import React from 'react';
 import Toggle from '@/src/client/shared/Switch/Toggle';
-import MobileLogin from '@/src/client/components/Auth/Login/MobileLogin';
-import MobileRegister from '@/src/client/components/Auth/Register/MobileRegister';
+import MobileLogin from '@/src/client/components/Auth/User/Login/MobileLogin';
+import MobileRegister from '@/src/client/components/Auth/User/Register/MobileRegister';
 import { renderAuthDrawer } from '@/src/client/shared/Drawer/RenderAuthDrawer';
 import { useVisibilityControl } from '@/src/client/shared/Hooks/useVisibilityControl';
 import { ControlsChevronDown } from '@heathmont/moon-icons-tw';

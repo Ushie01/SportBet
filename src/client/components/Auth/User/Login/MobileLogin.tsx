@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -6,41 +6,40 @@ import { signIn } from '@/src/helper/api/auth';
 import { useMutation } from '@tanstack/react-query';
 import { PhoneNo, Password } from '../Components/Input';
 import CheckBox from '@/src/client/shared/CheckBox/CheckBox';
-import { ErrorToast, SuccessToast } from '@/src/client/shared/ToastBar';
 import { ResponseMsg } from '../Components/ResponseMsg';
 import { AuthButton } from '../Components/DesktopButton';
+import { useAuthAccess } from '../../../../shared/Hooks/useAuthAccess';
 
 const MobileLogin = () => {
-	const [response, setResponse] = useState('');
-	const [password, setPassword] = useState('');
-	const [phoneNumber, setPhoneNumber] = useState('');
 	const mutation = useMutation({ mutationFn: signIn });
-
-	const handleLogin = async () => {
-		const values = { phoneNumber, password };
-		if (values.phoneNumber && values.password) {
-			const payload = await mutation.mutateAsync(values);
-			setResponse(payload?.message);
-			if (response.includes('exists')) {
-				ErrorToast({ text: 'Login Failed' });
-			} else {
-				SuccessToast({ text: 'Successfully Login' });
-			}
-		}
-	};
+	const {
+		response,
+		password,
+		setPassword,
+		phoneNumber,
+		setPhoneNumber,
+		handleClick,
+	} = useAuthAccess({
+		mutation,
+		failedResText: 'found',
+		successfulResText: 'successful',
+	});
 
 	return (
 		<div className='py-6'>
-			<ResponseMsg response={response} />
+			<ResponseMsg
+				response={response}
+				failedResText='found'
+			/>
 
 			<ToastContainer />
+
 			<div className='flex flex-col space-y-6'>
 				<PhoneNo
 					phoneNo={phoneNumber}
 					bgColor='bg-white'
 					setPhoneNo={setPhoneNumber}
 				/>
-
 				<Password
 					password={password}
 					placeHolder='Password'
@@ -54,7 +53,7 @@ const MobileLogin = () => {
 				</div>
 
 				<AuthButton
-					handle={handleLogin}
+					handle={handleClick}
 					className='h-[55px] text-xl w-full '
 					password={password}
 					mutation={mutation}

@@ -1,11 +1,11 @@
 const baseUrl = "https://legitxbackend.onrender.com/api/v1";
 
-export interface SignUpPayload {
+export interface payloadProps {
   phoneNumber: string;
   password: string;
 }
 
-export const signUp: (payload: SignUpPayload) => Promise<any> = async (payload) => {
+export const signUp: (payload: payloadProps) => Promise<any> = async (payload) => {
     try {
         return await (await fetch(`${baseUrl}/auth/register`, {
             method: 'POST',
@@ -20,7 +20,7 @@ export const signUp: (payload: SignUpPayload) => Promise<any> = async (payload) 
 };
 
 
-export const signIn: (payload: SignUpPayload) => Promise<any> = async (payload) => {
+export const signIn: (payload: payloadProps) => Promise<any> = async (payload) => {
     try {
         return await (await fetch(`${baseUrl}/auth/login`, {
             method: 'POST',

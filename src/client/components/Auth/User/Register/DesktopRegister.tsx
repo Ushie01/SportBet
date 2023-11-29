@@ -1,35 +1,34 @@
-import React, { useState } from 'react';
-import { useMutation } from '@tanstack/react-query';
-import { ToastContainer } from 'react-toastify';
+import React from 'react';
 import 'react-toastify/dist/ReactToastify.css';
 import Form from '../Components/Form';
 import { signUp } from '@/src/helper/api/auth';
-import { ErrorToast, SuccessToast } from '@/src/client/shared/ToastBar';
 import { AuthButton } from '../Components/DesktopButton';
+import { useMutation } from '@tanstack/react-query';
 import { ResponseMsg } from '../Components/ResponseMsg';
+import { ToastContainer } from 'react-toastify';
+import { useAuthAccess } from '../../../../shared/Hooks/useAuthAccess';
 
 const DesktopRegister = () => {
 	const mutation = useMutation({ mutationFn: signUp });
-	const [response, setResponse] = useState('');
-	const [password, setPassword] = useState('');
-	const [phoneNumber, setPhoneNumber] = useState('');
-
-	const handleRegister = async () => {
-		const values = { phoneNumber, password };
-		if (values.phoneNumber && values.password) {
-			const payload = await mutation.mutateAsync(values);
-			setResponse(payload?.message);
-			if (response.includes('exists')) {
-				ErrorToast({ text: 'Registration Failed' });
-			} else {
-				SuccessToast({ text: 'Successfully Created' });
-			}
-		}
-	};
+	const {
+		response,
+		password,
+		setPassword,
+		phoneNumber,
+		setPhoneNumber,
+		handleClick,
+	} = useAuthAccess({
+		mutation,
+		failedResText: 'exists',
+		successfulResText: 'successfully',
+	});
 
 	return (
 		<form className='flex flex-col items-center'>
-			<ResponseMsg response={response} />
+			<ResponseMsg
+				response={response}
+				failedResText='exists'
+			/>
 			<ToastContainer />
 			<Form
 				setPassword={setPassword}
@@ -40,7 +39,7 @@ const DesktopRegister = () => {
 
 			<div className='flex flex-col items-center w-full'>
 				<AuthButton
-					handle={handleRegister}
+					handle={handleClick}
 					className='h-12 my-7 w-[340px] '
 					password={password}
 					phoneNumber={phoneNumber}
