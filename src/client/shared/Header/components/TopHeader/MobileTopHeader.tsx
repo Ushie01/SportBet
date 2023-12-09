@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import Search from '../../../Svg/Search';
-import MobileRegister from '@/src/client/components/Auth/User/Register/MobileRegister';
-import MobileLogin from '@/src/client/components/Auth/User/Login/MobileLogin';
+import MobileRegister from '@/src/client/components/Auth/User/UserAuth/Register/MobileRegister';
+import MobileLogin from '@/src/client/components/Auth/User/UserAuth/Login/MobileLogin';
 import { renderAuthDrawer } from '../../../Drawer/RenderAuthDrawer';
 import { useVisibilityControl } from '../../../Hooks/useVisibilityControl';
 

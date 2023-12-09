@@ -8,7 +8,7 @@ import { PhoneNo, Password } from '../Components/Input';
 import CheckBox from '@/src/client/shared/CheckBox/CheckBox';
 import { ResponseMsg } from '../Components/ResponseMsg';
 import { AuthButton } from '../Components/DesktopButton';
-import { useAuthAccess } from '../../../../shared/Hooks/useAuthAccess';
+import { useAuthAccess } from '../../../../../shared/Hooks/useAuthAccess';
 
 const MobileLogin = () => {
 	const mutation = useMutation({ mutationFn: signIn });

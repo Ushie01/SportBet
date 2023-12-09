@@ -11,7 +11,6 @@ const MainSection = () => {
 						<LeftSection />
 						<RightSection />
 				</div>
-				
 				</div>
 			</Container>
 		);

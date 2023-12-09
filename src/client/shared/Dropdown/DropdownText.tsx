@@ -12,8 +12,8 @@ const DropdownText = () => {
 			onChange={setSelected}>
 			{({ open }) => (
 				<>
-                    <Dropdown.Select
-                        className='text-xs'
+					<Dropdown.Select
+						className='text-xs'
 						open={open}
 						placeholder='Nigeria'>
 						{selected}

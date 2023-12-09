@@ -6,7 +6,7 @@ import { AuthButton } from '../Components/DesktopButton';
 import { useMutation } from '@tanstack/react-query';
 import { ResponseMsg } from '../Components/ResponseMsg';
 import { ToastContainer } from 'react-toastify';
-import { useAuthAccess } from '../../../../shared/Hooks/useAuthAccess';
+import { useAuthAccess } from '../../../../../shared/Hooks/useAuthAccess';
 
 const DesktopRegister = () => {
 	const mutation = useMutation({ mutationFn: signUp });
