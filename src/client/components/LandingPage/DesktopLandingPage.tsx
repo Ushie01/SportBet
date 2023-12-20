@@ -5,8 +5,6 @@ import VirtualImage from './components/DesktopView/VirtualImage';
 import MainSection from './components/DesktopView/MainSection';
 import Footer from '../../shared/Footer';
 
-
-
 const DesktopLandingPage = () => {
 	return (
 		<div className='bg-lightGray'>

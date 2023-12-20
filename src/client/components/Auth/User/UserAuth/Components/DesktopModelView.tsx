@@ -24,7 +24,7 @@ const DesktopModalView = () => {
 					className='text-2xl text-black px-4 font-thin bg-white'
 				/>
 			</div>
-
+                                                                                    
 			<div className='py-8 bg-gray-100 w-[800px] h-[390px]'>
 				{link === tabValue ? <Register /> : <Login />}
 			</div>
