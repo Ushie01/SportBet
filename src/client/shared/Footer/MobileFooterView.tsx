@@ -17,7 +17,7 @@ const AgeRate = () => {
 				<p className='text-2xl font-bold text-gray-400'>{'18+'}</p>
 			</div>
 			<p className='text-[11px] text-gray-400'>
-				c 2023 LegitXBet. All rights reserved
+				c 2023 SportBet. All rights reserved
 			</p>
 		</div>
 	);
@@ -27,13 +27,10 @@ const FooterSection = () => {
 	return (
 		<div className='bg-darkGray w-full py-4'>
 			<div className='flex items-center justify-center'>
-				<Image
-					src='/assets/logo1.png'
-					alt='Logo alt'
-					height={40}
-          width={100}
-          className='pr-2'
-				/>
+				<p className='text-white text-xl font-bold'>
+					Sport<span className='text-gold'>Bet</span>
+				</p>
+
 				<Image
 					src={officialSport2}
 					alt='officail sport alt'
@@ -42,14 +39,14 @@ const FooterSection = () => {
 				/>
 			</div>
 			<p className='text-[12px] text-center mt-3 text-white'>
-				Official LegitXBet Betting Partner
+				Official SportBet Betting Partner
 			</p>
 
 			<div className='space-y-4 px-4 mt-5 w-full'>
 				<p className='p-2 text-center text-[11px] text-gray-400'>
-					Age 18 and above only to register or play at LegitXBet. Play
+					Age 18 and above only to register or play at SportBet. Play
 					Responsibly. Betting is addictive and can be psychologically
-					harmful. | LegitXBet Nigeria is licensed by National Lottery
+					harmful. | SportBet Nigeria is licensed by National Lottery
 					Regulatory Commission of Nigeria
 				</p>
 				<hr className='w-full border-gray-700' />

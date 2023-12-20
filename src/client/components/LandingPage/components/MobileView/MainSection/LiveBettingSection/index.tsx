@@ -9,6 +9,7 @@ const LiveBettingSection = () => {
 		<div className='bg-darkGray w-full'>
 			<HeadBettingSection
 				sports={false}
+				sportBetType='Live'
 				setOddsHeaderLength={setOddsHeaderLength}
 			/>
 			{MATCH_DATA.map((value, index) => (

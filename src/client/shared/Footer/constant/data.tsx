@@ -6,7 +6,7 @@ import Youtube from '../../Svg/Youtube';
 
 export const LEGITXBET_DATA = [
 	{
-		title: 'LegitXBet Nigeria',
+		title: 'SportBet Nigeria',
 		items: [
 			'About Us',
 			'Terms & Conditions',

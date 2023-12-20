@@ -8,7 +8,7 @@ const Warning = () => {
 			<div className='flex items-center justify-center space-x-4'>
 				<Forum />
 				<p>
-					Age 18 and above only to register or play at LegitXBet. Play
+					Age 18 and above only to register or play at SportBet. Play
 					Responsibly. <br /> Betting is addictive and can be psychologically
 					harmful.
 				</p>
@@ -16,9 +16,9 @@ const Warning = () => {
 			<div className='flex items-center justify-center space-x-4'>
 				<License />
 				<p>
-					LegitXBet Nigeria is licensed by National Lottery Regulatory
+					SportBet Nigeria is licensed by National Lottery Regulatory
 					Commission <br />
-					(NLRC) under License No 0001014.
+					(NLRC) under License No 0000000.
 				</p>
 			</div>
 		</div>

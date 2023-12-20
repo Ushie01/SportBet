@@ -6,5 +6,6 @@ export type SportDataItem = {
 
 export type headBettingsSectionProps = {
 	sports: boolean;
+	sportBetType: string;
 	setOddsHeaderLength: React.Dispatch<React.SetStateAction<number>>;
 };

@@ -57,7 +57,7 @@ const ContactInfo = () => (
 		<p className='font-bold'>Connect with Us</p>
 		<div className='flex flex-col font-thin'>
 			<p>Telephone: 070XXXXXXXX | 090XXXXXXXX</p>
-			<Link href='#'>Email: support@legitxbet.com</Link>
+			<Link href='#'>Email: support@sportbet.com</Link>
 		</div>
 		<div className='flex space-x-4'>
 			{SOCIAL_LINK.map((item, index) => (
@@ -75,12 +75,7 @@ const ContactInfo = () => (
 const TopLayer = () => (
 	<div className='flex items-start justify-between cursor-default py-4 text-xs px-48 bg-gray-900 border-b border-b-gray-600'>
 		<div className='flex flex-col items-start justify-start space-y-4'>
-			<Image
-				src='/assets/logo1.png'
-				alt='Logo alt'
-				height={40}
-				width={170}
-			/>
+			<p className='text-white text-2xl font-bold'>Sport<span className='text-gold'>Bet</span></p>
 			<LogoComponent />
 		</div>
 

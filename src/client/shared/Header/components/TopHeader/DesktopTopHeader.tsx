@@ -12,12 +12,7 @@ const DesktopTopHeader = () => {
 
 	return (
 		<div className='flex items-start justify-between w-full py-5'>
-			<Image
-				src='/assets/logo1.png'
-				alt='logo alt'
-				height={50}
-				width={200}
-			/>
+			<p className='text-white text-2xl font-bold'>Sport<span className='text-gold'>Bet</span></p>
 
 			<div className='flex flex-col'>
 				<div className='flex space-x-2'>

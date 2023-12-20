@@ -11,6 +11,7 @@ const SportsSection = () => {
 		<div className='bg-white w-full'>
 			<HeadBettingSection
 				sports={true}
+				sportBetType='Sport'
 				setOddsHeaderLength={setOddsHeaderLength}
 			/>
 			{MATCH_DATA.map((value, index) => (

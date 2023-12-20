@@ -12,11 +12,11 @@ import OddsRangeFilter from '@/src/client/shared/Filter/OddsRangeFilter';
 const HeadBettingSection = ({
 	sports,
 	setOddsHeaderLength,
+	sportBetType,
 }: headBettingsSectionProps) => {
 	const [click, setClick] = useState(false);
 	const { link, handleClick } = useLink('Football');
-	const { link: clickItem, handleClick: onHandleClick } =
-		useLink('Highlights');
+	const { link: clickItem, handleClick: onHandleClick } = useLink('Highlights');
 	const eventTypes = getEventTypesByGameType(link, SPORT_DATA);
 	const { link: clickValue, handleClick: handleTabClick } = useLink(
 		eventTypes[0]
@@ -90,7 +90,7 @@ const HeadBettingSection = ({
 						className={`font-bold text-xl  ${
 							sports ? 'text-black' : 'text-white'
 						}`}>
-						Live
+						{sportBetType}
 					</p>
 					<p className='text-gray-300'>|</p>
 					<div className={`${sports ? 'w-4/6' : 'w-5/6 pr-2'}`}>

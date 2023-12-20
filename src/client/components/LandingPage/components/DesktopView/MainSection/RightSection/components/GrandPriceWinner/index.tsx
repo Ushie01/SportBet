@@ -20,7 +20,7 @@ const GrandPriceWinner = () => {
 						</div>
 
 						<div className='flex items-center justify-between text-sm'>
-							<p className='text-gray-400'>LegitXbetting</p>
+							<p className='text-gray-400'>Sportbetting</p>
 							<p className='text-gray-400'>{item.phoneNo}</p>
 						</div>
 					</div>

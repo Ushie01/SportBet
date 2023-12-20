@@ -24,13 +24,7 @@ const MobileTopHeader = () => {
 			<div
 				className='flex items-center justify-between bg-black h-[50px] p-2'
 				id='section1'>
-				<Image
-					src='/assets/logo1.png'
-					alt='logo alt'
-					height={25}
-					width={100}
-				/>
-
+				<p className='text-white text-xl font-bold'>Sport<span className='text-gold'>Bet</span></p>
 				<div className='flex items-center justify-center space-x-3'>
 					<Search
 						width='18'
